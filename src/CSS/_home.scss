@@ -1,0 +1,40 @@
+/*------- Home Page Stylings ------- */
+.homeBanner {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 73% auto;
+  background-image: url("../Assets/Images/Banner/desktop-home-banner-gif2.gif");
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  top: 10vh;
+  background-color: $primaryBlack;
+  .navClickArea {
+    position: absolute;
+    height: 90%;
+    display: block;
+    background-color: #030303;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+    &:nth-child(1) {
+      width: 25%;
+      left: 12%;
+    }
+    &:nth-child(2) {
+      width: 23%;
+      left: 40%;
+    }
+    &:nth-child(3) {
+      width: 23%;
+      left: 65%;
+    }
+  }
+}
+
+/*-------End Home Page Stylings ------- */

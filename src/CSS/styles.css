@@ -1,1 +1,227 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/*------- Home Page Stylings ------- */
+.homeBanner {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 73% auto;
+  background-image: url("../Assets/Images/Banner/desktop-home-banner-gif2.gif");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40vh;
+  width: 100%;
+  top: 10vh;
+  background-color: #030303;
+}
+
+.homeBanner .navClickArea {
+  position: absolute;
+  height: 90%;
+  display: block;
+  background-color: #030303;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.homeBanner .navClickArea:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.homeBanner .navClickArea:nth-child(1) {
+  width: 25%;
+  left: 12%;
+}
+
+.homeBanner .navClickArea:nth-child(2) {
+  width: 23%;
+  left: 40%;
+}
+
+.homeBanner .navClickArea:nth-child(3) {
+  width: 23%;
+  left: 65%;
+}
+
+/*-------End Home Page Stylings ------- */
+/* ------- Global Stylings  ----------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 5vh 0;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 300px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p,
+li {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ------- End Global Stylings  ----------*/
+/*------- Header Stylings--------- */
+header {
+  height: auto;
+  width: 100vw;
+  padding-top: 10vh;
+  background-color: #030303;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  min-width: 300px;
+}
+
+header .navBar {
+  position: fixed;
+  height: 10vh;
+  top: 0;
+  width: 100vw;
+  min-width: 300px;
+  padding: 0 20vw;
+  background-color: #030303;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  z-index: 10;
+  -webkit-box-shadow: 0px 0px 5px 5px black;
+          box-shadow: 0px 0px 5px 5px black;
+}
+
+header .navBar .navLink {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+header .navBar .navLinkText {
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+header .navBar .navLinkText:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+header .navBar .navLinkText:visited {
+  color: gray;
+}
+
+header .navBar .navLogo {
+  background-color: black;
+  margin-top: 5vh;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 5px 5px black;
+          box-shadow: 0px 0px 5px 5px black;
+}
+
+header .navBar .navLogo img {
+  width: 80%;
+  margin-right: -5%;
+  height: auto;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+header .navBar .navLogo img:hover {
+  opacity: 0.5;
+}
+
+header .contactUsButton {
+  position: absolute;
+  z-index: 3;
+  right: 8%;
+  top: 20%;
+  width: 12vw;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  text-transform: uppercase;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+header .contactUsButton:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+header .contactUsButton .mobileContact {
+  display: none;
+}
+
+/*------- End Header Stylings--------- */
+/*# sourceMappingURL=styles.css.map */
