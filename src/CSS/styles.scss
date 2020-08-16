@@ -3,30 +3,26 @@
 @import "./community";
 @import "./professional";
 
-
 /* ------- Global Stylings  ----------*/
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "palatino Linotype","Book Antiqua", palatino, serif;
   scroll-behavior: smooth;
 }
 
-
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 section {
-  padding: 5vh 0;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   min-width: 300px;
+  margin-top: 40vh;
 }
 
 h1 {
@@ -46,6 +42,17 @@ li {
 a {
   text-decoration: none;
   color: white;
+}
+button {
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  background-color: mediumaquamarine;
+  border: 0;
+  border-radius: 15px;
+  /* margin-top: 5%; */
+  font-weight: bold;
+  float: left;
 }
 
 /* ------- End Global Stylings  ----------*/
@@ -67,10 +74,10 @@ header {
     top: 0;
     width: 100vw;
     min-width: 300px;
-    padding: 0 20vw;
+    padding: 0 3vw;
     background-color: $primaryBlack;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: white;
     align-items: center;
     font-size: 1.5rem;
@@ -89,7 +96,7 @@ header {
       transition: opacity 0.5s;
       &:hover {
         opacity: 0.5;
-        cursor:pointer;
+        cursor: pointer;
       }
       &:visited {
         color: gray;
@@ -142,3 +149,153 @@ header {
 }
 
 /*------- End Header Stylings--------- */
+
+/* LightBox Stylings */
+
+.lightBox {
+  position: fixed;
+  z-index: 20;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  .lightBoxBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .exitIcon {
+    top: 5vh;
+    right: 5vw;
+    font-size: 3rem;
+    position: absolute;
+    color: white;
+    border: 1px rigid black;
+    text-shadow: 0px 0px 5px black;
+    z-index: 100;
+    &:hover {
+      color: gray;
+      cursor: pointer;
+    }
+  }
+  .lightBoxContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    z-index: 3;
+  }
+  .slideShow {
+    height: 80vh;
+    width: 70vw;
+    display: none;
+  }
+  .teamMemberLightBox {
+    background-color: white;
+    width: 60vw;
+    padding: 3%;
+    height: auto;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .socialMediaIcon {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      margin-right: 1vw;
+      border-radius: 100%;
+      border: 2px solid black;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    .iconBar {
+      display: flex;
+      flex-direction: row;
+      margin: 3vh 0;
+    }
+    ul {
+      margin-left: 1.5vw;
+    }
+    .profileInformation {
+      width: 60%;
+      margin-left: 5vw;
+    }
+    .teamProfileImage {
+      display: block;
+      position: relative;
+      img {
+        background-color: gray;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+      }
+      .socialIcon {
+        position: absolute;
+        width: 100%;
+        height: 98%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        opacity: 0;
+        font-size: 5rem;
+        color: white;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .projectLightBox {
+    background-color: black;
+    color: white;
+    width: 60%;
+    height: 70%;
+    .weProvide {
+      background-color: white;
+      color: black;
+      height: 33%;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .weOffer,
+    .weAdvise {
+      height: 33%;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+    }
+    img {
+      width: 5vw;
+      margin: 5px;
+    }
+    .weOfferContent,
+    .weProvideContent,
+    .weAdviseContent {
+      text-align: left;
+      margin-right: 2em;
+    }
+  }
+}
+
+/* End LightBox Stylings */

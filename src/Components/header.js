@@ -9,11 +9,11 @@ export default class Header extends Component {
     return (
       <header>
         <nav className="navBar">
-          <span className="navLink navLinkText">Community Development</span>
+          {/* <span className="navLink navLinkText">Community Development</span> */}
           <div className="navLink navLogo">
             <img src={Logo} alt="LIFE3 Logo" title="LIFE3"></img>
           </div>
-          <span className="navLink navLinkText">Professional Development</span>
+          {/* <span className="navLink navLinkText">Professional Development</span> */}
           <button type="button" className="contactUsButton">
             <p>Contact Us</p>
             <FontAwesomeIcon
@@ -22,6 +22,7 @@ export default class Header extends Component {
             ></FontAwesomeIcon>
           </button>
         </nav>
+     
       </header>
     );
   }
