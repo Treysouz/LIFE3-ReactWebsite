@@ -1,26 +1,26 @@
 import React, { Component } from "react";
-import BannerVideo from "../Assets/Videos/life3.MP4"
+import BannerVideo from "../Assets/Videos/life3.MP4";
 export default class HomeBanner extends Component {
   render() {
     return (
-      <div className="homeBanner">
-        <div className="homeBanner3">
-          <h1>We Empower</h1>
-          <br></br>
-            <h2>
-              Entrepreneurs with options to design <br /> and build mobile or
-              web applications
-            </h2>
-            <br></br>
-            <a href="#homeBanner2">
-           
-              <button> LEARN MORE </button>
-            </a>
-
-        </div>
+      <div className="bannerContainer">
         <video autoPlay muted loop>
-          <source src={BannerVideo}></source>
+          <source src={BannerVideo} />
         </video>
+        <div className="banner">
+          <h1> Be Empowered </h1>
+          <h2>
+            {" "}
+            to build and design your web or mobile application in an equitable
+            environment{" "}
+          </h2>
+          <h2>
+            <a href="#contactUs">
+              {" "}
+              <button> Contact Us </button>{" "}
+            </a>
+          </h2>
+        </div>
       </div>
     );
   }

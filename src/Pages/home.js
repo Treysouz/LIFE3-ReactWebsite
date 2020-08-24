@@ -3,6 +3,9 @@ import HomeBanner from "../Components/HomeBanner";
 import AboutUsImage from "../Assets/Images/About Us image.jpg";
 import ProjectData from "../JSON/projectsData.json";
 import ProjectModule from "../Components/ProjectModule";
+import PhaseOneBanner from "../Assets/Images/Banner/phase1.png"
+import PhaseTwoBanner from "../Assets/Images/Banner/phase2.png"
+import PhaseThreeBanner from "../Assets/Images/Banner/phase3.png"
 
 export default class Home extends Component {
   constructor() {
@@ -10,188 +13,222 @@ export default class Home extends Component {
     this.state = {
       moduleOpen: false,
       lightBoxType: "",
-      viewingClient: ""
+      viewingClient: "",
     };
+  }
+  componentDidMount(){
+    console.log(this);
   }
   toggleModule = (client) => {
     this.setState({
       moduleOpen: !this.state.moduleOpen,
-      viewingClient: client
-    })
+      viewingClient: client,
+    });
   };
   openModule = () => {
-    return <ProjectModule toggleModule={()=>this.toggleModule()} viewingClient={this.state.viewingClient}></ProjectModule>;
+    return (
+      <ProjectModule
+        toggleModule={() => this.toggleModule()}
+        viewingClient={this.state.viewingClient}
+      ></ProjectModule>
+    );
   };
 
   render() {
     return (
       <section className="home">
         {this.state.moduleOpen ? this.openModule() : null}
-        <HomeBanner></HomeBanner>
-        <div className="quote">
-          <h2>
-            <br></br>" LIFE3's vision is to provide convenient and
-            personalized,user-driven <br></br> experiences empowered through
-            ideas, creativity and creations " <br></br>
-          </h2>
-        </div>
-
-        <div className="aboutUs">
-          <div className="displayAbout">
-            <h1> ABOUT US </h1>
-            <div className="aboutContent">
-              <p>
-                LIFE3 is committed to <strong>educating</strong> its community
-                by demonstrating how product development and design is applied
-                to building mobile and web applications. LIFE3{" "}
-                <strong>enables</strong> startups to build and create product
-                releases while <strong>empowering</strong> early-to-mid career
-                professionals with the opportunity to work on real business
-                problems.
-              </p>
-            </div>
-          </div>
-
-          <div className="aboutImage">
-            <img src={AboutUsImage}></img>
-          </div>
-        </div>
         <div>
-          <div className="homeBanner2" id="homeBanner2">
+          {/* How Can We Help You Section */}
+          <div className="mainInfo" id="mainInfo">
             <h1>HOW CAN WE HELP YOU?</h1>
-            <div className="col">
-              <div className="explore">
-                {/* <h1>EDUCATE</h1>
-          <p>business-driven mobile and web app development and design</p> */}
-                {/* <a class="navClickArea" href="Pages/community.html"><button>explore</button></a> */}
-                <h2>Conduct a marketing analysis</h2>
-                <p>Build a smarter strategy for growing your business</p>
-                <br />
-                <br />
-                <h2>
-                  Engage with developers, designers, product managers, &amp;
-                  other technical leads
+            <div className="mainInfoContainer">
+              <div
+                className="phaseContainer slide"
+                file="https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
+              >
+                <img  src={PhaseOneBanner }  alt="phase1 image" />
+                <p>Product Design Services</p>
+                <div className="phase">
+                  <h2>phase 1</h2>
+                  <p>
+                    Mock-up &amp; <br />
+                    Product Roadmap
+                  </p>
+                </div>
+                <h2
+                  className="slide"
+                  file="https://drive.google.com/file/d/1OTD5Q39uO-Q5GZgblyNYOxA5eaNanppP/preview"
+                >
+                  "I have an idea for an app and would like some advice and
+                  direction on how I can get started"
                 </h2>
-                <p>Connect with members of the LIFE3 community</p>
+                <a>
+                  <button>learn more</button>
+                </a>
               </div>
-              <div className="explore">
-                {/* <h1>ENABLE</h1>
-          <p>underrepresented groups to participate in technology-focused careers and ventures</p> */}
-                {/* <a class="navClickArea" href="#eventsAnchor"><button>explore</button></a> */}
-                <h2>Define a growth strategy</h2>
-                <p>
-                  Find the next vectors of growth &amp; the plan to get there
-                </p>
-                <br />
-                <br />
-                <h2>Design product to customer value and cost</h2>
-                <p>
-                  Design product that maximize customer value while balancing
-                  development &amp; manufacturing costs
-                </p>
+              <div
+                className="phaseContainer slide"
+                file="https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
+              >
+                <img src={PhaseTwoBanner } alt="phase2 image" />
+                <p>Product Design &amp; Development Services</p>
+                <div className="phase">
+                  <h2>phase 2</h2>
+                  <p>
+                    Software Design &amp; <br />
+                    Development
+                  </p>
+                </div>
+                <h2>
+                  "I am ready to work with developers and designers to create a
+                  market-relevant, customer-centric app"
+                </h2>
+                <a>
+                  <button>learn more</button>
+                </a>
               </div>
-              <div className="explore">
-                {/* <h1>EMPOWER</h1>
-          <p>early-stage business concepts to be created into shippable products</p> */}
-                {/* <a class="navClickArea" href="Pages/professional.html"><button>explore</button></a> */}
-                <h2>Conduct User Research</h2>
-                <p>
-                  Deeply understand the mindsets and behaviors of my comsumers
-                </p>
-                <br />
-                <br />
-                <h2>Participate in design thinking workshop</h2>
-                <p>
-                  Frame and solve problems based on empathetic observation of
-                  customers
-                </p>
-                <br />
-                <a href="#contactUs">
-                  <button>CONTACT US</button>
+              <div className="phaseContainer">
+                <img src={PhaseThreeBanner } alt="phase3 image" />
+                <p>Product Management Services</p>
+                <div className="phase">
+                  <h2>phase 3</h2>
+                  <p>
+                    Artificial Intelligence
+                    <br /> &amp; Analytics
+                  </p>
+                </div>
+                <h2>
+                  "I want to leverage data insights through advance analytics
+                  and artificial intelligence technology"
+                </h2>
+                <a>
+                  <button>learn more</button>
                 </a>
               </div>
             </div>
           </div>
-          <section className="partners">
-            <div className="sectionContent">
-              <div className="partnersInfoContainer">
+          {/* Projects */}
+          <div className="partners">
+            <div className="partnersInfoContainer">
+              <div className="partnersText">
                 <h1>
-                  <a>Our Approach</a>
-                </h1>
-                <div className="approach">
-                  <div className="phase" style={{ borderBottomLeftRadius: 40 }}>
-                    <h2>phase 1</h2>
-                    <p>
-                      Mock-up &amp; <br />
-                      Product Roadmap
-                    </p>
-                  </div>
-                  <div className="phase">
-                    <h2>phase 2</h2>
-                    <p>Software Design &amp; Development</p>
-                  </div>
-                  <div
-                    className="phase"
-                    style={{ borderBottomRightRadius: 40 }}
+                  <a
+                    href="https://www.linkedin.com/feed/hashtag/businessprojects"
+                    target="_blank" rel="noopener noreferrer"
                   >
-                    <h2>phase 3</h2>
-                    <p>Artificial Intelligence &amp; Analytics</p>
-                  </div>
-                </div>
+                    Business Projects
+                  </a>
+                </h1>
+                <p>
+                  {" "}
+                  LIFE3 employs design thinking frameworks to strategize around
+                  unique user needs, conduct market validation, get from idea
+                  conception to visual prototype, and drive customer-centric
+                  development
+                </p>
               </div>
-              <div className="partnersInfoContainer">
-                <div className="partnersText">
-                  <h1>
-                    <a
-                      href="https://www.linkedin.com/feed/hashtag/businessprojects"
-                      target="_blank"
-                    >
-                      Business Projects
-                    </a>
-                  </h1>
-                  <p>
-                    {" "}
-                    LIFE3 employs design thinking frameworks to strategize
-                    around unique user needs, conduct market validation, get
-                    from idea conception to visual prototype, and drive
-                    customer-centric development
-                  </p>
-                </div>
-                <div className="partnerLogosContainer">
-                  {Object.keys(ProjectData.clients).map((key) => {
-                    return (
-                      <div
-                        onClick={() => this.toggleModule(key)}
-                        className="partnerLogo"
-                        key={key}
-                      >
-                        <img
-                          src={require("../Assets/Images/Icons/" +
-                            ProjectData.clients[key].icon)}
-                          alt={key + "Logo"}
-                          title={key}
-                        ></img>
-                      </div>
-                    );
-                  })}
-                </div>
+              <div className="partnerLogosContainer">
+                {Object.keys(ProjectData.clients).map((key,index)=>{
+             
+                  return (
+                    <img className="partnerLogo" src={require("../Assets/Images/Icons/" +ProjectData.clients[key].icon )} key = {key} onClick={()=>this.toggleModule(key)}></img>
+                  )
+                })}
               </div>
-              {/* <div class="partnersInfoContainer">
-          <div class="partnersText">
-              <h1><a href="https://www.linkedin.com/feed/hashtag/higheredpartners/"
-                      target="_blank">Higher Education Partners</a></h1>
-              <p>LIFE3 provides mobile and web application development and design experience and training
-                  through real business project needs of technology startups within the New York City tech
-                  ecosystem </p>
-          </div>
-          <div class="partnerLogosContainer">
-              <a class="partnerLogo" href="../Pages/professional.html#cunyTech&"><img
-                      src="Assets/Images/Icons/cunytechworks.png" alt="CUNY Techworks Logo" title="CUNY Techworks"> </a><a
-                  href="../Pages/professional.html#pratt&" class="partnerLogo"><img
-                      src="Assets/Images/Icons/pratt.png" alt="Pratt Logo" title="Pratt"></a>
-          </div> */}
             </div>
-          </section>
+          </div>
+          {/* About Us */}
+          <div className="about">
+            <h1> ABOUT US </h1>
+            <div className="aboutUs">
+              <div className="aboutContent">
+                <p>
+                  <strong>WE ENABLE</strong> equity of underrepresented groups
+                  in technology-focused careers and entrepreneurial ventures.
+                </p>
+                <button>
+                  learn more <strong>→</strong>
+                </button>
+              </div>
+              <div className="aboutImage">
+                <img
+                  src={AboutUsImage}
+                  alt="about us image"
+                />
+              </div>
+            </div>
+          </div>
+
+          
+          
+          <footer>
+            <div className="contactUsForm" id="contactUs">
+              <form action="https://formspree.io/xzbeebbo" method="POST">
+                <h2>CONTACT US</h2>
+                <h1>SEND US A MESSAGE</h1>
+                <br />
+                <div className="formInput">
+                  <input
+                    type="text"
+                    name="companyName"
+                    placeholder="Your Company Name"
+                  />
+                  <input type="email" name="emailAddress" placeholder="Email" />
+                </div>
+                <div className="formInput">
+                  <input type="text" name="name" placeholder="Your Name" />
+                  <input type="tel" name="phoneNumber" placeholder="Phone#" />
+                </div>
+                <div className="messageInput">
+                  <textarea
+                    type="text"
+                    name="message"
+                    placeholder="Message"
+                    defaultValue={""}
+                  />
+                </div>
+                <input
+                  className="submitBtn"
+                  type="submit"
+                  defaultValue="SEND MESSAGE"
+                />
+              </form>
+            </div>
+            {/* <img class="footerLogo" src="Assets/Images/Icons/LIFE3FooterLogo.png" alt="LIFE3 Logo" title="LIFE3"> */}
+            {/* <div class="contactUsContainer">
+      <h3>CONTACT US</h3>
+      <p>215 Moore St, <br> Brooklyn, NY 11206 <br> USA</p>
+  </div> */}
+            <div className="socialMediaContainer">
+              <p>EMAIL US | CALL US (917) 570-2669</p>
+              <div className="iconBar">
+                <a
+                  href="https://www.linkedin.com/company/life3-learn-innovate-for-innovation-enablement-empowerment/?viewAsMember=true"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <div className="socialMediaIcon">
+                    <i className="fab fa-linkedin-in" />
+                  </div>
+                </a>
+                <a
+                  href="https://www.facebook.com/life3innovate/?modal=admin_todo_tour"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <div className="socialMediaIcon">
+                    <i className="fab fa-facebook-f" />
+                  </div>
+                </a>
+                <a href="mailto:omar.duran@life3.io">
+                  <div className="socialMediaIcon">
+                    <i className="far fa-envelope" />
+                  </div>
+                </a>
+              </div>
+              <p className="copyright">2020 LIFE3 All rights reserved.</p>
+              <p></p>
+            </div>
+          </footer>
         </div>
       </section>
     );
