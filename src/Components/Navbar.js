@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 import Logo from "../Assets/Images/Icons/LIFE3HeaderLogo.png";
 

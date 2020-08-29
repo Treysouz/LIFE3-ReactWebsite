@@ -3,9 +3,15 @@ import HomeBanner from "../Components/HomeBanner";
 import AboutUsImage from "../Assets/Images/About Us image.jpg";
 import ProjectData from "../JSON/projectsData.json";
 import ProjectModule from "../Components/ProjectModule";
-import PhaseOneBanner from "../Assets/Images/Banner/phase1.png"
-import PhaseTwoBanner from "../Assets/Images/Banner/phase2.png"
-import PhaseThreeBanner from "../Assets/Images/Banner/phase3.png"
+import PhaseOneBanner from "../Assets/Images/Banner/phase1.png";
+import PhaseTwoBanner from "../Assets/Images/Banner/phase2.png";
+import PhaseThreeBanner from "../Assets/Images/Banner/phase3.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default class Home extends Component {
   constructor() {
@@ -14,9 +20,11 @@ export default class Home extends Component {
       moduleOpen: false,
       lightBoxType: "",
       viewingClient: "",
+      offsetClientImages: 0,
+      limitClientImages: 3,
     };
   }
-  componentDidMount(){
+  componentDidMount() {
     console.log(this);
   }
   toggleModule = (client) => {
@@ -39,129 +47,143 @@ export default class Home extends Component {
       <section className="home">
         {this.state.moduleOpen ? this.openModule() : null}
         <div>
-          {/* How Can We Help You Section */}
-          <div className="mainInfo" id="mainInfo">
-            <h1>HOW CAN WE HELP YOU?</h1>
-            <div className="mainInfoContainer">
-              <div
-                className="phaseContainer slide"
-                file="https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
-              >
-                <img  src={PhaseOneBanner }  alt="phase1 image" />
-                <p>Product Design Services</p>
-                <div className="phase">
-                  <h2>phase 1</h2>
-                  <p>
-                    Mock-up &amp; <br />
-                    Product Roadmap
-                  </p>
-                </div>
-                <h2
-                  className="slide"
-                  file="https://drive.google.com/file/d/1OTD5Q39uO-Q5GZgblyNYOxA5eaNanppP/preview"
+          <div>
+            {/* How Can We Help You Section */}
+            <div className="mainInfo" id="mainInfo">
+              <h1>HOW CAN WE HELP YOU?</h1>
+              <div className="mainInfoContainer">
+                <div
+                  className="phaseContainer slide"
+                  file="https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
                 >
-                  "I have an idea for an app and would like some advice and
-                  direction on how I can get started"
-                </h2>
-                <a>
-                  <button>learn more</button>
-                </a>
-              </div>
-              <div
-                className="phaseContainer slide"
-                file="https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
-              >
-                <img src={PhaseTwoBanner } alt="phase2 image" />
-                <p>Product Design &amp; Development Services</p>
-                <div className="phase">
-                  <h2>phase 2</h2>
-                  <p>
-                    Software Design &amp; <br />
-                    Development
-                  </p>
-                </div>
-                <h2>
-                  "I am ready to work with developers and designers to create a
-                  market-relevant, customer-centric app"
-                </h2>
-                <a>
-                  <button>learn more</button>
-                </a>
-              </div>
-              <div className="phaseContainer">
-                <img src={PhaseThreeBanner } alt="phase3 image" />
-                <p>Product Management Services</p>
-                <div className="phase">
-                  <h2>phase 3</h2>
-                  <p>
-                    Artificial Intelligence
-                    <br /> &amp; Analytics
-                  </p>
-                </div>
-                <h2>
-                  "I want to leverage data insights through advance analytics
-                  and artificial intelligence technology"
-                </h2>
-                <a>
-                  <button>learn more</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Projects */}
-          <div className="partners">
-            <div className="partnersInfoContainer">
-              <div className="partnersText">
-                <h1>
-                  <a
-                    href="https://www.linkedin.com/feed/hashtag/businessprojects"
-                    target="_blank" rel="noopener noreferrer"
+                  <img src={PhaseOneBanner} alt="phase1 image" />
+                  <p>Product Design Services</p>
+                  <div className="phase">
+                    <h2>phase 1</h2>
+                    <p>
+                      Mock-up &amp; <br />
+                      Product Roadmap
+                    </p>
+                  </div>
+                  <h2
+                    className="slide"
+                    file="https://drive.google.com/file/d/1OTD5Q39uO-Q5GZgblyNYOxA5eaNanppP/preview"
                   >
-                    Business Projects
+                    "I have an idea for an app and would like some advice and
+                    direction on how I can get started"
+                  </h2>
+                  <a>
+                    <button>learn more</button>
                   </a>
-                </h1>
-                <p>
-                  {" "}
-                  LIFE3 employs design thinking frameworks to strategize around
-                  unique user needs, conduct market validation, get from idea
-                  conception to visual prototype, and drive customer-centric
-                  development
-                </p>
-              </div>
-              <div className="partnerLogosContainer">
-                {Object.keys(ProjectData.clients).map((key,index)=>{
-             
-                  return (
-                    <img className="partnerLogo" src={require("../Assets/Images/Icons/" +ProjectData.clients[key].icon )} key = {key} onClick={()=>this.toggleModule(key)}></img>
-                  )
-                })}
+                </div>
+                <div
+                  className="phaseContainer slide"
+                  file="https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
+                >
+                  <img src={PhaseTwoBanner} alt="phase2 image" />
+                  <p>Product Design &amp; Development Services</p>
+                  <div className="phase">
+                    <h2>phase 2</h2>
+                    <p>
+                      Software Design &amp; <br />
+                      Development
+                    </p>
+                  </div>
+                  <h2>
+                    "I am ready to work with developers and designers to create
+                    a market-relevant, customer-centric app"
+                  </h2>
+                  <a>
+                    <button>learn more</button>
+                  </a>
+                </div>
+                <div className="phaseContainer">
+                  <img src={PhaseThreeBanner} alt="phase3 image" />
+                  <p>Product Management Services</p>
+                  <div className="phase">
+                    <h2>phase 3</h2>
+                    <p>
+                      Artificial Intelligence
+                      <br /> &amp; Analytics
+                    </p>
+                  </div>
+                  <h2>
+                    "I want to leverage data insights through advance analytics
+                    and artificial intelligence technology"
+                  </h2>
+                  <a>
+                    <button>learn more</button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          {/* About Us */}
-          <div className="about">
-            <h1> ABOUT US </h1>
-            <div className="aboutUs">
-              <div className="aboutContent">
-                <p>
-                  <strong>WE ENABLE</strong> equity of underrepresented groups
-                  in technology-focused careers and entrepreneurial ventures.
-                </p>
-                <button>
-                  learn more <strong>→</strong>
-                </button>
+            {/* Projects */}
+            <div className="partners">
+              <div className="partnersInfoContainer">
+                <div className="partnersText">
+                  <h1>
+                    <a
+                      href="https://www.linkedin.com/feed/hashtag/businessprojects"
+                      target="_blank"
+                    >
+                      Business Projects
+                    </a>
+                  </h1>
+                  <p>
+                    {" "}
+                    LIFE3 employs design thinking frameworks to strategize
+                    around unique user needs, conduct market validation, get
+                    from idea conception to visual prototype, and drive
+                    customer-centric development
+                  </p>
+                </div>
+                <div className="partnerLogosContainer">
+                  {Object.keys(ProjectData.clients).map((key, index) => {
+                    if (
+                      index >= this.state.offsetClientImages &&
+                      index < this.state.limitClientImages
+                    ) {
+                      return (
+                        <img
+                          className="partnerLogo"
+                          src={require("../Assets/Images/Icons/" +
+                            ProjectData.clients[key].icon)}
+                          key={key}
+                          onClick={() => this.toggleModule(key)}
+                        ></img>
+                      );
+                    }
+                  })}
+                  <div className="carouselControls">
+                  <FontAwesomeIcon className="leftArrow" icon={faChevronLeft}></FontAwesomeIcon>
+                  <FontAwesomeIcon className="rightArrow"  icon={faChevronRight}></FontAwesomeIcon>
+                    <div className="carouselNavDots" >
+                      <FontAwesomeIcon></FontAwesomeIcon>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="aboutImage">
-                <img
-                  src={AboutUsImage}
-                  alt="about us image"
-                />
+            </div>
+            {/* About Us */}
+            <div className="about">
+              <h1> ABOUT US </h1>
+              <div className="aboutUs">
+                <div className="aboutContent">
+                  <p>
+                    <strong>WE ENABLE</strong> equity of underrepresented groups
+                    in technology-focused careers and entrepreneurial ventures.
+                  </p>
+                  <button>
+                    learn more <strong>→</strong>
+                  </button>
+                </div>
+                <div className="aboutImage">
+                  <img src={AboutUsImage} alt="about us image" />
+                </div>
               </div>
             </div>
           </div>
 
-          
-          
           <footer>
             <div className="contactUsForm" id="contactUs">
               <form action="https://formspree.io/xzbeebbo" method="POST">
@@ -205,7 +227,8 @@ export default class Home extends Component {
               <div className="iconBar">
                 <a
                   href="https://www.linkedin.com/company/life3-learn-innovate-for-innovation-enablement-empowerment/?viewAsMember=true"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className="socialMediaIcon">
                     <i className="fab fa-linkedin-in" />
@@ -213,7 +236,8 @@ export default class Home extends Component {
                 </a>
                 <a
                   href="https://www.facebook.com/life3innovate/?modal=admin_todo_tour"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className="socialMediaIcon">
                     <i className="fab fa-facebook-f" />

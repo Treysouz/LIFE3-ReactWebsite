@@ -17,6 +17,8 @@
 
 .mainInfo h1 {
   text-align: center;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .mainInfo h2 {
@@ -25,6 +27,11 @@
   font-weight: bold;
   font-style: italic;
   font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.mainInfo .phase {
+  text-transform: uppercase;
 }
 
 .mainInfo p {
@@ -92,12 +99,18 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 900;
 }
 
 .phase p {
   font-style: italic;
   text-align: center;
   font-size: 1.3rem;
+  font-weight: 700;
 }
 
 /* End How Can We Help You Section Stylings */
@@ -118,6 +131,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .partners a {
@@ -135,12 +149,14 @@
   font-style: italic;
   font-size: 3rem;
   margin-top: 1em;
+  font-weight: 900;
 }
 
 .partners p {
   line-height: 2;
   font-size: 1.3rem;
   margin: 2vh 0;
+  font-weight: 500;
 }
 
 .partners .partnersInfoContainer .partnersText {
@@ -156,9 +172,8 @@
       -ms-flex-direction: row;
           flex-direction: row;
   height: 200px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -171,6 +186,11 @@
   width: auto;
   height: 60%;
   margin: 2vh 1vw;
+}
+
+.partners .partnersInfoContainer .partnerLogo:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .partners .partnersInfoContainer .partnerLogo img {
@@ -187,6 +207,8 @@
 .about h1 {
   text-align: center;
   margin-bottom: 2vh;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .aboutUs {
@@ -207,11 +229,18 @@
 
 .aboutUs p {
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .aboutUs .aboutContent {
   line-height: 2;
   width: 50vw;
+}
+
+.aboutUs button {
+  background-color: white;
+  float: right;
+  font-weight: 700;
 }
 
 .aboutUs .aboutImage img {
@@ -232,7 +261,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: magneta, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   scroll-behavior: smooth;
 }
 
@@ -267,7 +296,7 @@ button {
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
-  font-weight: bold;
+  font-weight: 900;
   float: left;
   margin: 20px;
   font-size: 1.3rem;
@@ -276,6 +305,11 @@ button {
 button:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
 }
 
 /* ------- End Global Stylings  ----------*/
@@ -337,6 +371,7 @@ header .navBar .navLinkText {
   color: white;
   text-align: right;
   float: right;
+  font-weight: 700;
 }
 
 header .navBar .navLinkText:hover {
@@ -415,7 +450,7 @@ video {
 }
 
 .banner {
-  width: 45%;
+  width: 50%;
   position: absolute;
   top: 16%;
   right: 12%;
@@ -427,7 +462,147 @@ video {
   margin: 20px 0 0 0;
 }
 
+.banner h1 {
+  font-weight: 900;
+}
+
+.banner h2 {
+  font-weight: 500;
+}
+
 /*------- End Header Stylings--------- */
+/*------ Footer Stylings ----------- */
+.contactUsForm h2 {
+  color: mediumaquamarine;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.contactUsForm h1 {
+  font-weight: 900;
+}
+
+.contactUsForm .submitBtn {
+  width: 200px;
+  height: 40px;
+  background-color: mediumaquamarine;
+  border: 0;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.contactUsForm .submitBtn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  min-height: 600px;
+  min-width: 300px;
+  clear: both;
+  position: relative;
+}
+
+footer .footerLogo {
+  width: 10%;
+  height: auto;
+}
+
+footer .contactUsForm {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+footer .contactUsForm input {
+  padding: 5px;
+  width: 40%;
+  height: 35px;
+  margin: 10px 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  font-weight: 500;
+}
+
+footer .contactUsForm textarea {
+  padding: 5px;
+  width: 85%;
+  height: 70px;
+  margin: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .socialMediaContainer {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .socialMediaContainer .iconBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1vh 0;
+  /* align-items: center; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .socialMediaContainer .socialMediaIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin-right: 1vw;
+  border-radius: 100%;
+  border: 1px white solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+footer .socialMediaContainer .socialMediaIcon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/*------ End Footer Stylings ----------- */
 /* LightBox Stylings */
 .lightBox {
   position: fixed;
@@ -445,6 +620,22 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.lightBox .teamProfileImage {
+  width: 200px;
+  height: 200px;
+}
+
+.lightBox .teamName {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.lightBox .teamRole {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .lightBox .lightBoxBackground {
@@ -497,7 +688,9 @@ video {
   width: 60vw;
   padding: 3%;
   height: auto;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -599,13 +792,15 @@ video {
   background-color: black;
   color: white;
   width: 60%;
-  height: 70%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .lightBox .projectLightBox .weProvide {
   background-color: white;
   color: black;
-  height: 33%;
+  height: 35%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,7 +816,7 @@ video {
 
 .lightBox .projectLightBox .weOffer,
 .lightBox .projectLightBox .weAdvise {
-  height: 33%;
+  height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,7 +839,7 @@ video {
 .lightBox .projectLightBox .weProvideContent,
 .lightBox .projectLightBox .weAdviseContent {
   text-align: left;
-  margin-right: 2em;
+  margin: 0 2em;
 }
 
 .lightBox .projectLightBox .weProvideContent {
@@ -655,16 +850,34 @@ video {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lightBox .projectLightBox .weProvideContent figure {
+  margin: 0 15px;
+}
+
+.lightBox .projectLightBox .teamProfileImage {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 10px auto;
+}
+
+.lightBox .projectLightBox .teamProfileImage:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 .lightBox .nextProject {
-  height: 20%;
+  height: 10%;
   text-align: end;
   padding-right: 2vw;
   background-color: white;
@@ -677,19 +890,100 @@ video {
 .projectLightBox .phase {
   background-color: white;
   color: black;
-  height: 80%;
+  height: 90%;
+  width: 30%;
+  margin: auto;
+}
+
+.projectLightBox .phase li {
+  font-weight: 500;
 }
 
 .projectLightBox .phase h2 {
   background-color: mediumaquamarine;
   color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.3rem;
 }
 
-.projectLightBox figcaption {
-  display: none;
+.teamProfileImage {
+  display: block;
+  position: relative;
+}
+
+.teamProfileImage .socialIcon:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.projectLightBox .listhead {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.projectLightBox .teamProfileImage {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 10px auto;
+}
+
+.teamProfileImage img {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.lightBox .teamContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2em;
+}
+
+.lightBox .teamMemberContainer {
+  display: inline-block;
+  width: auto;
+  height: 60%;
+  margin: 2vh 1vw;
+}
+
+.lightBox .teamMemberContainer img:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 /* End LightBox Stylings */
+/*----- Carousel Stylings ------ */
+.carouselControls {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carouselControls .carouselNavDots {
+  position: absolute;
+  bottom: 0;
+}
+
+.carouselControls .leftArrow, .carouselControls .rightArrow {
+  font-size: 5rem;
+}
+
+/*----- End Carousel Stylings ------ */
 /* Media Queries */
 @media (max-width: 1600px), (max-height: 800px) {
   h1,
@@ -748,13 +1042,10 @@ video {
     font-size: 2rem;
   }
   video {
-    height: 35%;
+    height: 45%;
   }
   .mainInfo {
-    margin-top: 0;
-  }
-  .mainInfo img {
-    height: 15vh;
+    margin-top: 15vh;
   }
   h2,
   header .navBar,
@@ -769,7 +1060,7 @@ video {
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 1rem;
   }
-  .aboutTeam .teamProfiles figure .teamProfileImage {
+  .teamProfileImage {
     width: 80px;
     height: 80px;
   }
@@ -827,7 +1118,7 @@ video {
             align-items: center;
     height: auto;
   }
-  .aboutTeam .teamProfiles figure .teamProfileImage {
+  .teamProfileImage {
     width: 100px;
     height: 100px;
   }
@@ -879,6 +1170,23 @@ video {
   }
 }
 
+/* @media (max-height: 700px){
+  h1, footer h1 {
+      font-size: 1.3rem;
+  }
+  h2, header .navBar, footer .contactUsContainer h3, .projectInformation .testimonial p {
+      font-size: .8rem;
+  }
+  p, li, footer p, .aboutTeam .teamProfiles figure figcaption p {
+      font-size: .8rem;
+  }
+  .phasesTable th {
+      font-size: .8rem;
+  }
+  .phasesTable td {
+      font-size: .8rem;
+  }
+} */
 @media (max-width: 850px), (max-height: 650px) {
   .banner {
     width: 60%;
@@ -908,7 +1216,7 @@ video {
   .partners .partnersInfoContainer .partnerLogosContainer {
     height: 120px;
   }
-  .aboutTeam .teamProfiles figure .teamProfileImage {
+  .teamProfileImage {
     width: 70px;
     height: 70px;
   }
@@ -1114,7 +1422,7 @@ video {
   .aboutTeam .teamProfiles figure {
     margin: 1%;
   }
-  .aboutTeam .teamProfiles figure .teamProfileImage {
+  .teamProfileImage {
     width: 75px;
     height: 75px;
   }
@@ -1130,7 +1438,7 @@ video {
   .lightBox .teamMemberLightBox {
     width: 90vw;
   }
-  .lightBox .teamMemberLightBox .teamProfileImage img {
+  .teamProfileImage img {
     width: 150px;
     height: 150px;
   }
@@ -1156,7 +1464,7 @@ video {
 
 @media (max-height: 650px) {
   video {
-    height: 60%;
+    height: 50%;
   }
   .aboutImage {
     width: 50%;
@@ -1167,7 +1475,7 @@ video {
     font-size: 2rem;
   }
   .partners {
-    margin-top: 300vh;
+    margin-top: 10vh;
   }
   footer .contactUsForm {
     width: 90%;
@@ -1194,9 +1502,9 @@ video {
     font-size: 1.2rem;
     line-height: normal;
   }
-  header {
-    height: 487px;
-  }
+  /* header{
+      height: 487px;
+  } */
   /* .aboutUs {
       display: flex;
       flex-direction: column;
@@ -1214,7 +1522,7 @@ video {
     padding: 0;
   }
   .mainInfo button {
-    margin: 0;
+    margin-bottom: 40px;
   }
   .navBar .navLink {
     margin: 0;
@@ -1252,7 +1560,7 @@ video {
     width: 50%;
   }
   .partners {
-    margin-top: 55vh;
+    margin-top: 10vh;
   }
   .partnersInfoContainer h1,
   .aboutUs h1,
@@ -1277,27 +1585,17 @@ video {
   .banner h2 {
     font-size: 1.3rem;
   }
-  .aboutUs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  /* .aboutUs {
+      display: flex;
+      flex-direction: column;
+  } */
   .aboutImage .img {
     margin-top: 20px;
   }
-  .mainInfo .mainInfoContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  /* .mainInfo .mainInfoContainer{
+      display: flex;
+      flex-direction: column;
+  } */
   .mainInfo button {
     margin-bottom: 20px;
     font-size: 0.8rem;
@@ -1365,7 +1663,7 @@ video {
   footer .footerLogo {
     display: none;
   }
-  .aboutTeam .teamProfiles figure .teamProfileImage {
+  .teamProfileImage {
     width: 75px;
     height: 75px;
   }

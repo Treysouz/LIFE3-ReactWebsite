@@ -3,12 +3,15 @@ import WeAdvise from "../Assets/Images/Icons/We advise.png";
 import WeOffer from "../Assets/Images/Icons/We offer.png";
 import WeProvide from "../Assets/Images/Icons/We provide.png";
 import ProjectData from "../JSON/projectsData.json";
+import TeamModule from "./TeamModule";
 
 export default class ProjectModule extends Component {
   constructor() {
     super();
     this.state = {
       teamList: [],
+      teamMemberLightBoxOpen: false,
+      clickedTeamMember: "",
     };
   }
   componentDidMount() {
@@ -20,43 +23,24 @@ export default class ProjectModule extends Component {
       })
     })
   }
+  toggleTeamLightBox = (member)=>{
+    console.log(member);
+    this.state.teamMemberLightBoxOpen?this.setState({teamMemberLightBoxOpen: false}): this.setState({teamMemberLightBoxOpen: true});
+    this.setState({
+      clickedTeamMember: member
+    })
+  }
   render() {
     return (
+   
       <div className="lightBox">
+           {this.state.teamMemberLightBoxOpen?<TeamModule viewingClient = {this.props.viewingClient} clickedTeamMember= {this.state.clickedTeamMember} toggleTeamLightBox={()=>this.toggleTeamLightBox()}></TeamModule>: null}
         <div
           className="lightBoxBackground"
           onClick={() => this.props.toggleModule()}
         ></div>
         <i className="fas fa-times exitIcon" />
-        <div className="lightBoxContent">
-          <iframe
-            className="slideShow"
-            src=""
-            frameBorder={0}
-            allowFullScreen={true}
-            mozallowfullscreen={true}
-            webkitallowfullscreen={true}
-          />
-          <div className="teamMemberLightBox">
-            <div className="teamProfileImage">
-              <img />
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <div className="socialIcon">
-                  <i className="fab fa-linkedin-in" />
-                </div>
-              </a>
-            </div>
-            <div className="profileInformation">
-              <h1 className="teamName" />
-              <h2 className="teamRole" />
-              <ul className="roleDescription">
-                <li />
-                <li />
-                <li />
-              </ul>
-            </div>
-          </div>
-        </div>
+    
         <div className="projectLightBox">
           <div className="weOffer">
             <div>
@@ -72,16 +56,16 @@ export default class ProjectModule extends Component {
               <img src={WeProvide} />
               <h2>We Provide</h2>
             </div>
-            <div>
-              <p>The project Team</p>
+            <div className="teamContainer">
+              <h2>The Project Team</h2>
               <div className="weProvideContent">
                 {this.state.teamList.map((member)=>{
                   return(
-                    <figure key={member}>
-                      <img src={require("../Assets/Images/Team/" + ProjectData.team[member].image)}></img>
+                    <figure key={member} onClick={()=>this.toggleTeamLightBox(member)}>
+                      <img className="teamProfileImage" alt={member} title={member} src={require("../Assets/Images/Team/" + ProjectData.team[member].image)}></img>
                       <figcaption>
-                        <h3>{member}</h3>
-                        <h4>{ProjectData.team[member].roles[this.props.viewingClient].role}</h4>
+                        <p className="teamName">{member}</p>
+                        <p className="teamRole">{ProjectData.team[member].roles[this.props.viewingClient].role}</p>
                       </figcaption>
                     </figure>
                   )
@@ -104,7 +88,7 @@ export default class ProjectModule extends Component {
                 Product Roadmap
               </p>
               <br />
-              <p>User Experience Design</p>
+              <p className="listhead">User Experience Design</p>
               <div className="weAdviseContent">
                 <ul>
                   <li />
@@ -120,7 +104,7 @@ export default class ProjectModule extends Component {
                 Development
               </p>
               <br />
-              <p>Design Thinking</p>
+              <p className="listhead">Design Thinking</p>
             </div>
           </div>
           <p className="nextProject">NEXT PROJECT</p>
