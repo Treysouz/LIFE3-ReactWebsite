@@ -22,10 +22,33 @@ export default class Home extends Component {
       viewingClient: "",
       offsetClientImages: 0,
       limitClientImages: 3,
+      clientCount: 0,
     };
   }
   componentDidMount() {
-    console.log(this);
+    var clientCount = 0;
+    for (var client in ProjectData.clients) {
+      clientCount += 1;
+      this.setState({
+        clientCount: clientCount,
+      });
+    }
+  }
+  componentDidUpdate(){
+    for(var count=0; count< document.querySelectorAll(".carouselNavDots .paginationCircle").length; count++){
+      document.querySelectorAll(".carouselNavDots .paginationCircle")[count].style.color="black"
+    }
+    document.querySelectorAll(".carouselNavDots .paginationCircle")[Math.floor(this.state.offsetClientImages/3)].style.color = "mediumaquamarine"
+    if(this.state.offsetClientImages==0){
+      document.querySelector(".carouselControls .leftArrow").classList.remove("active");
+    }else{
+      document.querySelector(".carouselControls .leftArrow").classList.add("active");
+    }
+    if(this.state.limitClientImages < this.state.clientCount){
+      document.querySelector(".carouselControls .rightArrow").classList.add("active");
+    }else{
+      document.querySelector(".carouselControls .rightArrow").classList.remove("active");
+    }
   }
   toggleModule = (client) => {
     this.setState({
@@ -41,7 +64,29 @@ export default class Home extends Component {
       ></ProjectModule>
     );
   };
+  carouselRight = () => {
+    if (this.state.limitClientImages < this.state.clientCount) {
+      this.setState({
+        limitClientImages: this.state.limitClientImages + 3,
+        offsetClientImages: this.state.offsetClientImages + 3,
+      });
+    }
+  };
 
+  carouselLeft = () => {
+    if (this.state.offsetClientImages > 0) {
+      this.setState({
+        limitClientImages: this.state.limitClientImages - 3,
+        offsetClientImages: this.state.offsetClientImages - 3,
+      });
+    }
+  };
+  carouselPaginationClick = (offset, limit) => {
+    this.setState({
+      limitClientImages: limit,
+      offsetClientImages: offset,
+    });
+  };
   render() {
     return (
       <section className="home">
@@ -155,10 +200,29 @@ export default class Home extends Component {
                     }
                   })}
                   <div className="carouselControls">
-                  <FontAwesomeIcon className="leftArrow" icon={faChevronLeft}></FontAwesomeIcon>
-                  <FontAwesomeIcon className="rightArrow"  icon={faChevronRight}></FontAwesomeIcon>
-                    <div className="carouselNavDots" >
-                      <FontAwesomeIcon></FontAwesomeIcon>
+                    <FontAwesomeIcon
+                      className="leftArrow"
+                      icon={faChevronLeft}
+                      onClick={() => this.carouselLeft()}
+                    ></FontAwesomeIcon>
+                    <FontAwesomeIcon
+                      className="rightArrow"
+                      icon={faChevronRight}
+                      onClick={() => this.carouselRight()}
+                    ></FontAwesomeIcon>
+                    <div className="carouselNavDots">
+                      {Object.keys(ProjectData.clients).map((key, index) => {
+                        if (index % 3 == 0) {
+                          return (
+                            <FontAwesomeIcon key={index} className="paginationCircle"
+                              icon={faCircle}
+                              onClick={() =>
+                                this.carouselPaginationClick(index, index + 3)
+                              }
+                            ></FontAwesomeIcon>
+                          );
+                        }
+                      })}
                     </div>
                   </div>
                 </div>

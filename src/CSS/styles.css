@@ -131,7 +131,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .partners a {
@@ -179,6 +178,7 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 .partners .partnersInfoContainer .partnerLogo {
@@ -977,10 +977,40 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .carouselControls .carouselNavDots {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carouselControls .carouselNavDots .paginationCircle {
+  margin: 0 1%;
+}
+
+.carouselControls .carouselNavDots .paginationCircle:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.carouselControls .carouselNavDots .active {
+  color: "mediumaquamarine";
 }
 
 .carouselControls .leftArrow, .carouselControls .rightArrow {
   font-size: 5rem;
+  color: gray;
+}
+
+.carouselControls .leftArrow.active, .carouselControls .rightArrow.active {
+  color: black;
+}
+
+.carouselControls .leftArrow.active:hover, .carouselControls .rightArrow.active:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 /*----- End Carousel Stylings ------ */

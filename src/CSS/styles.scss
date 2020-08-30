@@ -565,10 +565,32 @@ footer {
   .carouselNavDots{
     position: absolute;
     bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .paginationCircle{
+      margin: 0 1%;
+      &:hover{
+        opacity: .5;
+        cursor: pointer;
+      }
+    }
+    .active{
+      color: "mediumaquamarine"
+    }
     
   }
   .leftArrow, .rightArrow{
     font-size: 5rem;
+    color: gray;
+    &.active{
+      color: black;
+      &:hover{
+        opacity: .5;
+        cursor: pointer;
+      }
+    }
+    
   }
 }
 /*----- End Carousel Stylings ------ */

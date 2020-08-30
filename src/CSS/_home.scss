@@ -91,7 +91,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+
   a {
     color: black;
     &:hover {
@@ -124,6 +124,7 @@
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
     }
     .partnerLogo {
       display: inline-block;
