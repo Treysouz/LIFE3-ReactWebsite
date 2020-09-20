@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import WeAdvise from "../Assets/Images/Icons/We advise.png";
-import WeOffer from "../Assets/Images/Icons/We offer.png";
-import WeProvide from "../Assets/Images/Icons/We provide.png";
+
 import ProjectData from "../JSON/projectsData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default class TeamModule extends Component {
   constructor() {
@@ -22,18 +20,19 @@ export default class TeamModule extends Component {
         ></div>
         <div className="teamMemberLightBox">
           <div className="teamProfileImage">
-            <img
-              alt={this.props.clickedTeamMember}
-              title={this.props.clickedTeamMember}
-              src={require("../Assets/Images/Team/" +
-                ProjectData.team[this.props.clickedTeamMember].image)}
-            />
             <a
               href={ProjectData.team[this.props.clickedTeamMember].linkedin}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
+              <img
+                alt={this.props.clickedTeamMember}
+                title={this.props.clickedTeamMember}
+                src={require("../Assets/Images/Team/" +
+                  ProjectData.team[this.props.clickedTeamMember].image)}
+              />
+
               <div className="socialIcon">
-                <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
               </div>
             </a>
           </div>

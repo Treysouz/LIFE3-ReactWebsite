@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import HomeBanner from "../Components/HomeBanner";
-import AboutUsImage from "../Assets/Images/About Us image.jpg";
+
 import ProjectData from "../JSON/projectsData.json";
 import ProjectModule from "../Components/ProjectModule";
+import PhaseModule from "../Components/PhaseModule";
 import PhaseOneBanner from "../Assets/Images/Banner/phase1.png";
 import PhaseTwoBanner from "../Assets/Images/Banner/phase2.png";
 import PhaseThreeBanner from "../Assets/Images/Banner/phase3.png";
@@ -11,57 +11,95 @@ import {
   faChevronLeft,
   faChevronRight,
   faCircle,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faFacebook, fa } from "@fortawesome/free-brands-svg-icons";
 
 export default class Home extends Component {
   constructor() {
     super();
     this.state = {
-      moduleOpen: false,
-      lightBoxType: "",
+      projectModuleOpen: false,
+      openPhaseModule: false,
       viewingClient: "",
       offsetClientImages: 0,
       limitClientImages: 3,
       clientCount: 0,
+      viewingFile: "",
     };
   }
   componentDidMount() {
     var clientCount = 0;
     for (var client in ProjectData.clients) {
+      var client = client;
       clientCount += 1;
       this.setState({
         clientCount: clientCount,
       });
     }
+    this.props.getPage(window.location.pathname);
   }
-  componentDidUpdate(){
-    for(var count=0; count< document.querySelectorAll(".carouselNavDots .paginationCircle").length; count++){
-      document.querySelectorAll(".carouselNavDots .paginationCircle")[count].style.color="black"
+  componentDidUpdate() {
+    for (
+      var count = 0;
+      count <
+      document.querySelectorAll(".carouselNavDots .paginationCircle").length;
+      count++
+    ) {
+      document.querySelectorAll(".carouselNavDots .paginationCircle")[
+        count
+      ].style.color = "black";
     }
-    document.querySelectorAll(".carouselNavDots .paginationCircle")[Math.floor(this.state.offsetClientImages/3)].style.color = "mediumaquamarine"
-    if(this.state.offsetClientImages==0){
-      document.querySelector(".carouselControls .leftArrow").classList.remove("active");
-    }else{
-      document.querySelector(".carouselControls .leftArrow").classList.add("active");
+    document.querySelectorAll(".carouselNavDots .paginationCircle")[
+      Math.floor(this.state.offsetClientImages / 3)
+    ].style.color = "mediumaquamarine";
+    if (this.state.offsetClientImages === 0) {
+      document
+        .querySelector(".carouselControls .leftArrow")
+        .classList.remove("active");
+    } else {
+      document
+        .querySelector(".carouselControls .leftArrow")
+        .classList.add("active");
     }
-    if(this.state.limitClientImages < this.state.clientCount){
-      document.querySelector(".carouselControls .rightArrow").classList.add("active");
-    }else{
-      document.querySelector(".carouselControls .rightArrow").classList.remove("active");
+    if (this.state.limitClientImages < this.state.clientCount) {
+      document
+        .querySelector(".carouselControls .rightArrow")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".carouselControls .rightArrow")
+        .classList.remove("active");
     }
   }
-  toggleModule = (client) => {
+  toggleProjectModule = (client) => {
     this.setState({
-      moduleOpen: !this.state.moduleOpen,
+      projectModuleOpen: !this.state.projectModuleOpen,
       viewingClient: client,
     });
   };
-  openModule = () => {
+  togglePhaseModule = (file) => {
+    this.setState({
+      openPhaseModule: !this.state.openPhaseModule,
+      viewingFile: file,
+    });
+  };
+ 
+  openProjectModule = () => {
     return (
       <ProjectModule
-        toggleModule={() => this.toggleModule()}
+        toggleProjectModule={this.toggleProjectModule}
         viewingClient={this.state.viewingClient}
+
       ></ProjectModule>
+    );
+  };
+  openPhaseModule = () => {
+    return (
+      <PhaseModule
+        togglePhaseModule={() => this.togglePhaseModule()}
+        viewingFile={this.state.viewingFile}
+      ></PhaseModule>
     );
   };
   carouselRight = () => {
@@ -90,233 +128,166 @@ export default class Home extends Component {
   render() {
     return (
       <section className="home">
-        {this.state.moduleOpen ? this.openModule() : null}
-        <div>
-          <div>
-            {/* How Can We Help You Section */}
-            <div className="mainInfo" id="mainInfo">
-              <h1>HOW CAN WE HELP YOU?</h1>
-              <div className="mainInfoContainer">
-                <div
-                  className="phaseContainer slide"
-                  file="https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
-                >
-                  <img src={PhaseOneBanner} alt="phase1 image" />
-                  <p>Product Design Services</p>
-                  <div className="phase">
-                    <h2>phase 1</h2>
-                    <p>
-                      Mock-up &amp; <br />
-                      Product Roadmap
-                    </p>
-                  </div>
-                  <h2
-                    className="slide"
-                    file="https://drive.google.com/file/d/1OTD5Q39uO-Q5GZgblyNYOxA5eaNanppP/preview"
-                  >
-                    "I have an idea for an app and would like some advice and
-                    direction on how I can get started"
-                  </h2>
-                  <a>
-                    <button>learn more</button>
-                  </a>
-                </div>
-                <div
-                  className="phaseContainer slide"
-                  file="https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
-                >
-                  <img src={PhaseTwoBanner} alt="phase2 image" />
-                  <p>Product Design &amp; Development Services</p>
-                  <div className="phase">
-                    <h2>phase 2</h2>
-                    <p>
-                      Software Design &amp; <br />
-                      Development
-                    </p>
-                  </div>
-                  <h2>
-                    "I am ready to work with developers and designers to create
-                    a market-relevant, customer-centric app"
-                  </h2>
-                  <a>
-                    <button>learn more</button>
-                  </a>
-                </div>
-                <div className="phaseContainer">
-                  <img src={PhaseThreeBanner} alt="phase3 image" />
-                  <p>Product Management Services</p>
-                  <div className="phase">
-                    <h2>phase 3</h2>
-                    <p>
-                      Artificial Intelligence
-                      <br /> &amp; Analytics
-                    </p>
-                  </div>
-                  <h2>
-                    "I want to leverage data insights through advance analytics
-                    and artificial intelligence technology"
-                  </h2>
-                  <a>
-                    <button>learn more</button>
-                  </a>
-                </div>
+        {this.state.projectModuleOpen ? this.openProjectModule() : null}
+        {this.state.openPhaseModule ? this.openPhaseModule() : null}
+        {/* How Can We Help You Section */}
+        <div className="mainInfo" id="mainInfo">
+          <h1>HOW CAN WE HELP YOU?</h1>
+          <div className="mainInfoContainer">
+            <div
+              className="phaseContainer slide"
+              onClick={() =>
+                this.togglePhaseModule(
+                  "https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
+                )
+              }
+            >
+              <img src={PhaseOneBanner} alt="phase one" />
+              <p className="describle">Product Design Services</p>
+              <div className="phase">
+                <h2>phase 1</h2>
+                <p>
+                  Mock-up &amp; <br />
+                  Product Roadmap
+                </p>
               </div>
+              <h2 className="example">
+                "I have an idea for an app and would like some advice and
+                direction on how I can get started"
+              </h2>
+
+              <button>learn more</button>
             </div>
-            {/* Projects */}
-            <div className="partners">
-              <div className="partnersInfoContainer">
-                <div className="partnersText">
-                  <h1>
-                    <a
-                      href="https://www.linkedin.com/feed/hashtag/businessprojects"
-                      target="_blank"
-                    >
-                      Business Projects
-                    </a>
-                  </h1>
-                  <p>
-                    {" "}
-                    LIFE3 employs design thinking frameworks to strategize
-                    around unique user needs, conduct market validation, get
-                    from idea conception to visual prototype, and drive
-                    customer-centric development
-                  </p>
-                </div>
-                <div className="partnerLogosContainer">
-                  {Object.keys(ProjectData.clients).map((key, index) => {
-                    if (
-                      index >= this.state.offsetClientImages &&
-                      index < this.state.limitClientImages
-                    ) {
-                      return (
-                        <img
-                          className="partnerLogo"
-                          src={require("../Assets/Images/Icons/" +
-                            ProjectData.clients[key].icon)}
-                          key={key}
-                          onClick={() => this.toggleModule(key)}
-                        ></img>
-                      );
-                    }
-                  })}
-                  <div className="carouselControls">
-                    <FontAwesomeIcon
-                      className="leftArrow"
-                      icon={faChevronLeft}
-                      onClick={() => this.carouselLeft()}
-                    ></FontAwesomeIcon>
-                    <FontAwesomeIcon
-                      className="rightArrow"
-                      icon={faChevronRight}
-                      onClick={() => this.carouselRight()}
-                    ></FontAwesomeIcon>
-                    <div className="carouselNavDots">
-                      {Object.keys(ProjectData.clients).map((key, index) => {
-                        if (index % 3 == 0) {
-                          return (
-                            <FontAwesomeIcon key={index} className="paginationCircle"
-                              icon={faCircle}
-                              onClick={() =>
-                                this.carouselPaginationClick(index, index + 3)
-                              }
-                            ></FontAwesomeIcon>
-                          );
-                        }
-                      })}
-                    </div>
-                  </div>
-                </div>
+            <div
+              className="phaseContainer slide"
+              onClick={() =>
+                this.togglePhaseModule(
+                  "https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
+                )
+              }
+            >
+              <img src={PhaseTwoBanner} alt="phase two" />
+              <p className="describle">
+                Product Design &amp; Development Services
+              </p>
+              <div className="phase">
+                <h2>phase 2</h2>
+                <p>
+                  Software Design &amp; <br />
+                  Development
+                </p>
               </div>
+              <h2 className="example">
+                "I am ready to work with developers and designers to create a
+                market-relevant, customer-centric app"
+              </h2>
+
+              <button>learn more</button>
             </div>
-            {/* About Us */}
-            <div className="about">
-              <h1> ABOUT US </h1>
-              <div className="aboutUs">
-                <div className="aboutContent">
-                  <p>
-                    <strong>WE ENABLE</strong> equity of underrepresented groups
-                    in technology-focused careers and entrepreneurial ventures.
-                  </p>
-                  <button>
-                    learn more <strong>→</strong>
-                  </button>
-                </div>
-                <div className="aboutImage">
-                  <img src={AboutUsImage} alt="about us image" />
+            <div className="phaseContainer slide">
+              <img src={PhaseThreeBanner} alt="phase three" />
+              <p className="describle">Product Management Services</p>
+              <div className="phase">
+                <h2>phase 3</h2>
+                <p>
+                  Artificial Intelligence
+                  <br /> &amp; Analytics
+                </p>
+              </div>
+              <h2 className="example">
+                "I want to leverage data insights through advance analytics and
+                artificial intelligence technology"
+              </h2>
+
+              <button>learn more</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects */}
+        <div className="partners">
+          <div className="partnersInfoContainer">
+            <div className="partnersText">
+              <a
+                href="https://www.linkedin.com/feed/hashtag/businessprojects"
+                target="_blank"
+              >
+                <h1>
+                  Business Projects <span className='shadowedText'>Projects</span>
+                </h1>
+              </a>
+              <p>
+                {" "}
+                LIFE3 employs design thinking frameworks to strategize around
+                unique user needs, conduct market validation, get from idea
+                conception to visual prototype, and drive customer-centric
+                development
+              </p>
+              <div className="partnerLogosContainer">
+                {Object.keys(ProjectData.clients).map((key, index) => {
+                  if (
+                    index >= this.state.offsetClientImages &&
+                    index < this.state.limitClientImages
+                  ) {
+                    return (
+                      <img
+                        className="partnerLogo"
+                        src={require("../Assets/Images/Icons/" +
+                          ProjectData.clients[key].icon)}
+                        key={key}
+                        onClick={() => this.toggleProjectModule(key)}
+                      ></img>
+                    );
+                  }
+                })}
+                <div className="carouselControls">
+                  <FontAwesomeIcon
+                    className="leftArrow"
+                    icon={faChevronLeft}
+                    onClick={() => this.carouselLeft()}
+                  ></FontAwesomeIcon>
+                  <FontAwesomeIcon
+                    className="rightArrow"
+                    icon={faChevronRight}
+                    onClick={() => this.carouselRight()}
+                  ></FontAwesomeIcon>
+                  <div className="carouselNavDots">
+                    {Object.keys(ProjectData.clients).map((key, index) => {
+                      if (index % 3 == 0) {
+                        return (
+                          <FontAwesomeIcon
+                            key={index}
+                            className="paginationCircle"
+                            icon={faCircle}
+                            onClick={() =>
+                              this.carouselPaginationClick(index, index + 3)
+                            }
+                          ></FontAwesomeIcon>
+                        );
+                      }
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        {/* About Us */}
+        <div className="about">
+          <div>
+            <h1 className="aboutUs"> ABOUT US <span className="shadowedText">About</span> </h1>
+          </div>
+          <div className="aboutContent">
+            <h1>WE ENABLE</h1>
+            <p>
+              equity of underrepresented groups in technology-focused careers
+              and entrepreneurial ventures.
+            </p>
 
-          <footer>
-            <div className="contactUsForm" id="contactUs">
-              <form action="https://formspree.io/xzbeebbo" method="POST">
-                <h2>CONTACT US</h2>
-                <h1>SEND US A MESSAGE</h1>
-                <br />
-                <div className="formInput">
-                  <input
-                    type="text"
-                    name="companyName"
-                    placeholder="Your Company Name"
-                  />
-                  <input type="email" name="emailAddress" placeholder="Email" />
-                </div>
-                <div className="formInput">
-                  <input type="text" name="name" placeholder="Your Name" />
-                  <input type="tel" name="phoneNumber" placeholder="Phone#" />
-                </div>
-                <div className="messageInput">
-                  <textarea
-                    type="text"
-                    name="message"
-                    placeholder="Message"
-                    defaultValue={""}
-                  />
-                </div>
-                <input
-                  className="submitBtn"
-                  type="submit"
-                  defaultValue="SEND MESSAGE"
-                />
-              </form>
-            </div>
-            {/* <img class="footerLogo" src="Assets/Images/Icons/LIFE3FooterLogo.png" alt="LIFE3 Logo" title="LIFE3"> */}
-            {/* <div class="contactUsContainer">
-      <h3>CONTACT US</h3>
-      <p>215 Moore St, <br> Brooklyn, NY 11206 <br> USA</p>
-  </div> */}
-            <div className="socialMediaContainer">
-              <p>EMAIL US | CALL US (917) 570-2669</p>
-              <div className="iconBar">
-                <a
-                  href="https://www.linkedin.com/company/life3-learn-innovate-for-innovation-enablement-empowerment/?viewAsMember=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="socialMediaIcon">
-                    <i className="fab fa-linkedin-in" />
-                  </div>
-                </a>
-                <a
-                  href="https://www.facebook.com/life3innovate/?modal=admin_todo_tour"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="socialMediaIcon">
-                    <i className="fab fa-facebook-f" />
-                  </div>
-                </a>
-                <a href="mailto:omar.duran@life3.io">
-                  <div className="socialMediaIcon">
-                    <i className="far fa-envelope" />
-                  </div>
-                </a>
-              </div>
-              <p className="copyright">2020 LIFE3 All rights reserved.</p>
-              <p></p>
-            </div>
-          </footer>
+            <p className="click">
+              <u>learn more </u>
+            </p>
+          </div>
         </div>
       </section>
     );

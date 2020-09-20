@@ -12,7 +12,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  margin: 10vh 2vw 0;
+  margin: 5vh 2vw 0;
 }
 
 .mainInfo h1 {
@@ -22,7 +22,7 @@
 }
 
 .mainInfo h2 {
-  text-align: left;
+  /* text-align: left; */
   margin: 20px;
   font-weight: bold;
   font-style: italic;
@@ -30,13 +30,13 @@
   font-weight: 700;
 }
 
-.mainInfo .phase {
-  text-transform: uppercase;
+.mainInfo p {
+  font-size: .9rem;
 }
 
-.mainInfo p {
-  font-size: 0.9rem;
-  margin-right: 15px;
+.mainInfo .describle {
+  color: mediumaquamarine;
+  display: block;
 }
 
 .mainInfo button {
@@ -56,9 +56,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -70,14 +70,20 @@
   background-color: black;
 }
 
-.mainInfo .phaseContainer:hover {
-  opacity: 0.5;
-  cursor: pointer;
+.mainInfo .phase {
+  text-transform: uppercase;
 }
 
 .mainInfo img {
   width: 100%;
   height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainInfo .phaseContainer:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 .mainInfo .mainInfoContainer {
@@ -96,13 +102,8 @@
 .phase h2 {
   /* color: white; */
   text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3rem;
   font-style: normal;
-  font-weight: bold;
   font-size: 1.4rem;
-  font-size: 1.3rem;
   font-weight: 900;
 }
 
@@ -111,6 +112,7 @@
   text-align: center;
   font-size: 1.3rem;
   font-weight: 700;
+  display: block;
 }
 
 /* End How Can We Help You Section Stylings */
@@ -149,6 +151,16 @@
   font-size: 3rem;
   margin-top: 1em;
   font-weight: 900;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .partners p {
@@ -181,19 +193,21 @@
   position: relative;
 }
 
-.partners .partnersInfoContainer .partnerLogo {
+.partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
   display: inline-block;
   width: auto;
   height: 60%;
   margin: 2vh 1vw;
+  position: relative;
+  z-index: 3;
 }
 
-.partners .partnersInfoContainer .partnerLogo:hover {
+.partners .partnersInfoContainer .partnerLogosContainer .partnerLogo:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
-.partners .partnersInfoContainer .partnerLogo img {
+.partners .partnersInfoContainer .partnerLogosContainer img {
   height: 100%;
   width: auto;
 }
@@ -201,17 +215,162 @@
 /* End Projects Section Stylings */
 /* About Section Stylings */
 .about {
-  margin-bottom: 10vh;
+  background-image: url("../Assets/Images/Banner/We enable background image.png");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  color: white;
+}
+
+.about .aboutContent {
+  width: 60%;
+  margin: auto;
+}
+
+.about .aboutUs {
+  font-style: italic;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 10px;
+  font-size: 4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about h1 {
-  text-align: center;
-  margin-bottom: 2vh;
   font-weight: 900;
-  font-style: italic;
+  color: mediumaquamarine;
+  padding-top: 10%;
+  /* padding-top: 80px; */
 }
 
-.aboutUs {
+.about p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.aboutContent .click {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 700;
+}
+
+/* End About Section Stylings */
+.enableBannerContent {
+  position: absolute;
+  top: 10%;
+  margin-left: 5%;
+  color: white;
+  z-index: 1;
+  width: 90%;
+}
+
+.enableBannerContent h1 {
+  font-size: 3.2rem;
+  color: mediumaquamarine;
+  line-height: 2;
+}
+
+.enableBannerContent p {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.diverseContentInfo {
+  text-align: center;
+}
+
+.diverseContentInfo h1 {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  font-style: italic;
+  font-size: 3rem;
+  margin-top: 1em;
+}
+
+.diverseContentInfo h2 {
+  font-size: 1.4rem;
+}
+
+.diverseContentInfo p {
+  font-size: 1.6rem;
+  font-weight: 545;
+  line-height: 2;
+}
+
+.diverseContentInfo .aboutDiverseContent {
+  text-align: center;
+  line-height: 2;
+}
+
+.diverseImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonialsName {
+  text-align: center;
+}
+
+.testimonialsContentInfo {
+  text-align: left;
+  margin-left: 230px;
+}
+
+.testimonialsContentInfo p {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.testimonialsImage h2 {
+  font-size: 1.4rem;
+}
+
+.testimonialsImage h1 {
+  font-size: 2.2rem;
+}
+
+.diverseContentInfo {
+  text-align: center;
+}
+
+.diverseContentInfo h1 {
+  font-style: italic;
+  margin: 1em auto;
+}
+
+.diverseContentInfo p {
+  line-height: 2;
+  width: 80%;
+  margin: auto;
+}
+
+.diverseImageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,6 +378,114 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 5vh 10vw;
+}
+
+.diverseImageOne img {
+  width: 70%;
+  height: auto;
+}
+
+.diverseImageTwo img {
+  width: 50%;
+  height: auto;
+}
+
+.eBanner {
+  background-image: url("../Assets/Images/Banner/e's background image.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.empowerBannerContent {
+  position: absolute;
+  top: 10%;
+  margin-left: 5%;
+  color: white;
+  z-index: 1;
+  width: 90%;
+}
+
+.empowerBannerContent h1 {
+  font-size: 3.2rem;
+}
+
+.empowerBannerContent p {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.testimonials h1 {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5vh;
+}
+
+.testimonialsHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15%;
+  margin-top: 5vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.testimonialsHead img {
+  height: 160px;
+  width: 160px;
+  /* float: left; */
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 3px solid mediumaquamarine;
+}
+
+.testimonialsName {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-top: 1em;
+}
+
+.testimonials h3 {
+  font-size: 1.4rem;
+}
+
+.testimonialsContentInfo {
+  width: 70%;
+  text-align: left;
+  margin: 5vh auto 12vh;
+}
+
+.testimonialsContentInfo p {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.empowerBannerContent h1 {
+  line-height: 2;
+  color: mediumaquamarine;
+}
+
+.empower .partners button {
+  background-color: black;
+  color: white;
+  margin: 20px 0 0 0;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -227,35 +494,30 @@
           justify-content: center;
 }
 
-.aboutUs p {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.aboutUs .aboutContent {
-  line-height: 2;
-  width: 50vw;
-}
-
-.aboutUs button {
-  background-color: white;
-  float: right;
-  font-weight: 700;
-}
-
-.aboutUs .aboutImage img {
+.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo img {
+  height: 10%;
   width: auto;
-  border-radius: 50%;
-  margin: 0 auto 0;
+  max-height: 150px;
 }
 
-.aboutUs .aboutImage button {
-  background-color: white;
-  float: right;
+.empower .partners .partnersInfoContainer .partnerLogosContainer {
+  height: auto;
+  width: 100%;
 }
 
-/* End About Section Stylings */
-/* ------- Global Stylings  ----------*/
+.empower .partners .partnersInfoContainer .partnersText {
+  width: 100%;
+}
+
+.empower .partnersInfoContainer {
+  width: 100%;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer {
+  margin: 0;
+}
+
+/* Global Stylings */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -289,17 +551,25 @@ a {
   color: white;
 }
 
+.shadowedText {
+  position: absolute;
+  font-size: 6.5rem;
+  color: darkgray;
+  opacity: 0.2;
+}
+
 button {
   text-transform: uppercase;
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
-  font-weight: 900;
+  font-weight: bold;
   float: left;
   margin: 20px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 button:hover {
@@ -312,12 +582,12 @@ table {
   border-spacing: 2px;
 }
 
-/* ------- End Global Stylings  ----------*/
+/* End Global Stylings */
 /*------- Header Stylings--------- */
 header {
   height: 50vh;
   /* width: 100vw; */
-  padding-top: 10vh;
+  margin-top: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,6 +599,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 header .navBar {
@@ -338,13 +609,13 @@ header .navBar {
   top: 0;
   width: 100vw;
   min-width: 300px;
-  padding: 0 20vw;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -352,10 +623,18 @@ header .navBar {
   font-size: 1.5rem;
   -webkit-box-shadow: 0px 0px 5px 5px black;
           box-shadow: 0px 0px 5px 5px black;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-left: auto;
+}
+
+header .navBar .linksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .navBar .navLink {
@@ -380,30 +659,19 @@ header .navBar .navLinkText:hover {
 }
 
 header .navBar .navLogo {
-  position: absolute;
+  height: 95%;
+  width: auto;
   left: 1%;
   background-color: black;
-  margin-top: 5vh;
-  width: 15vh;
-  height: 15vh;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-shadow: 0px 0px 5px 5px black;
           box-shadow: 0px 0px 5px 5px black;
 }
 
 header .navBar .navLogo img {
-  width: 80%;
+  width: auto;
+  height: 100%;
   margin-right: -5%;
-  height: auto;
 }
 
 header .navBar .navLogo img:hover {
@@ -411,20 +679,21 @@ header .navBar .navLogo img:hover {
 }
 
 header .contactUsButton {
-  right: 4%;
-  position: absolute;
   z-index: 3;
-  top: 20%;
-  width: 12vw;
+  margin-left: 60px;
+  width: 200px;
   height: auto;
   border-radius: 20px;
-  border: 2px solid white;
-  background-color: black;
-  color: white;
+  font-size: 1.2rem;
+  background-color: mediumaquamarine;
+  color: black;
   font-weight: 600;
   padding: 10px;
   text-transform: uppercase;
-  margin: 5px;
+}
+
+header .contactUsButton p {
+  white-space: nowrap;
 }
 
 header .contactUsButton:hover {
@@ -432,21 +701,96 @@ header .contactUsButton:hover {
   cursor: pointer;
 }
 
-header .contactUsButton .mobileContact {
-  display: none;
+.mobileNavIcon {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 50vh;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 50vh;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    height: 50vh;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: 50vh;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.mobileNavList {
+  background-color: black;
+  height: auto;
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  left: 0;
+  top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-animation-name: slideDown;
+          animation-name: slideDown;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.mobileNavList .navLink {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-left: 0 !important;
 }
 
 video {
   position: absolute;
   z-index: -9999;
-  height: 40%;
+  height: 100%;
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
 }
 
 .bannerContainer {
   width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .banner {
@@ -464,6 +808,7 @@ video {
 
 .banner h1 {
   font-weight: 900;
+  color: mediumaquamarine;
 }
 
 .banner h2 {
@@ -471,32 +816,7 @@ video {
 }
 
 /*------- End Header Stylings--------- */
-/*------ Footer Stylings ----------- */
-.contactUsForm h2 {
-  color: mediumaquamarine;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.contactUsForm h1 {
-  font-weight: 900;
-}
-
-.contactUsForm .submitBtn {
-  width: 200px;
-  height: 40px;
-  background-color: mediumaquamarine;
-  border: 0;
-  border-radius: 15px;
-  font-size: 1.3rem;
-  font-weight: 900;
-}
-
-.contactUsForm .submitBtn:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
+/* Footer Stylings */
 footer {
   background-color: black;
   color: white;
@@ -513,7 +833,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 20vh;
-  min-height: 600px;
+  min-height: 750px;
   min-width: 300px;
   clear: both;
   position: relative;
@@ -524,34 +844,38 @@ footer .footerLogo {
   height: auto;
 }
 
+.contactUsForm h2 {
+  color: mediumaquamarine;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.contactUsForm h1 {
+  font-weight: 900;
+}
+
+.contactUsForm .submitBtn {
+  width: 250px;
+  height: 50px;
+  background-color: mediumaquamarine;
+  border: 0;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.contactUsForm .submitBtn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 footer .contactUsForm {
+  margin-top: 5vh;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-}
-
-footer .contactUsForm input {
-  padding: 5px;
-  width: 40%;
-  height: 35px;
-  margin: 10px 2%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: inline-block;
-  font-weight: 500;
-}
-
-footer .contactUsForm textarea {
-  padding: 5px;
-  width: 85%;
-  height: 70px;
-  margin: 10px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 footer .socialMediaContainer {
@@ -579,6 +903,33 @@ footer .socialMediaContainer .iconBar {
           justify-content: center;
 }
 
+footer .contactUsForm input,
+select {
+  padding: 5px;
+  width: 40%;
+  height: 35px;
+  margin: 10px 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  font-weight: 500;
+}
+
+footer .contactUsForm .input2 {
+  width: 85%;
+}
+
+footer .contactUsForm textarea {
+  padding: 5px;
+  width: 85%;
+  height: 70px;
+  margin: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer .socialMediaContainer .socialMediaIcon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,362 +953,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   opacity: 0.5;
 }
 
-/*------ End Footer Stylings ----------- */
-/* LightBox Stylings */
-.lightBox {
-  position: fixed;
-  z-index: 20;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.lightBox .teamProfileImage {
-  width: 200px;
-  height: 200px;
-}
-
-.lightBox .teamName {
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-.lightBox .teamRole {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.lightBox .lightBoxBackground {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-}
-
-.lightBox .exitIcon {
-  top: 5vh;
-  right: 5vw;
-  font-size: 3rem;
-  position: absolute;
-  color: white;
-  border: 1px rigid black;
-  text-shadow: 0px 0px 5px black;
-  z-index: 100;
-}
-
-.lightBox .exitIcon:hover {
-  color: gray;
-  cursor: pointer;
-}
-
-.lightBox .lightBoxContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  z-index: 3;
-}
-
-.lightBox .slideShow {
-  height: 80vh;
-  width: 70vw;
-  display: none;
-}
-
-.lightBox .teamMemberLightBox {
-  background-color: white;
-  width: 60vw;
-  padding: 3%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.lightBox .teamMemberLightBox .socialMediaIcon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50px;
-  height: 50px;
-  margin-right: 1vw;
-  border-radius: 100%;
-  border: 2px solid black;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.5rem;
-}
-
-.lightBox .teamMemberLightBox .socialMediaIcon:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.lightBox .teamMemberLightBox .iconBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 3vh 0;
-}
-
-.lightBox .teamMemberLightBox ul {
-  margin-left: 1.5vw;
-}
-
-.lightBox .teamMemberLightBox .profileInformation {
-  width: 60%;
-  margin-left: 5vw;
-}
-
-.lightBox .teamMemberLightBox .teamProfileImage {
-  display: block;
-  position: relative;
-}
-
-.lightBox .teamMemberLightBox .teamProfileImage img {
-  background-color: gray;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-}
-
-.lightBox .teamMemberLightBox .teamProfileImage .socialIcon {
-  position: absolute;
-  width: 100%;
-  height: 98%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 0px;
-  opacity: 0;
-  font-size: 5rem;
-  color: white;
-}
-
-.lightBox .teamMemberLightBox .teamProfileImage .socialIcon:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  cursor: pointer;
-}
-
-.lightBox .projectLightBox {
-  background-color: black;
-  color: white;
-  width: 60%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.lightBox .projectLightBox .weProvide {
-  background-color: white;
-  color: black;
-  height: 35%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.lightBox .projectLightBox .weOffer,
-.lightBox .projectLightBox .weAdvise {
-  height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.lightBox .projectLightBox img {
-  width: 5vw;
-  margin: 5px;
-}
-
-.lightBox .projectLightBox .weOfferContent,
-.lightBox .projectLightBox .weProvideContent,
-.lightBox .projectLightBox .weAdviseContent {
-  text-align: left;
-  margin: 0 2em;
-}
-
-.lightBox .projectLightBox .weProvideContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.lightBox .projectLightBox .weProvideContent figure {
-  margin: 0 15px;
-}
-
-.lightBox .projectLightBox .teamProfileImage {
-  background-color: gray;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  margin: 10px auto;
-}
-
-.lightBox .projectLightBox .teamProfileImage:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-
-.lightBox .nextProject {
-  height: 10%;
-  text-align: end;
-  padding-right: 2vw;
-  background-color: white;
-  color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.projectLightBox .phase {
-  background-color: white;
-  color: black;
-  height: 90%;
-  width: 30%;
-  margin: auto;
-}
-
-.projectLightBox .phase li {
-  font-weight: 500;
-}
-
-.projectLightBox .phase h2 {
-  background-color: mediumaquamarine;
-  color: black;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 1.3rem;
-}
-
-.teamProfileImage {
-  display: block;
-  position: relative;
-}
-
-.teamProfileImage .socialIcon:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  cursor: pointer;
-}
-
-.projectLightBox .listhead {
-  font-weight: 700;
-  font-style: normal;
-}
-
-.projectLightBox .teamProfileImage {
-  background-color: gray;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  margin: 10px auto;
-}
-
-.teamProfileImage img {
-  background-color: gray;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-}
-
-.lightBox .teamContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 2em;
-}
-
-.lightBox .teamMemberContainer {
-  display: inline-block;
-  width: auto;
-  height: 60%;
-  margin: 2vh 1vw;
-}
-
-.lightBox .teamMemberContainer img:hover {
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-/* End LightBox Stylings */
+/* End Footer Stylings */
 /*----- Carousel Stylings ------ */
 .carouselControls {
   width: 100%;
@@ -991,7 +987,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 .carouselControls .carouselNavDots .paginationCircle:hover {
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -999,23 +995,513 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   color: "mediumaquamarine";
 }
 
-.carouselControls .leftArrow, .carouselControls .rightArrow {
+.carouselControls .leftArrow,
+.carouselControls .rightArrow {
   font-size: 5rem;
   color: gray;
 }
 
-.carouselControls .leftArrow.active, .carouselControls .rightArrow.active {
+.carouselControls .leftArrow.active,
+.carouselControls .rightArrow.active {
   color: black;
 }
 
-.carouselControls .leftArrow.active:hover, .carouselControls .rightArrow.active:hover {
-  opacity: .5;
+.carouselControls .leftArrow.active:hover,
+.carouselControls .rightArrow.active:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
 /*----- End Carousel Stylings ------ */
+/* LightBox Stylings */
+.lightBox {
+  position: fixed;
+  z-index: 20;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lightBox .lightBoxBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.lightBox .teamName {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.lightBox .teamRole {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.lightBox .exitIcon {
+  top: 5vh;
+  right: 5vw;
+  font-size: 3rem;
+  position: absolute;
+  color: white;
+  border: 1px rigid black;
+  text-shadow: 0px 0px 5px black;
+  z-index: 100;
+}
+
+.lightBox .exitIcon:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.projectLightBox .partnerLogo {
+  width: 200px;
+  height: auto;
+}
+
+.lightBox .lightBoxContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  z-index: 3;
+}
+
+.lightBox .slideShow {
+  height: 80vh;
+  width: 70vw;
+}
+
+.lightBox .teamMemberLightBox {
+  background-color: white;
+  width: 60vw;
+  padding: 3%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teamProfileImage {
+  display: block;
+  /* position: relative; */
+}
+
+.lightBox .teamProfileImage {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.teamProfileImage .socialIcon {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0px;
+  opacity: 0;
+  font-size: 5rem;
+  color: white;
+}
+
+.teamProfileImage .socialIcon:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.projectLightBox .teamProfileImage {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 10px auto;
+}
+
+.teamProfileImage img {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.lightBox .teamMemberLightBox .profileInformation {
+  width: 60%;
+  margin-left: 5vw;
+}
+
+.lightBox .teamMemberLightBox ul {
+  margin-left: 1.5vw;
+}
+
+.lightBox .teamMemberLightBox .iconBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 3vh 0;
+}
+
+.lightBox .teamMemberLightBox .socialMediaIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin-right: 1vw;
+  border-radius: 100%;
+  border: 2px solid black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+.lightBox .teamMemberLightBox .socialMediaIcon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.lightBox .contactUsForm {
+  background-color: white;
+  height: 80vh;
+  width: 80vw;
+  display: none;
+}
+
+.lightBox .contactUsForm img {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.lightBox .contactUsForm form {
+  float: right;
+  padding: 1%;
+  width: 50%;
+  height: 100%;
+}
+
+.lightBox .contactUsForm form h2 {
+  margin-left: 3%;
+}
+
+.lightBox .contactUsForm form .formInput {
+  border: 1px solid gray;
+  padding: 1%;
+  border-radius: 30px;
+  width: 96%;
+  margin: 0 auto;
+  height: 10%;
+}
+
+.lightBox .contactUsForm form .halfFormInput {
+  border: 1px solid gray;
+  padding: 1%;
+  border-radius: 30px;
+  width: 45%;
+  margin: 0 2.3%;
+  display: inline-block;
+  height: 10%;
+}
+
+.lightBox .contactUsForm form .formInput input,
+.lightBox .contactUsForm form .halfFormInput input {
+  border: none;
+  width: 90%;
+  height: 35px;
+  font-size: 1.3rem;
+  margin-left: 5%;
+  color: gray;
+  height: 50%;
+}
+
+.lightBox .contactUsForm form .messageInput {
+  border: 1px solid gray;
+  padding: 1%;
+  border-radius: 30px;
+  width: 96%;
+  margin: 0 auto;
+  height: 40%;
+}
+
+.lightBox .contactUsForm form .messageInput textarea {
+  border: none;
+  margin-left: 2%;
+  font-size: 1.3rem;
+  width: 96%;
+  height: 80%;
+  color: gray;
+}
+
+.lightBox .contactUsForm form .submitBtn {
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  float: right;
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.lightBox .contactUsForm form .submitBtn:hover {
+  cursor: pointer;
+}
+
+.lightBox .projectLightBox {
+  margin-top: 10vh;
+  padding: 20px 5%;
+  background-color: white;
+  color: black;
+  width: 85%;
+  height: 100%;
+  /* project module height */
+  overflow-y: scroll;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.projectLightBox .nextProjectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: right;
+  align-items: center;
+}
+
+.projectLightBox .nextProjectContainer img {
+  max-height: 125px;
+  width: auto;
+}
+
+.projectLightBox .nextProject {
+  margin-bottom: 2em;
+}
+
+.projectLightBox .nextProject button {
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 30px;
+  font-size: 1.3rem;
+}
+
+.lightBox .teamContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em;
+}
+
+.lightBox .teamMemberContainer {
+  padding: 20px;
+}
+
+.projectLightBox .phase {
+  background-color: black;
+  color: white;
+  height: 40vh;
+  width: 35%;
+  margin: 20px auto;
+}
+
+.projectLightBox p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.projectLightBox .servicesContent {
+  padding: 10px 10%;
+}
+
+.projectLightBox .phaseContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* padding: 20px 10%; */
+}
+
+.projectLightBox .phase h2 {
+  background-color: mediumaquamarine;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.projectLightBox .phase li {
+  font-weight: 500;
+}
+
+.partnerLogosContainer figcaption {
+  display: none;
+}
+
+.projectLightBox .listhead {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lightBox .teamMemberContainer .teamProfiles2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lightBox .teamMemberContainer img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.projectLightBox h1 {
+  font-style: italic;
+  margin: 10px;
+  /* text-transform: none; */
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectLightBox .redesignContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projectLightBox .redesignContainer .redesigncell {
+  width: 50%;
+  margin: 10px;
+}
+
+.timeTravelContainer .timeTravelBtn {
+  background-color: black;
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 5%;
+  font-size: 1.2rem;
+  height: 30px;
+  width: 250px;
+}
+
+.timeTravelContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectLightBox .redesignContainer .redesigncell img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* End LightBox Stylins */
 /* Media Queries */
 @media (max-width: 1600px), (max-height: 800px) {
+  .banner {
+    width: 60%;
+  }
+  .header {
+    height: 60vh;
+  }
+  .about .aboutUs {
+    font-size: 4rem;
+  }
   h1,
   footer h1 {
     font-size: 3rem;
@@ -1030,7 +1516,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   li,
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+  }
+  .about p {
+    font-size: 2rem;
   }
   footer .footerLogo {
     width: 10%;
@@ -1068,27 +1557,31 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   footer h1 {
     font-size: 3rem;
   }
+  .about .aboutUs {
+    font-size: 3rem;
+  }
   .banner h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  video {
-    height: 45%;
+  .banner {
+    width: 60%;
   }
-  .mainInfo {
-    margin-top: 15vh;
+  .header {
+    height: 60vh;
   }
   h2,
   header .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p,
   .servicesTable th h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
+  .about p,
   p,
   li,
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .teamProfileImage {
     width: 80px;
@@ -1126,11 +1619,17 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   footer .contactUsForm {
     width: 60%;
   }
+  .testimonialsContentInfo p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 1000px) {
   header .contactUsButton {
-    width: 18vw;
+    width: 150px;
+  }
+  header .contactUsButton p {
+    font-size: 1rem;
   }
   .ourApproach .phasesTable {
     width: 100vw;
@@ -1198,6 +1697,30 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     margin-right: 40px;
     margin-left: 0;
   }
+  .mainInfo .mainInfoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about p {
+    font-size: 1.3rem;
+  }
+  .projectLightBox .redesignContainer .redesigncell {
+    width: 100%;
+  }
+  .projectLightBox .redesignContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 /* @media (max-height: 700px){
@@ -1234,8 +1757,16 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: 30px;
     font-size: 1rem;
   }
+  .timeTravelContainer .timeTravelBtn {
+    width: 150px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
   h1 {
-    font-size: 2.3rem;
+    font-size: 2rem !important;
+  }
+  .about .aboutUs {
+    font-size: 3rem;
   }
   header .navBar .navLinkText .mainInfo {
     font-size: 1.3rem;
@@ -1295,12 +1826,32 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   footer .contactUsForm {
     width: 90%;
   }
+  .projectLightBox .phase {
+    width: 80%;
+  }
+  .projectLightBox .phaseContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shadowedText {
+    font-size: 4.5rem;
+  }
+  .empower
+.partners
+.partnersInfoContainer
+.partnerLogosContainer
+.partnerLogo
+img {
+    max-height: 100px;
+  }
 }
 
 @media (max-width: 675px) {
-  video {
-    height: 60%;
-  }
   .aboutImage {
     width: 50%;
   }
@@ -1318,8 +1869,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: 30px;
     font-size: 0.8rem;
   }
+  .timeTravelContainer .timeTravelBtn {
+    width: 180px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
   .banner {
-    margin: 80px 0 0 40px;
+    margin: 40px 0 0 40px;
     width: 80%;
   }
   .banner h1 {
@@ -1329,7 +1885,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 1.3rem;
   }
   header {
-    height: 487px;
+    height: 60vh;
   }
   .aboutUs {
     display: -webkit-box;
@@ -1342,6 +1898,9 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   .aboutImage .img {
     margin-top: 20px;
+  }
+  .about .aboutUs {
+    font-size: 2rem;
   }
   .aboutUs p {
     font-size: 1.2rem;
@@ -1364,9 +1923,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     margin: 0;
     padding: 0;
   }
-  .mainInfo button {
-    margin: 0;
-  }
   .navBar .navLink {
     margin: 0;
   }
@@ -1384,11 +1940,12 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .projectInformation .testimonial p {
     font-size: 0.8rem;
   }
+  .partners p,
   p,
   li,
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .phasesTable th {
     font-size: 0.8rem;
@@ -1397,57 +1954,22 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 0.8rem;
   }
   header .navBar {
-    padding: 0;
+    padding: 0 4%;
   }
   header .navBar .navLinkText {
     margin-right: 20px;
     margin-left: 0;
     font-size: 1rem;
   }
-  .mainInfo {
-    height: 90vh;
-  }
-  /* header .homeBanner .navClickArea:nth-child(1) {
-      height: 90%;
-      width: 29%;
-      left: 2%;
-  }
-  header .homeBanner .navClickArea:nth-child(2) {
-      height: 90%;
-      width: 30%;
-      left: 35%;
-  }
-  header .homeBanner .navClickArea:nth-child(3) {
-      height: 90%;
-      width: 30%;
-      left: 68%;
-  } */
   header .contactUsButton .fa-envelope-open-text {
     display: inline-block;
     color: white;
-  }
-  header .contactUsButton {
-    position: fixed;
-    width: auto;
-    height: auto;
-    font-size: 2rem;
-    right: 0;
-    top: 10%;
-    background-color: rgba(1, 1, 1, 0.5);
-    text-shadow: 0px 0px 5px black;
-    border: none;
-    -webkit-box-shadow: 0 0 3px 3px black;
-            box-shadow: 0 0 3px 3px black;
-    border-radius: 0 0 0 10px;
   }
   header .contactUsButton p {
     display: none;
   }
   .ourApproach .serviceStepsContainer figure img {
     width: 30%;
-  }
-  .partners .partnersInfoContainer .partnerLogosContainer {
-    height: 90px;
   }
   .aboutTeam .teamProfiles figure {
     margin: 1%;
@@ -1490,12 +2012,31 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .servicesTable .adviseList li {
     font-size: 0.6rem;
   }
+  .projectLightBox .partnerLogo {
+    width: 100px;
+    height: auto;
+  }
+  .projectLightBox .nextProject button {
+    width: 200px;
+    height: 30px;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .shadowedText {
+    display: none;
+  }
+  .testimonialsContentInfo p {
+    font-size: 0.8rem;
+  }
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+  .testimonials h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-height: 650px) {
-  video {
-    height: 50%;
-  }
   .aboutImage {
     width: 50%;
   }
@@ -1516,9 +2057,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: 30px;
     font-size: 0.8rem;
   }
-  .banner {
-    margin: 80px 0 0 40px;
-  }
   .banner h1 {
     font-size: 2rem;
   }
@@ -1528,24 +2066,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .mainInfo h2 {
     font-size: 1rem;
   }
+  .about .aboutUs {
+    font-size: 2rem;
+  }
   .aboutUs p {
     font-size: 1.2rem;
     line-height: normal;
   }
-  /* header{
-      height: 487px;
-  } */
-  /* .aboutUs {
-      display: flex;
-      flex-direction: column;
-  }
-  .aboutImage .img{
-      margin-top: 20px;
-  }
-  .mainInfo .mainInfoContainer{
-      display: flex;
-      flex-direction: column;
-  } */
   .mainInfo p,
   h2 {
     margin: 0;
@@ -1583,14 +2110,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 @media (max-width: 450px), (max-height: 550px) {
-  video {
-    height: 50%;
-  }
   .aboutImage {
     width: 50%;
-  }
-  .partners {
-    margin-top: 10vh;
   }
   .partnersInfoContainer h1,
   .aboutUs h1,
@@ -1601,7 +2122,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     width: 90%;
   }
   button,
-  .contactUsForm .submitBtn {
+  .contactUsForm .submitBtn,
+  .projectLightBox .nextProject button {
     width: 150px;
     height: 30px;
     font-size: 0.9rem;
@@ -1613,19 +2135,11 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 2rem;
   }
   .banner h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
-  /* .aboutUs {
-      display: flex;
-      flex-direction: column;
-  } */
   .aboutImage .img {
     margin-top: 20px;
   }
-  /* .mainInfo .mainInfoContainer{
-      display: flex;
-      flex-direction: column;
-  } */
   .mainInfo button {
     margin-bottom: 20px;
     font-size: 0.8rem;
@@ -1636,8 +2150,16 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   header .navBar .navLogo {
     margin-left: 10px;
   }
-  .about h1 {
+  .about {
+    height: 60vh;
+  }
+  .about .aboutContent {
+    width: 70%;
+  }
+  .about h1,
+  .about .aboutUs {
     font-size: 2rem;
+    padding-top: 20%;
   }
   .about p {
     font-size: 1rem;
@@ -1645,12 +2167,14 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .mainInfo h1 {
     margin: 10px 0 0 20px;
     padding: 0;
+    font-size: 2rem;
   }
   .mainInfo p,
-  h2 {
+  h2,
+  .projectLightBox .phase h2 {
     margin-left: 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .partners p {
     font-size: 0.8rem;
@@ -1664,11 +2188,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     line-height: 2;
   }
   header {
-    height: 120vh;
+    height: 70vh;
     width: 100vw;
-  }
-  .mainInfo img {
-    height: 20vh;
   }
   h1,
   footer h1 {
@@ -1680,15 +2201,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .projectInformation .testimonial p {
     font-size: 0.8rem;
   }
+  .projectLightBox p,
   p,
   li,
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 0.8rem;
-    line-height: 1rem;
-  }
-  .partners .partnersInfoContainer .partnerLogosContainer {
-    height: 80px;
+    /* line-height: 1rem; */
   }
   footer .footerLogo {
     display: none;
@@ -1711,6 +2230,35 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   footer .socialMediaContainer .socialMediaIcon {
     font-size: 1rem;
+  }
+  .mainInfo .mainInfoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shadowedText {
+    font-size: 2rem;
+  }
+  .testimonialsHead img {
+    height: 100px;
+    width: 100px;
+  }
+  .testimonials h2 {
+    font-size: 1.3rem;
+  }
+  .testimonials h3 {
+    font-size: 0.8rem;
+  }
+  .testimonialsContentInfo p {
+    font-size: 0.8rem;
+  }
+  .testimonials h1,
+  .diverseContentInfo h1 {
+    font-size: 2rem;
   }
 }
 
@@ -1771,6 +2319,123 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .lightBox .contactUsForm form .halfFormInput,
   .lightBox .contactUsForm form .messageInput {
     padding: 5%;
+  }
+  .mainInfo .mainInfoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .empower
+.partners
+.partnersInfoContainer
+.partnerLogosContainer
+.partnerLogo
+img {
+    max-height: 75px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .carouselControls .leftArrow,
+  .carouselControls .rightArrow {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .partners {
+    margin: 0;
+  }
+  .partners p {
+    margin: 2vh 15vw;
+  }
+  .partners .partnersInfoContainer .partnerLogosContainer {
+    margin: 2vh 5vw;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
+    height: 50%;
+  }
+  .empower
+.partners
+.partnersInfoContainer
+.partnerLogosContainer
+.partnerLogo {
+    height: 100%;
+  }
+  .carouselControls .carouselNavDots .paginationCircle {
+    font-size: 0.8rem;
+  }
+  .shadowedText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
+    height: 35%;
+  }
+  .empower
+.partners
+.partnersInfoContainer
+.partnerLogosContainer
+.partnerLogo {
+    height: 100%;
+  }
+  .timeTravelContainer .timeTravelBtn {
+    width: 150px;
+    height: 25px;
+    margin-bottom: 50px;
+  }
+  .testimonialsHead {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5% 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .carouselControls .leftArrow,
+  .carouselControls .rightArrow {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .empowerBannerContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .empowerBannerContent p, .enableBannerContent p {
+    font-size: 1.5rem;
+  }
+  header .contactUsButton {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .empowerBannerContent p, .enableBannerContent p {
+    font-size: 1.2rem;
+  }
+  .enableBannerContent h1, .empowerBannerContent h1 {
+    font-size: 1.5rem !important;
   }
 }
 
