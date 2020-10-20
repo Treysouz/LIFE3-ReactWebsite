@@ -40,6 +40,7 @@ export default class Home extends Component {
     this.props.getPage(window.location.pathname);
   }
   componentDidUpdate() {
+    this.state.projectModuleOpen? document.documentElement.style.overflow="hidden":  document.documentElement.style.overflow="auto";
     for (
       var count = 0;
       count <
@@ -50,9 +51,9 @@ export default class Home extends Component {
         count
       ].style.color = "black";
     }
-    document.querySelectorAll(".carouselNavDots .paginationCircle")[
-      Math.floor(this.state.offsetClientImages / 3)
-    ].style.color = "mediumaquamarine";
+      document.querySelectorAll(".carouselNavDots .paginationCircle")[
+        Math.floor(this.state.offsetClientImages / 3)
+      ].style.color = "mediumaquamarine";
     if (this.state.offsetClientImages === 0) {
       document
         .querySelector(".carouselControls .leftArrow")
@@ -84,13 +85,12 @@ export default class Home extends Component {
       viewingFile: file,
     });
   };
- 
+
   openProjectModule = () => {
     return (
       <ProjectModule
         toggleProjectModule={this.toggleProjectModule}
         viewingClient={this.state.viewingClient}
-
       ></ProjectModule>
     );
   };
@@ -142,7 +142,9 @@ export default class Home extends Component {
                 )
               }
             >
-              <img src={PhaseOneBanner} alt="phase one" />
+              <div className="phaseImage">
+                <img src={PhaseOneBanner} alt="phase one" />
+              </div>
               <p className="describle">Product Design Services</p>
               <div className="phase">
                 <h2>phase 1</h2>
@@ -166,7 +168,9 @@ export default class Home extends Component {
                 )
               }
             >
-              <img src={PhaseTwoBanner} alt="phase two" />
+              <div className="phaseImage">
+                <img src={PhaseTwoBanner} alt="phase two" />
+              </div>
               <p className="describle">
                 Product Design &amp; Development Services
               </p>
@@ -185,7 +189,9 @@ export default class Home extends Component {
               <button>learn more</button>
             </div>
             <div className="phaseContainer slide">
-              <img src={PhaseThreeBanner} alt="phase three" />
+              <div className="phaseImage">
+                <img src={PhaseThreeBanner} alt="phase three" />
+              </div>
               <p className="describle">Product Management Services</p>
               <div className="phase">
                 <h2>phase 3</h2>
@@ -213,7 +219,8 @@ export default class Home extends Component {
                 target="_blank"
               >
                 <h1>
-                  Business Projects <span className='shadowedText'>Projects</span>
+                  Business Projects{" "}
+                  <span className="shadowedText">Projects</span>
                 </h1>
               </a>
               <p>
@@ -274,20 +281,14 @@ export default class Home extends Component {
         </div>
         {/* About Us */}
         <div className="about">
-          <div>
-            <h1 className="aboutUs"> ABOUT US <span className="shadowedText">About</span> </h1>
-          </div>
-          <div className="aboutContent">
-            <h1>WE ENABLE</h1>
-            <p>
-              equity of underrepresented groups in technology-focused careers
-              and entrepreneurial ventures.
-            </p>
-
-            <p className="click">
-              <u>learn more </u>
-            </p>
-          </div>
+          <h1>Using Technology to Learn & Progress Together</h1>
+          <p>
+            LIFE3 provides cost effective options for technology startups while
+            facilitating entrepreneurial ecosystems in where multiple
+            stakeholders work collaboratively with designers, developers and
+            product managers to ideate, build, and release innovations into
+            market. We use technology to learn and progress together.
+          </p>
         </div>
       </section>
     );

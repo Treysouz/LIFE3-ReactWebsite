@@ -5,7 +5,7 @@
 }
 .empowerBannerContent {
   position: absolute;
-  top: 10%;
+  top: 26%;
   margin-left: 5%;
   color: white;
   z-index: 1;
@@ -19,10 +19,32 @@
     line-height: 1.2;
   }
 }
+.empower h1{
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.shadowedText{
+  z-index: -1;
+}
+.testimonials{
+  height: 90vh;
+  position: relative;
+  .carouselControls{
+    top:0;
+    padding: 0 2%;
+    .carouselNavDots {
 
+      margin-bottom: 2%;
+    }
+  }
+}
 .testimonials h1 {
   text-align: center;
-  font-style: italic;
   margin-top: 5vh;
 }
 .testimonialsHead {
@@ -48,6 +70,7 @@
 .testimonials h2 {
   font-size: 2.2rem;
   margin-top: 1em;
+  text-align: left;
 }
 .testimonials h3 {
   font-size: 1.4rem;
@@ -101,3 +124,125 @@
 .empower .partners .partnersInfoContainer .partnerLogosContainer {
   margin: 0;
 }
+.enableBannerContent {
+  position: absolute;
+  top: 10%;
+  margin-left: 5%;
+  color: white;
+  z-index: 1;
+  width: 90%;
+  h1 {
+    font-size: 3.2rem;
+    color: mediumaquamarine;
+    line-height: 2;
+  }
+  p {
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+
+.diverseContentInfo {
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    font-style: italic;
+    font-size: 3rem;
+    margin-top: 1em;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 545;
+    line-height: 2;
+  }
+  .aboutDiverseContent {
+    text-align: center;
+    line-height: 2;
+  }
+}
+.diverseImage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.testimonialsName {
+  text-align: center;
+}
+
+.testimonialsContentInfo {
+  text-align: left;
+  margin-left: 230px;
+  p {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 500;
+  }
+}
+
+.testimonialsImage {
+  h2 {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+.diverseContentInfo {
+  text-align: center;
+}
+
+.diverseContentInfo h1 {
+  font-style: italic;
+  margin: 1em auto;
+}
+
+.diverseContentInfo p {
+  line-height: 2;
+  width: 80%;
+  margin: auto;
+}
+
+.diverseImageContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 5vh 10vw;
+}
+.diverseImageOne img {
+  width: 50%;
+  height: auto;
+}
+.diverseImageTwo img {
+  width: 40%;
+  height: auto;
+}
+.businessProjectsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3% 0;
+  figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    button{
+      background-color: black;
+      color: white;
+    }
+    img{
+      height: 100px;
+      width: auto;
+    }
+  }
+}
+
+
+

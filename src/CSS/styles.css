@@ -1,4 +1,5 @@
 /* How Can We Help You Section Stylings */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .mainInfo {
   /* width: 100%; */
   position: relative;
@@ -11,23 +12,29 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  margin: 5vh 2vw 0;
+  padding: 5vh 2vw 0;
 }
 
 .mainInfo h1 {
   text-align: center;
   font-weight: 900;
-  font-style: italic;
 }
 
 .mainInfo h2 {
   /* text-align: left; */
-  margin: 20px;
   font-weight: bold;
-  font-style: italic;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.mainInfo .example {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 1vw;
 }
 
 .mainInfo p {
@@ -46,9 +53,7 @@
 }
 
 .mainInfo .phaseContainer {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,6 +75,29 @@
   background-color: black;
 }
 
+.mainInfo .phaseContainer .phaseImage {
+  overflow: hidden;
+}
+
+.mainInfo .phaseContainer:hover {
+  cursor: pointer;
+}
+
+.mainInfo .phaseContainer:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.mainInfo .phaseContainer:hover button {
+  opacity: .5;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
 .mainInfo .phase {
   text-transform: uppercase;
 }
@@ -79,11 +107,6 @@
   height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.mainInfo .phaseContainer:hover {
-  opacity: .5;
-  cursor: pointer;
 }
 
 .mainInfo .mainInfoContainer {
@@ -108,7 +131,6 @@
 }
 
 .phase p {
-  font-style: italic;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 700;
@@ -147,7 +169,6 @@
   text-transform: uppercase;
   color: black;
   text-align: center;
-  font-style: italic;
   font-size: 3rem;
   margin-top: 1em;
   font-weight: 900;
@@ -217,16 +238,23 @@
 .about {
   background-image: url("../Assets/Images/Banner/We enable background image.png");
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-size: cover;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: left;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20vh 2vw;
 }
 
 .about .aboutContent {
@@ -235,7 +263,6 @@
 }
 
 .about .aboutUs {
-  font-style: italic;
   color: white;
   text-align: center;
   padding-top: 80px;
@@ -255,14 +282,13 @@
 
 .about h1 {
   font-weight: 900;
-  color: mediumaquamarine;
-  padding-top: 10%;
+  color: white;
   /* padding-top: 80px; */
 }
 
 .about p {
   font-size: 2rem;
-  font-weight: 500;
+  padding: 0 10vw;
 }
 
 .aboutContent .click {
@@ -272,6 +298,165 @@
 }
 
 /* End About Section Stylings */
+.eBanner {
+  background-image: url("../Assets/Images/Banner/e's background image.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.empowerBannerContent {
+  position: absolute;
+  top: 26%;
+  margin-left: 5%;
+  color: white;
+  z-index: 1;
+  width: 90%;
+}
+
+.empowerBannerContent h1 {
+  font-size: 3.2rem;
+}
+
+.empowerBannerContent p {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.empower h1 {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shadowedText {
+  z-index: -1;
+}
+
+.testimonials {
+  height: 90vh;
+  position: relative;
+}
+
+.testimonials .carouselControls {
+  top: 0;
+  padding: 0 2%;
+}
+
+.testimonials .carouselControls .carouselNavDots {
+  margin-bottom: 2%;
+}
+
+.testimonials h1 {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.testimonialsHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15%;
+  margin-top: 5vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.testimonialsHead img {
+  height: 160px;
+  width: 160px;
+  /* float: left; */
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 3px solid mediumaquamarine;
+}
+
+.testimonialsName {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.testimonials h3 {
+  font-size: 1.4rem;
+}
+
+.testimonialsContentInfo {
+  width: 70%;
+  text-align: left;
+  margin: 5vh auto 12vh;
+}
+
+.testimonialsContentInfo p {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.empowerBannerContent h1 {
+  line-height: 2;
+  color: mediumaquamarine;
+}
+
+.empower .partners button {
+  background-color: black;
+  color: white;
+  margin: 20px 0 0 0;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo img {
+  height: 10%;
+  width: auto;
+  max-height: 150px;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer {
+  height: auto;
+  width: 100%;
+}
+
+.empower .partners .partnersInfoContainer .partnersText {
+  width: 100%;
+}
+
+.empower .partnersInfoContainer {
+  width: 100%;
+}
+
+.empower .partners .partnersInfoContainer .partnerLogosContainer {
+  margin: 0;
+}
+
 .enableBannerContent {
   position: absolute;
   top: 10%;
@@ -382,103 +567,29 @@
 }
 
 .diverseImageOne img {
-  width: 70%;
-  height: auto;
-}
-
-.diverseImageTwo img {
   width: 50%;
   height: auto;
 }
 
-.eBanner {
-  background-image: url("../Assets/Images/Banner/e's background image.png");
-  background-position: center;
-  background-size: cover;
+.diverseImageTwo img {
+  width: 40%;
+  height: auto;
 }
 
-.empowerBannerContent {
-  position: absolute;
-  top: 10%;
-  margin-left: 5%;
-  color: white;
-  z-index: 1;
-  width: 90%;
-}
-
-.empowerBannerContent h1 {
-  font-size: 3.2rem;
-}
-
-.empowerBannerContent p {
-  font-size: 1.9rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.testimonials h1 {
-  text-align: center;
-  font-style: italic;
-  margin-top: 5vh;
-}
-
-.testimonialsHead {
+.businessProjectsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 15%;
-  margin-top: 5vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3% 0;
 }
 
-.testimonialsHead img {
-  height: 160px;
-  width: 160px;
-  /* float: left; */
-  margin-right: 10px;
-  border-radius: 50%;
-  border: 3px solid mediumaquamarine;
-}
-
-.testimonialsName {
-  margin-left: 20px;
-  text-align: left;
-}
-
-.testimonials h2 {
-  font-size: 2.2rem;
-  margin-top: 1em;
-}
-
-.testimonials h3 {
-  font-size: 1.4rem;
-}
-
-.testimonialsContentInfo {
-  width: 70%;
-  text-align: left;
-  margin: 5vh auto 12vh;
-}
-
-.testimonialsContentInfo p {
-  font-size: 1.6rem;
-  line-height: 2;
-  font-weight: 500;
-}
-
-.empowerBannerContent h1 {
-  line-height: 2;
-  color: mediumaquamarine;
-}
-
-.empower .partners button {
-  background-color: black;
-  color: white;
-  margin: 20px 0 0 0;
-}
-
-.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
+.businessProjectsContainer figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,29 +603,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 5%;
 }
 
-.empower .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo img {
-  height: 10%;
+.businessProjectsContainer figure button {
+  background-color: black;
+  color: white;
+}
+
+.businessProjectsContainer figure img {
+  height: 100px;
   width: auto;
-  max-height: 150px;
-}
-
-.empower .partners .partnersInfoContainer .partnerLogosContainer {
-  height: auto;
-  width: 100%;
-}
-
-.empower .partners .partnersInfoContainer .partnersText {
-  width: 100%;
-}
-
-.empower .partnersInfoContainer {
-  width: 100%;
-}
-
-.empower .partners .partnersInfoContainer .partnerLogosContainer {
-  margin: 0;
 }
 
 /* Global Stylings */
@@ -523,13 +622,12 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: magneta, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "Poppins", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
-  overflow-y: scroll !important;
 }
 
 h1 {
@@ -538,7 +636,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 p,
@@ -559,13 +657,12 @@ a {
 }
 
 button {
-  text-transform: uppercase;
-  width: 250px;
+  width: 200px;
   height: 50px;
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
-  font-weight: bold;
+  letter-spacing: 1px;
   float: left;
   margin: 20px;
   font-size: 1.5rem;
@@ -585,9 +682,8 @@ table {
 /* End Global Stylings */
 /*------- Header Stylings--------- */
 header {
-  height: 50vh;
+  height: 60vh;
   /* width: 100vw; */
-  margin-top: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,6 +698,16 @@ header {
   position: relative;
 }
 
+header .hoveredBar {
+  -webkit-box-shadow: 0px 0px 5px 5px black;
+          box-shadow: 0px 0px 5px 5px black;
+  background-color: black !important;
+  -webkit-transition: background-color 1s, -webkit-box-shadow 1s;
+  transition: background-color 1s, -webkit-box-shadow 1s;
+  transition: box-shadow 1s, background-color 1s;
+  transition: box-shadow 1s, background-color 1s, -webkit-box-shadow 1s;
+}
+
 header .navBar {
   z-index: 10;
   position: fixed;
@@ -609,7 +715,8 @@ header .navBar {
   top: 0;
   width: 100vw;
   min-width: 300px;
-  background-color: black;
+  padding: 0 5vw;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,8 +728,6 @@ header .navBar {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
-  -webkit-box-shadow: 0px 0px 5px 5px black;
-          box-shadow: 0px 0px 5px 5px black;
   margin-left: auto;
 }
 
@@ -654,7 +759,8 @@ header .navBar .navLinkText {
 }
 
 header .navBar .navLinkText:hover {
-  opacity: 0.5;
+  opacity: 0.8;
+  color: mediumaquamarine;
   cursor: pointer;
 }
 
@@ -662,10 +768,7 @@ header .navBar .navLogo {
   height: 95%;
   width: auto;
   left: 1%;
-  background-color: black;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 5px 5px black;
-          box-shadow: 0px 0px 5px 5px black;
 }
 
 header .navBar .navLogo img {
@@ -764,8 +867,8 @@ header .contactUsButton:hover {
   overflow: hidden;
   -webkit-animation-name: slideDown;
           animation-name: slideDown;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .mobileNavList .navLink {
@@ -789,6 +892,7 @@ video {
 .bannerContainer {
   width: 100%;
   height: 100%;
+  text-shadow: 0px 0px 2px white;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
@@ -796,7 +900,7 @@ video {
 .banner {
   width: 50%;
   position: absolute;
-  top: 16%;
+  top: 26%;
   right: 12%;
   color: white;
   z-index: 1;
@@ -832,7 +936,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 20vh;
+  height: 90vh;
   min-height: 750px;
   min-width: 300px;
   clear: both;
@@ -1014,6 +1118,21 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 /*----- End Carousel Stylings ------ */
 /* LightBox Stylings */
+.moduleExit {
+  color: mediumaquamarine;
+  opacity: .5;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  font-size: 2rem;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.moduleExit:hover {
+  opacity: 1;
+}
+
 .lightBox {
   position: fixed;
   z-index: 20;
@@ -1620,7 +1739,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     width: 60%;
   }
   .testimonialsContentInfo p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1705,6 +1824,12 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainInfo .phaseContainer {
+    width: 50%;
   }
   .about p {
     font-size: 1.3rem;
@@ -1740,7 +1865,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
       font-size: .8rem;
   }
 } */
-@media (max-width: 850px), (max-height: 650px) {
+@media (max-width: 850px), (max-height: 600px) {
   .banner {
     width: 60%;
   }
@@ -1748,7 +1873,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 1.5rem;
   }
   .aboutUs p,
-  .mainInfo h2 {
+  .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p {
     font-size: 1.2rem;
     line-height: 1.5;
   }
@@ -1763,7 +1888,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 0.8rem;
   }
   h1 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
   .about .aboutUs {
     font-size: 3rem;
@@ -1852,6 +1977,12 @@ img {
 }
 
 @media (max-width: 675px) {
+  .about {
+    padding: 10vh 2vw;
+  }
+  .mainInfo .phaseContainer {
+    width: 80%;
+  }
   .aboutImage {
     width: 50%;
   }
@@ -1944,7 +2075,7 @@ img {
   p,
   li,
   footer p,
-  .aboutTeam .teamProfiles figure figcaption p {
+  .aboutTeam .teamProfiles figure figcaption p, .about p {
     font-size: 1rem;
   }
   .phasesTable th {
@@ -2024,9 +2155,6 @@ img {
   }
   .shadowedText {
     display: none;
-  }
-  .testimonialsContentInfo p {
-    font-size: 0.8rem;
   }
   .testimonials h2 {
     font-size: 1.5rem;
@@ -2128,9 +2256,6 @@ img {
     height: 30px;
     font-size: 0.9rem;
   }
-  .banner {
-    margin: 80px 0 0 40px;
-  }
   .banner h1 {
     font-size: 2rem;
   }
@@ -2158,8 +2283,7 @@ img {
   }
   .about h1,
   .about .aboutUs {
-    font-size: 2rem;
-    padding-top: 20%;
+    font-size: 1rem;
   }
   .about p {
     font-size: 1rem;
@@ -2176,7 +2300,7 @@ img {
     padding: 0;
     font-size: 1rem;
   }
-  .partners p {
+  .partners p, .about p {
     font-size: 0.8rem;
   }
   .aboutUs .aboutImage img {
@@ -2421,7 +2545,8 @@ img {
 }
 
 @media (max-width: 1000px) {
-  .empowerBannerContent p, .enableBannerContent p {
+  .empowerBannerContent p,
+  .enableBannerContent p {
     font-size: 1.5rem;
   }
   header .contactUsButton {
@@ -2431,11 +2556,95 @@ img {
 }
 
 @media (max-width: 600px) {
-  .empowerBannerContent p, .enableBannerContent p {
+  .empowerBannerContent p,
+  .enableBannerContent p {
     font-size: 1.2rem;
   }
-  .enableBannerContent h1, .empowerBannerContent h1 {
+  .enableBannerContent h1,
+  .empowerBannerContent h1 {
     font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .testimonialsHead {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonialsContentInfo {
+    text-align: center;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0 15%;
+  }
+  .testimonialsHead img {
+    width: 125px;
+    height: 125px;
+  }
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+  .testimonials h3 {
+    font-size: 1.2rem;
+  }
+  .businessProjectsContainer figure img {
+    height: 75px;
+  }
+}
+
+@media (max-width: 700px) {
+  .testimonialsHead img {
+    width: 100px;
+    height: 100px;
+  }
+  .testimonials h2 {
+    font-size: 1.2rem;
+  }
+  .testimonials h3 {
+    font-size: 1rem;
+  }
+  .testimonialsContentInfo {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 450px) {
+  .testimonials {
+    height: 100vh;
+    padding-bottom: 10%;
+  }
+  .testimonials .carouselControls .carouselNavDots {
+    bottom: 15%;
+  }
+  .businessProjectsContainer figure img {
+    height: 50px;
+  }
+  .businessProjectsContainer figure button {
+    width: 100px;
+    height: 25px;
+  }
+  .aboutUs p, .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p {
+    font-size: .8rem;
+  }
+  .lightBox .projectLightBox {
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+  }
+  .projectLightBox .teamProfileImage {
+    width: 75px;
+    height: 75px;
+  }
+  .lightBox .teamName {
+    font-size: 1rem;
+  }
+  .lightBox .teamRole {
+    font-size: .8rem;
   }
 }
 

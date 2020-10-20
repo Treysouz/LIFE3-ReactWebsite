@@ -20,11 +20,11 @@ export default class HomeBanner extends Component {
 
         {this.props.currentPage === "/" ? (
           <div className="banner">
-            <h1>BE EMPOWERED</h1>{" "}
+            <h1>WE ENABLE</h1>{" "}
             <div>
               <h2>
-                to build and design your web or mobile application in an
-                equitable environment
+                you to build and design your digital application in a diverse
+                and equitable environemnt
               </h2>
               <h2>
                 <a href="#contactUs">
@@ -47,15 +47,17 @@ export default class HomeBanner extends Component {
           </div>
         ) : null}
         {this.props.currentPage === "/empower" ? (
-          <div className="empowerBannerContent">
+          <div className="banner">
             <h1> We Empower </h1>
             <p>
-              LIFE3 creates environments where early-stage businesses concept
-              are empowered.We provide insights into agile &amp; design thinking
-              frameworks. We present management and design thinking principles
-              for startups to consider and apply these concepts for their web
-              and mobile.{" "}
+              We empower inclusion of underrepresented communities in
+              technology-focused careers and entrepreneurial ventures
             </p>
+            <h2>
+              <a href="#contactUs">
+                <button> Contact Us </button>{" "}
+              </a>
+            </h2>
           </div>
         ) : null}
       </div>

@@ -5,23 +5,30 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
-  margin: 5vh 2vw 0;
+  padding: 5vh 2vw 0;
 }
 
 .mainInfo h1 {
   text-align: center;
   font-weight: 900;
-  font-style: italic;
+
 }
 
 .mainInfo h2 {
   /* text-align: left; */
-  margin: 20px;
+
   font-weight: bold;
-  font-style:italic;
+  
   font-size: 1.3rem;
   font-weight: 700;
+ 
+}
+.mainInfo .example{
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 1vw;
 }
 
 .mainInfo p {
@@ -40,7 +47,8 @@
   margin-bottom: 40px;
 }
 .mainInfo .phaseContainer {
-  flex:1;
+  width: 30%;
+ 
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -51,6 +59,21 @@
   color: white;
   border-radius: 3%;
   background-color: black;
+  .phaseImage{
+    overflow: hidden;
+  }
+  &:hover{
+    cursor: pointer;
+    img{
+      transform: scale(1.2);
+      
+      transition: transform 1s;
+    }
+    button{
+      opacity: .5;
+      transition: opacity .5s;
+    }
+  }
 }
 .mainInfo .phase {
   text-transform: uppercase;
@@ -61,10 +84,7 @@
   object-fit: cover;
 
 }
-.mainInfo .phaseContainer:hover {
-  opacity: .5;
-  cursor: pointer;
-}
+
 .mainInfo .mainInfoContainer {
   display: flex;
   flex-direction: row;
@@ -79,7 +99,7 @@
   font-weight: 900;
 }
 .phase p{
-  font-style:italic;
+
   text-align: center;
   font-size: 1.3rem;
   font-weight: 700;
@@ -107,7 +127,7 @@
     text-transform: uppercase;
     color: black;
     text-align: center;
-    font-style: italic;
+  
     font-size: 3rem;
     margin-top: 1em;
     font-weight: 900;
@@ -160,12 +180,15 @@
 .about {
   background-image: url("../Assets/Images/Banner/We\ enable\ background\ image.png");
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-size: cover;
   align-items: center;
-  justify-content: center;
-  text-align: left;
+  justify-content: space-around;
+  text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20vh 2vw;
 }
 
 .about .aboutContent {
@@ -174,7 +197,7 @@
 }
 
 .about .aboutUs {
-  font-style: italic;
+
   color: white;
   text-align: center;
   padding-top: 80px;
@@ -188,15 +211,15 @@
 
 .about h1 {
   font-weight: 900;
-  color: mediumaquamarine;
-  padding-top: 10%;
+  color: white;
+  
   /* padding-top: 80px; */
 
 }
 
 .about p {
   font-size: 2rem;
-  font-weight: 500;
+  padding: 0 10vw;
 }
 
 .aboutContent .click {

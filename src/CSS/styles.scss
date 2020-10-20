@@ -1,8 +1,9 @@
 @import "./variables";
 @import "./home";
-@import "./enable";
+
 @import "./empower";
 @import "./form";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Global Stylings */
 
@@ -10,13 +11,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: magneta, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "Poppins", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
-  overflow-y: scroll !important;
 }
 
 h1 {
@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 p,
@@ -45,13 +45,12 @@ a {
   opacity: 0.2;
 }
 button {
-  text-transform: uppercase;
-  width: 250px;
+  width: 200px;
   height: 50px;
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
-  font-weight: bold;
+  letter-spacing: 1px;
   float: left;
   margin: 20px;
   font-size: 1.5rem;
@@ -69,15 +68,19 @@ table {
 
 /*------- Header Stylings--------- */
 header {
-  height: 50vh;
+  height: 60vh;
   /* width: 100vw; */
-  margin-top: 10vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   position: relative;
-
+  .hoveredBar {
+    box-shadow: 0px 0px 5px 5px black;
+    background-color: black !important ;
+    transition: box-shadow 1s, background-color 1s;
+  }
   .navBar {
     z-index: 10;
     position: fixed;
@@ -85,14 +88,13 @@ header {
     top: 0;
     width: 100vw;
     min-width: 300px;
-
-    background-color: black;
+    padding: 0 5vw;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     color: white;
     align-items: center;
     font-size: 1.5rem;
-    box-shadow: 0px 0px 5px 5px black;
 
     margin-left: auto;
     .linksContainer {
@@ -114,7 +116,8 @@ header {
       float: right;
       font-weight: 700;
       &:hover {
-        opacity: 0.5;
+        opacity: 0.8;
+        color:mediumaquamarine;
         cursor: pointer;
       }
     }
@@ -122,11 +125,11 @@ header {
       height: 95%;
       width: auto;
       left: 1%;
-      background-color: black;
+      // background-color: black;
 
       border-radius: 50%;
 
-      box-shadow: 0px 0px 5px 5px black;
+      // box-shadow: 0px 0px 5px 5px black;
       img {
         width: auto;
         height: 100%;
@@ -196,14 +199,13 @@ header {
   align-items: center;
   overflow: hidden;
   animation-name: slideDown;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   .navLink {
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 2px;
     margin-left: 0 !important;
   }
-
 }
 
 video {
@@ -217,6 +219,7 @@ video {
 .bannerContainer {
   width: 100%;
   height: 100%;
+  text-shadow: 0px 0px 2px white;
   clip-path: polygon(
     0 0,
     /* left top */ 100% 0,
@@ -228,7 +231,7 @@ video {
 .banner {
   width: 50%;
   position: absolute;
-  top: 16%;
+  top: 26%;
   right: 12%;
   color: white;
   z-index: 1;
@@ -253,7 +256,7 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 90vh;
   min-height: 750px;
   min-width: 300px;
   clear: both;
@@ -390,6 +393,18 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 /*----- End Carousel Stylings ------ */
 /* LightBox Stylings */
+.moduleExit{
+  color: mediumaquamarine;
+  opacity: .5;
+  transition: opacity .5s;
+  font-size: 2rem;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  &:hover{
+    opacity: 1;
+  }
+}
 .lightBox {
   position: fixed;
   z-index: 20;
@@ -894,7 +909,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
 
   .testimonialsContentInfo p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -956,6 +971,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .mainInfo .mainInfoContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .mainInfo .phaseContainer{
+    width: 50%;
   }
   .about p {
     font-size: 1.3rem;
@@ -987,7 +1006,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
 } */
 
-@media (max-width: 850px), (max-height: 650px) {
+@media (max-width: 850px), (max-height: 600px) {
   .banner {
     width: 60%;
   }
@@ -995,7 +1014,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 1.5rem;
   }
   .aboutUs p,
-  .mainInfo h2 {
+  .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p {
     font-size: 1.2rem;
     line-height: 1.5;
   }
@@ -1010,7 +1029,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 0.8rem;
   }
   h1 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
+
   }
   .about .aboutUs {
     font-size: 3rem;
@@ -1089,6 +1109,12 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 @media (max-width: 675px) {
+  .about{
+    padding: 10vh 2vw;
+  }
+  .mainInfo .phaseContainer{
+    width: 80%;
+  }
   .aboutImage {
     width: 50%;
   }
@@ -1171,7 +1197,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   p,
   li,
   footer p,
-  .aboutTeam .teamProfiles figure figcaption p {
+  .aboutTeam .teamProfiles figure figcaption p, .about p {
     font-size: 1rem;
   }
   .phasesTable th {
@@ -1255,9 +1281,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .shadowedText {
     display: none;
   }
-  .testimonialsContentInfo p {
-    font-size: 0.8rem;
-  }
+
   .testimonials h2 {
     font-size: 1.5rem;
   }
@@ -1267,6 +1291,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 @media (max-height: 650px) {
+ 
   .aboutImage {
     width: 50%;
   }
@@ -1358,9 +1383,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: 30px;
     font-size: 0.9rem;
   }
-  .banner {
-    margin: 80px 0 0 40px;
-  }
+
   .banner h1 {
     font-size: 2rem;
   }
@@ -1388,8 +1411,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   .about h1,
   .about .aboutUs {
-    font-size: 2rem;
-    padding-top: 20%;
+    font-size: 1rem;
+    
   }
   .about p {
     font-size: 1rem;
@@ -1406,7 +1429,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     padding: 0;
     font-size: 1rem;
   }
-  .partners p {
+  .partners p, .about p {
     font-size: 0.8rem;
   }
   .aboutUs .aboutImage img {
@@ -1623,27 +1646,113 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 2rem;
   }
 }
-@media (max-height: 600px){
-  .empowerBannerContent p{
+@media (max-height: 600px) {
+  .empowerBannerContent p {
     font-size: 1rem;
   }
 }
-@media (max-width: 1000px){
-  .empowerBannerContent p, .enableBannerContent p{
+@media (max-width: 1000px) {
+  .empowerBannerContent p,
+  .enableBannerContent p {
     font-size: 1.5rem;
   }
-  header .contactUsButton{
+  header .contactUsButton {
     font-size: 1rem;
     margin-left: 10px;
   }
 }
 
-@media (max-width: 600px){
-  .empowerBannerContent p, .enableBannerContent p{
+@media (max-width: 600px) {
+  .empowerBannerContent p,
+  .enableBannerContent p {
     font-size: 1.2rem;
   }
-  .enableBannerContent h1, .empowerBannerContent h1{
-    font-size: 1.5rem !important; 
+  .enableBannerContent h1,
+  .empowerBannerContent h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+
+
+
+
+@media (max-width: 1300px){
+  .testimonialsHead{
+    margin: 0;
+    justify-content: center;
+
+  }
+  .testimonialsContentInfo{
+    text-align: center;
+    margin-left: 0;
+    display: flex;
+    width: 100%;
+    padding: 0 15%;
+
+  }
+  .testimonialsHead img{
+    width: 125px;
+    height: 125px;
+  }
+  .testimonials h2{
+    font-size: 1.5rem;
+  }
+  .testimonials h3{
+    font-size: 1.2rem;
+  }
+  .businessProjectsContainer figure img{
+    height: 75px;
+  }
+}
+@media(max-width: 700px){
+
+  .testimonialsHead img{
+    width: 100px;
+    height: 100px;
+  }
+  .testimonials h2{
+    font-size: 1.2rem;
+  }
+  .testimonials h3{
+    font-size: 1rem;
+  }
+  .testimonialsContentInfo{
+    padding: 0 10%;
+  }
+}
+@media(max-width: 450px){
+  .testimonials{
+    height: 100vh;
+    padding-bottom: 10%;
+  }
+  .testimonials .carouselControls .carouselNavDots{
+    bottom: 15%;
+  }
+  .businessProjectsContainer figure img{
+    height: 50px;
+  }
+  .businessProjectsContainer figure button{
+    width: 100px;
+    height: 25px;
+  }
+  .aboutUs p, .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p{
+    font-size: .8rem;
+  }
+  .lightBox .projectLightBox{
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+  }
+  .projectLightBox .teamProfileImage{
+    width: 75px;
+    height: 75px;
+  }
+  .lightBox .teamName{
+    font-size: 1rem;
+  }
+  .lightBox .teamRole{
+    font-size: .8rem;
   }
 }
 /* End Media Queries */

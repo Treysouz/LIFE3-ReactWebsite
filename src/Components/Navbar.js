@@ -33,6 +33,23 @@ export default class Header extends Component {
             mobileView: false,
           });
     });
+    window.addEventListener("load", () => {
+      window.scrollY >= 100
+        ? document.getElementById("navBar").classList.add("hoveredBar")
+        : document.getElementById("navBar").classList.remove("hoveredBar");
+    });
+
+    window.addEventListener("scroll", () => {
+      
+      window.scrollY >= 100
+        ? document.getElementById("navBar").classList.add("hoveredBar")
+        : document.getElementById("navBar").classList.remove("hoveredBar");
+    });
+  }
+  componentDidUpdate() {
+    (this.state.mobileNav && window.scrollY < 100) || window.scrollY >= 100
+      ? document.getElementById("navBar").classList.add("hoveredBar")
+      : document.getElementById("navBar").classList.remove("hoveredBar");
   }
   toggleMobileNav = () => {
     this.setState({ mobileNav: !this.state.mobileNav });
@@ -40,21 +57,21 @@ export default class Header extends Component {
 
   render() {
     return (
-      <nav className="navBar">
+      <nav className="navBar" id="navBar">
         <Link className="navLink navLogo" to="/">
           <img src={Logo} alt="LIFE3 Logo" title="LIFE3" />
         </Link>
         {!this.state.mobileView ? (
           <div className="linksContainer">
+            <Link className="navLink navLinkText" to="/">
+              Enable
+            </Link>
             <Link className="navLink navLinkText" to="/empower">
               Empower
             </Link>
-            <Link className="navLink navLinkText" to="/enable">
-              Enable
-            </Link>
-            <a href="#contactUs">
+            {/* <a href="#contactUs">
               <button className="contactUsButton">Contact Us</button>
-            </a>
+            </a> */}
           </div>
         ) : (
           <FontAwesomeIcon
@@ -65,15 +82,15 @@ export default class Header extends Component {
         )}
         {this.state.mobileNav ? (
           <div className="mobileNavList" onClick={() => this.toggleMobileNav()}>
+            <Link className="navLink" to="/">
+              Enable
+            </Link>
             <Link className="navLink" to="/empower">
               Empower
             </Link>
-            <Link className="navLink" to="/enable">
-              Enable
-            </Link>
-            <a className="navLink" href="#contactUs">
+            {/* <a className="navLink" href="#contactUs">
               Contact Us
-            </a>
+            </a> */}
           </div>
         ) : null}
       </nav>

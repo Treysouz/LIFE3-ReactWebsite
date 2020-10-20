@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 import ProjectData from "../JSON/projectsData.json";
 import TeamModule from "./TeamModule";
+import {
+ faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class ProjectModule extends Component {
   constructor() {
@@ -56,6 +60,7 @@ export default class ProjectModule extends Component {
   render() {
     return (
       <div className="lightBox">
+     
         {this.state.teamMemberLightBoxOpen ? (
           <TeamModule
             viewingClient={this.props.viewingClient}
@@ -71,6 +76,7 @@ export default class ProjectModule extends Component {
         <i className="fas fa-times exitIcon" />
 
         <div className="projectLightBox">
+        <FontAwesomeIcon className="moduleExit" icon={faTimes}  onClick={() => this.props.toggleProjectModule()}></FontAwesomeIcon>
           <div>
             <img
               className="partnerLogo"
