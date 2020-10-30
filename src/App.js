@@ -18,7 +18,7 @@ export default class App extends Component {
     this.getPage(window.location.pathname)
   }
   getPage = (page) =>{
-    console.log(page)
+  
     this.setState({
       currentPage: page
     })

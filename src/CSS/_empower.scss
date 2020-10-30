@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
 }
+
 .empowerBannerContent {
   position: absolute;
   top: 26%;
@@ -19,27 +20,43 @@
     line-height: 1.2;
   }
 }
-.empower h1{
+.empower h1 {
   text-align: center;
   display: inline-block;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
-.shadowedText{
+.shadowedText {
   z-index: -1;
 }
-.testimonials{
-  height: 90vh;
+.testimonials {
+  margin-bottom: 10vh;
   position: relative;
-  .carouselControls{
-    top:0;
+  .carouselControls {
+    top: 0;
     padding: 0 2%;
+    z-index: 1;
     .carouselNavDots {
-
       margin-bottom: 2%;
+    }
+  }
+
+  .carouselNavDots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    .paginationCircle {
+      margin: 0 1%;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    .active {
+      color: "mediumaquamarine";
     }
   }
 }
@@ -52,6 +69,7 @@
   margin-left: 15%;
   margin-top: 5vh;
   flex-wrap: wrap;
+  text-transform: uppercase;
 }
 .testimonialsHead img {
   height: 160px;
@@ -61,10 +79,17 @@
   border-radius: 50%;
   border: 3px solid mediumaquamarine;
 }
-
+.testimonialContainer {
+  padding-top: 2%;
+  position: relative;
+}
 .testimonialsName {
   margin-left: 20px;
   text-align: left;
+  h2,
+  h3 {
+    font-family: $primaryFont;
+  }
 }
 
 .testimonials h2 {
@@ -74,11 +99,12 @@
 }
 .testimonials h3 {
   font-size: 1.4rem;
+  text-align: left;
 }
 .testimonialsContentInfo {
   width: 70%;
   text-align: left;
-  margin: 5vh auto 12vh;
+  margin: 5vh auto;
 }
 
 .testimonialsContentInfo p {
@@ -149,7 +175,7 @@
     text-transform: uppercase;
     color: black;
     text-align: center;
-    font-style: italic;
+
     font-size: 3rem;
     margin-top: 1em;
   }
@@ -199,7 +225,6 @@
 }
 
 .diverseContentInfo h1 {
-  font-style: italic;
   margin: 1em auto;
 }
 
@@ -222,27 +247,39 @@
   width: 40%;
   height: auto;
 }
-.businessProjectsContainer{
+.businessProjectsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3% 0;
-  figure{
+  flex-wrap: wrap;
+  
+  figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
-    button{
+    padding: 0 2%;
+    figcaption{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
       background-color: black;
       color: white;
+      padding: 1% 5%;
     }
-    img{
+    img {
       height: 100px;
       width: auto;
+      transition: opacity .5s;
+      &:hover{
+        opacity: .5;
+        cursor: pointer;
+
+      }
     }
   }
 }
-
-
-

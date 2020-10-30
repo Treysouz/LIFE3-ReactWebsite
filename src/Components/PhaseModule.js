@@ -20,6 +20,7 @@ export default class TeamModule extends Component {
             allowFullScreen={true}
             mozallowfullscreen="true"
             webkitallowfullscreen="true"
+            title="Phase Slideshow"
           />
         </div>
         

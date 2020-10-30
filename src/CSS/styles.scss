@@ -3,7 +3,7 @@
 
 @import "./empower";
 @import "./form";
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Global Stylings */
 
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
   scroll-behavior: smooth;
 }
 
@@ -22,15 +22,19 @@ body {
 h1 {
   text-transform: uppercase;
   font-size: 3.5rem;
+  font-family: $primaryFont;
+  z-index: 1;
 }
 
 h2 {
   font-size: 2rem;
+  font-family: $secondaryFont;
 }
 
 p,
 li {
   font-size: 1.5rem;
+  font-family: $secondaryFont;
 }
 
 a {
@@ -39,14 +43,15 @@ a {
 }
 .shadowedText {
   position: absolute;
-
+  letter-spacing: 9px;
   font-size: 6.5rem;
   color: darkgray;
   opacity: 0.2;
 }
 button {
-  width: 200px;
-  height: 50px;
+  padding: 1% 3%;
+  white-space: nowrap;
+
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
@@ -54,7 +59,10 @@ button {
   float: left;
   margin: 20px;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: $primaryFont;
+  text-transform: capitalize;
+  transition: opacity 0.5s;
 }
 button:hover {
   opacity: 0.5;
@@ -68,7 +76,7 @@ table {
 
 /*------- Header Stylings--------- */
 header {
-  height: 60vh;
+  height: 85vh;
   /* width: 100vw; */
 
   display: flex;
@@ -105,6 +113,7 @@ header {
     .navLink {
       display: inline-block;
       margin-left: 60px;
+      font-family: $primaryFont;
     }
     .navLinkText {
       font-size: 1.5rem;
@@ -115,9 +124,10 @@ header {
       text-align: right;
       float: right;
       font-weight: 700;
+      transition: opacity 0.5s, color 0.5s;
       &:hover {
         opacity: 0.8;
-        color:mediumaquamarine;
+        color: mediumaquamarine;
         cursor: pointer;
       }
     }
@@ -134,7 +144,7 @@ header {
         width: auto;
         height: 100%;
         margin-right: -5%;
-
+        transition: opacity 0.5s;
         &:hover {
           opacity: 0.5;
         }
@@ -157,7 +167,7 @@ header {
     p {
       white-space: nowrap;
     }
-
+    transition: opacity 0.5s;
     &:hover {
       opacity: 0.5;
       cursor: pointer;
@@ -239,7 +249,7 @@ video {
     margin: 20px 0 0 0;
   }
   h1 {
-    font-weight: 900;
+    font-weight: 600;
     color: mediumaquamarine;
   }
   h2 {
@@ -271,21 +281,26 @@ footer .footerLogo {
 .contactUsForm h2 {
   color: mediumaquamarine;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 600;
+  font-family: $primaryFont;
 }
 
 .contactUsForm h1 {
-  font-weight: 900;
+  font-weight: 600;
+  font-family: $primaryFont;
 }
 
 .contactUsForm .submitBtn {
-  width: 250px;
-  height: 50px;
+  width: auto;
+  height: auto;
+  padding: 1% 3%;
   background-color: mediumaquamarine;
   border: 0;
   border-radius: 15px;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: $primaryFont;
+  transition: opacity 0.5s;
 }
 .contactUsForm .submitBtn:hover {
   opacity: 0.5;
@@ -345,6 +360,7 @@ footer .socialMediaContainer .socialMediaIcon {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  transition: opacity 0.5s;
 }
 
 footer .socialMediaContainer .socialMediaIcon:hover {
@@ -369,6 +385,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     justify-content: center;
     .paginationCircle {
       margin: 0 1%;
+      transition: opacity 0.5s;
       &:hover {
         opacity: 0.5;
         cursor: pointer;
@@ -382,6 +399,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .rightArrow {
     font-size: 5rem;
     color: gray;
+    transition: opacity 0.5s;
     &.active {
       color: black;
       &:hover {
@@ -393,16 +411,18 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 /*----- End Carousel Stylings ------ */
 /* LightBox Stylings */
-.moduleExit{
+.moduleExit {
   color: mediumaquamarine;
-  opacity: .5;
-  transition: opacity .5s;
+  opacity: 0.5;
+  transition: opacity 0.5s;
   font-size: 2rem;
-  position: absolute;
+  position: sticky;
   top: 1%;
-  right: 1%;
-  &:hover{
+  float: right;
+  transition: opacity 0.5s;
+  &:hover {
     opacity: 1;
+    cursor: pointer;
   }
 }
 .lightBox {
@@ -428,12 +448,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .lightBox .teamName {
   font-weight: 700;
   font-size: 1.3rem;
+  font-family: $primaryFont;
 }
 
 .lightBox .teamRole {
-  font-style: italic;
   font-weight: 500;
   font-size: 1rem;
+  font-family: $secondaryFont;
 }
 
 .lightBox .exitIcon {
@@ -445,6 +466,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   border: 1px rigid black;
   text-shadow: 0px 0px 5px black;
   z-index: 100;
+  transition: opacity 0.5s;
 }
 
 .lightBox .exitIcon:hover {
@@ -505,6 +527,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   opacity: 0;
   font-size: 5rem;
   color: white;
+  transition: opacity 0.5s;
 }
 
 .teamProfileImage .socialIcon:hover {
@@ -553,6 +576,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  transition: opacity 0.5s;
 }
 
 .lightBox .teamMemberLightBox .socialMediaIcon:hover {
@@ -663,6 +687,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   align-items: center;
   align-content: center;
   text-align: center;
+  position: relative;
 }
 .projectLightBox .nextProjectContainer {
   display: flex;
@@ -671,20 +696,14 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   align-items: center;
   float: right;
   align-items: center;
-  img {
-    max-height: 125px;
-    width: auto;
-  }
 }
 .projectLightBox .nextProject {
   margin-bottom: 2em;
 }
-.projectLightBox .nextProject button {
+.projectLightBox .nextProjectContainer button {
   background-color: black;
   color: white;
-  width: 250px;
-  height: 30px;
-  font-size: 1.3rem;
+  padding: 3% 10%;
 }
 .lightBox .teamContainer {
   align-items: center;
@@ -696,13 +715,31 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .projectLightBox .phase {
   background-color: black;
   color: white;
-  height: 40vh;
+  height: auto;
   width: 35%;
   margin: 20px auto;
+  overflow-y: auto;
+  padding-bottom: 2%;
+  h3 {
+    font-family: $primaryFont;
+    font-size: 1.8rem;
+
+    padding: 2% 5% 0;
+  }
+}
+.phaseListContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .projectLightBox p {
   font-size: 1.3rem;
   font-weight: 600;
+}
+.projectLightBox h2 {
+  font-family: $primaryFont;
+  text-transform: uppercase;
 }
 .projectLightBox .servicesContent {
   padding: 10px 10%;
@@ -716,18 +753,33 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   background-color: mediumaquamarine;
   color: black;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.5rem;
+  padding: 1%;
+  font-family: $primaryFont;
+  width: 100%;
 }
+.projectLightBox .phase {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
 .projectLightBox .phase li {
   font-weight: 500;
+  text-align: left;
+  font-size: 1.2rem;
 }
 .partnerLogosContainer figcaption {
   display: none;
 }
 .projectLightBox .listhead {
-  font-weight: 700;
+  font-family: $secondaryFont;
   font-style: normal;
+  font-weight: 600;
+  padding-bottom: 1%;
+  text-align: left;
 }
 
 .lightBox .teamMemberContainer .teamProfiles2 {
@@ -739,9 +791,9 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .lightBox .teamMemberContainer img:hover {
   cursor: pointer;
   opacity: 0.5;
+  transition: opacity 0.5s;
 }
 .projectLightBox h1 {
-  font-style: italic;
   margin: 10px;
   /* text-transform: none; */
   position: relative;
@@ -758,13 +810,11 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   margin: 10px;
 }
 .timeTravelContainer .timeTravelBtn {
-  background-color: black;
-  color: white;
-  align-self: flex-end;
+  background-color: mediumaquamarine;
+  color: black;
+  align-self: center;
   margin-bottom: 5%;
   font-size: 1.2rem;
-  height: 30px;
-  width: 250px;
 }
 
 .timeTravelContainer {
@@ -784,9 +834,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .banner {
     width: 60%;
   }
-  .header {
-    height: 60vh;
-  }
+
   .about .aboutUs {
     font-size: 4rem;
   }
@@ -799,6 +847,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   header .navBar,
   .projectInformation .testimonial p {
     font-size: 2rem;
+  }
+  .shadowedText {
+    font-size: 5rem;
+    letter-spacing: 4px;
   }
   p,
   li,
@@ -854,14 +906,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .banner {
     width: 60%;
   }
-  .header {
-    height: 60vh;
-  }
+
   h2,
   header .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p,
-  .servicesTable th h2 {
+  .servicesTable th h2,
+  .projectLightBox .phase h3 {
     font-size: 1.5rem;
   }
   .about p,
@@ -878,9 +929,11 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .servicesTable th img {
     height: 80%;
   }
-  .phasesTable th {
+  .phasesTable th,
+  .projectLightBox .phase li {
     font-size: 1rem;
   }
+
   .phasesTable td {
     font-size: 1rem;
   }
@@ -910,6 +963,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
   .testimonialsContentInfo p {
     font-size: 1.2rem;
+  }
+  .shadowedText {
+    font-size: 4.5rem;
+    letter-spacing: 3px;
   }
 }
 
@@ -973,7 +1030,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     flex-direction: column;
     align-items: center;
   }
-  .mainInfo .phaseContainer{
+  .mainInfo .phaseContainer {
     width: 50%;
   }
   .about p {
@@ -985,6 +1042,15 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .projectLightBox .redesignContainer {
     display: flex;
     flex-direction: column;
+  }
+  .projectLightBox .phase h3 {
+    font-size: 1.2rem;
+  }
+  .projectLightBox .listhead {
+    font-size: 1rem;
+  }
+  .projectLightBox .phase li {
+    font-size: 1rem;
   }
 }
 
@@ -1014,23 +1080,24 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     font-size: 1.5rem;
   }
   .aboutUs p,
-  .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p {
+  .mainInfo h2,
+  .diverseContentInfo p,
+  .testimonialsContentInfo p {
     font-size: 1.2rem;
     line-height: 1.5;
   }
+  .shadowedText {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
   button {
-    width: 150px;
-    height: 30px;
     font-size: 1rem;
   }
   .timeTravelContainer .timeTravelBtn {
-    width: 150px;
-    height: 25px;
     font-size: 0.8rem;
   }
   h1 {
     font-size: 1.5rem !important;
-
   }
   .about .aboutUs {
     font-size: 3rem;
@@ -1094,9 +1161,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     display: flex;
     flex-direction: column;
   }
-  .shadowedText {
-    font-size: 4.5rem;
-  }
 
   .empower
     .partners
@@ -1109,10 +1173,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 @media (max-width: 675px) {
-  .about{
+  .about {
     padding: 10vh 2vw;
   }
-  .mainInfo .phaseContainer{
+  .mainInfo .phaseContainer {
     width: 80%;
   }
   .aboutImage {
@@ -1128,13 +1192,9 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   button,
   .contactUsForm .submitBtn {
-    width: 180px;
-    height: 30px;
     font-size: 0.8rem;
   }
   .timeTravelContainer .timeTravelBtn {
-    width: 180px;
-    height: 25px;
     font-size: 0.7rem;
   }
   .banner {
@@ -1147,9 +1207,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .banner h2 {
     font-size: 1.3rem;
   }
-  header {
-    height: 60vh;
-  }
+
   .aboutUs {
     display: flex;
     flex-direction: column;
@@ -1197,7 +1255,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   p,
   li,
   footer p,
-  .aboutTeam .teamProfiles figure figcaption p, .about p {
+  .aboutTeam .teamProfiles figure figcaption p,
+  .about p {
     font-size: 1rem;
   }
   .phasesTable th {
@@ -1273,8 +1332,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: auto;
   }
   .projectLightBox .nextProject button {
-    width: 200px;
-    height: 30px;
     font-size: 1.1rem;
     margin: 0;
   }
@@ -1291,7 +1348,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 @media (max-height: 650px) {
- 
   .aboutImage {
     width: 50%;
   }
@@ -1379,8 +1435,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   button,
   .contactUsForm .submitBtn,
   .projectLightBox .nextProject button {
-    width: 150px;
-    height: 30px;
     font-size: 0.9rem;
   }
 
@@ -1412,7 +1466,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   .about h1,
   .about .aboutUs {
     font-size: 1rem;
-    
   }
   .about p {
     font-size: 1rem;
@@ -1429,7 +1482,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     padding: 0;
     font-size: 1rem;
   }
-  .partners p, .about p {
+  .partners p,
+  .about p {
     font-size: 0.8rem;
   }
   .aboutUs .aboutImage img {
@@ -1441,7 +1495,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     line-height: 2;
   }
   header {
-    height: 70vh;
     width: 100vw;
   }
   h1,
@@ -1617,7 +1670,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 @media (max-width: 450px) {
   .partners .partnersInfoContainer .partnerLogosContainer .partnerLogo {
-    height: 35%;
+    height: 40%;
   }
   .empower
     .partners
@@ -1627,9 +1680,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     height: 100%;
   }
   .timeTravelContainer .timeTravelBtn {
-    width: 150px;
-    height: 25px;
-
     margin-bottom: 50px;
   }
   .testimonialsHead {
@@ -1673,86 +1723,78 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
 }
 
-
-
-
-
-@media (max-width: 1300px){
-  .testimonialsHead{
+@media (max-width: 1300px) {
+  .testimonialsHead {
     margin: 0;
     justify-content: center;
-
   }
-  .testimonialsContentInfo{
+  .testimonialsContentInfo {
     text-align: center;
     margin-left: 0;
     display: flex;
     width: 100%;
     padding: 0 15%;
-
   }
-  .testimonialsHead img{
+  .testimonialsHead img {
     width: 125px;
     height: 125px;
   }
-  .testimonials h2{
+  .testimonials h2 {
     font-size: 1.5rem;
   }
-  .testimonials h3{
+  .testimonials h3 {
     font-size: 1.2rem;
   }
-  .businessProjectsContainer figure img{
+  .businessProjectsContainer figure img {
     height: 75px;
   }
 }
-@media(max-width: 700px){
-
-  .testimonialsHead img{
+@media (max-width: 700px) {
+  .testimonialsHead img {
     width: 100px;
     height: 100px;
   }
-  .testimonials h2{
+  .testimonials h2 {
     font-size: 1.2rem;
   }
-  .testimonials h3{
+  .testimonials h3 {
     font-size: 1rem;
   }
-  .testimonialsContentInfo{
+  .testimonialsContentInfo {
     padding: 0 10%;
   }
 }
-@media(max-width: 450px){
-  .testimonials{
-    height: 100vh;
+@media (max-width: 450px) {
+  .testimonials {
     padding-bottom: 10%;
   }
-  .testimonials .carouselControls .carouselNavDots{
+  .testimonials .carouselControls .carouselNavDots {
     bottom: 15%;
   }
-  .businessProjectsContainer figure img{
+  .businessProjectsContainer figure img {
     height: 50px;
   }
-  .businessProjectsContainer figure button{
-    width: 100px;
-    height: 25px;
+
+  .aboutUs p,
+  .mainInfo h2,
+  .diverseContentInfo p,
+  .testimonialsContentInfo p {
+    font-size: 0.8rem;
   }
-  .aboutUs p, .mainInfo h2, .diverseContentInfo p, .testimonialsContentInfo p{
-    font-size: .8rem;
-  }
-  .lightBox .projectLightBox{
+  .lightBox .projectLightBox {
     width: 100%;
     height: 100vh;
     margin-top: 0;
   }
-  .projectLightBox .teamProfileImage{
+  .projectLightBox .teamProfileImage {
     width: 75px;
     height: 75px;
   }
-  .lightBox .teamName{
+  .lightBox .teamName {
     font-size: 1rem;
   }
-  .lightBox .teamRole{
-    font-size: .8rem;
+  .lightBox .teamRole {
+    font-size: 0.8rem;
   }
 }
 /* End Media Queries */

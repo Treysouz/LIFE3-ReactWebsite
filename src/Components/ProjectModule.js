@@ -2,9 +2,7 @@ import React, { Component } from "react";
 
 import ProjectData from "../JSON/projectsData.json";
 import TeamModule from "./TeamModule";
-import {
- faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class ProjectModule extends Component {
@@ -45,9 +43,7 @@ export default class ProjectModule extends Component {
         Object.keys(ProjectData.clients).indexOf(this.props.viewingClient) + 1,
     });
   };
-  componentDidUpdate() {
-
-  }
+  componentDidUpdate() {}
   toggleTeamLightBox = (member) => {
     console.log(member);
     this.state.teamMemberLightBoxOpen
@@ -60,7 +56,6 @@ export default class ProjectModule extends Component {
   render() {
     return (
       <div className="lightBox">
-     
         {this.state.teamMemberLightBoxOpen ? (
           <TeamModule
             viewingClient={this.props.viewingClient}
@@ -76,7 +71,11 @@ export default class ProjectModule extends Component {
         <i className="fas fa-times exitIcon" />
 
         <div className="projectLightBox">
-        <FontAwesomeIcon className="moduleExit" icon={faTimes}  onClick={() => this.props.toggleProjectModule()}></FontAwesomeIcon>
+          <FontAwesomeIcon
+            className="moduleExit"
+            icon={faTimes}
+            onClick={() => this.props.toggleProjectModule()}
+          ></FontAwesomeIcon>
           <div>
             <img
               className="partnerLogo"
@@ -94,31 +93,71 @@ export default class ProjectModule extends Component {
             <p>{ProjectData.clients[this.props.viewingClient].weOffer}</p>
           </div>
           <div className="phaseContainer">
-            <div className="phase">
+            {Object.entries(
+              ProjectData.clients[this.props.viewingClient].phases
+            ).map((key, index) => {
+              return (
+                <div className="phase" key={key + index}>
+                  <h2>{key[0]}</h2>
+                  <h3>{key[1].phaseHeader}</h3>
+                  <br />
+
+                  {/* {Object.entries([key[1].list][0]).map((key, index) => {
+                    return (
+                      <div key={key + index} className="phaseListContainer">
+                        <p className="listhead">{key[0]}</p>
+                        <ul>
+                          {key[1].map((key, index) => {
+                            return(
+                              <li key={key+index}>{key}</li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    );
+                  })} */}
+                </div>
+              );
+            })}
+            {/* <div className="phase">
               <h2>phase 1</h2>
-              <p>
+              <h3>
                 Mock-up &amp; <br />
                 Product Roadmap
-              </p>
+              </h3>
               <br />
               <p className="listhead">User Experience Design</p>
-              <div className="weAdviseContent">
+          
                 <ul>
-                  <li />
-                  <li />
-                  <li />
+                  <li>User Personas</li>
+                  <li>Competitive Analysis</li>
+                  <li>User Surveys</li>
+                  <li>Interviews</li>
                 </ul>
-              </div>
+         
             </div>
             <div className="phase">
               <h2>phase 2</h2>
-              <p>
+              <h3>
                 Software Design &amp; <br />
                 Development
-              </p>
+              </h3>
               <br />
               <p className="listhead">Design Thinking</p>
-            </div>
+       
+                <ul>
+                  <li>Journey Maps</li>
+                  <li>User Stories</li>
+                </ul>
+         
+              <p className="listhead">User Interface Design</p>
+       
+                <ul>
+                  <li>Program Flyer Design</li>
+                  <li>Webpage Design</li>
+                </ul>
+            
+            </div> */}
           </div>
           <div className="teamContainer">
             <h2>The Project Team</h2>
@@ -144,8 +183,7 @@ export default class ProjectModule extends Component {
                           <p className="teamRole">
                             {
                               ProjectData.team[member].roles[
-                                this.props.viewingClient +
-                                  "(2019)"
+                                this.props.viewingClient + "(2019)"
                               ].role
                             }
                           </p>
@@ -186,29 +224,40 @@ export default class ProjectModule extends Component {
               )}
             </div>
           </div>
-          {this.props.viewingClient == "LIFE3" ? (
+          {this.props.viewingClient === "LIFE3" ? (
             <div className="timeTravelContainer">
-              <h1>{!this.state.timeTravel? "2020": "2019"} LIFE3 WEBSITE REDESIGN</h1>
+              <h1>
+                {!this.state.timeTravel ? "2020" : "2019"} LIFE3 WEBSITE
+                REDESIGN
+              </h1>
               <div className="redesignContainer">
                 <div className="redesigncell">
                   <h2>BEFORE</h2>
-                 {!this.state.timeTravel? <img
-                    src={require("../Assets/Images/2020 Before, 2019 After.png")}
-                    alt="LIFE3 2020 Before Design" 
-                  /> : <img
-                  src={require("../Assets/Images/2019 Before.png")}
-                  alt="LIFE3 2020 Before Design" 
-                 /> }
+                  {!this.state.timeTravel ? (
+                    <img
+                      src={require("../Assets/Images/2020 Before, 2019 After.png")}
+                      alt="LIFE3 2020 Before Design"
+                    />
+                  ) : (
+                    <img
+                      src={require("../Assets/Images/2019 Before.png")}
+                      alt="LIFE3 2020 Before Design"
+                    />
+                  )}
                 </div>
                 <div className="redesigncell">
                   <h2>AFTER</h2>
-                 {!this.state.timeTravel? <img
-                    src={require("../Assets/Images/2020 After.png")}
-                    alt="LIFE3 2020 After Design"
-                  />: <img
-                  src={require("../Assets/Images/2020 Before, 2019 After.png")}
-                  alt="LIFE3 2020 After Design"
-                /> }
+                  {!this.state.timeTravel ? (
+                    <img
+                      src={require("../Assets/Images/2020 After.png")}
+                      alt="LIFE3 2020 After Design"
+                    />
+                  ) : (
+                    <img
+                      src={require("../Assets/Images/2020 Before, 2019 After.png")}
+                      alt="LIFE3 2020 After Design"
+                    />
+                  )}
                 </div>
               </div>
               {!this.state.timeTravel ? (
@@ -221,7 +270,7 @@ export default class ProjectModule extends Component {
                   }}
                   className="timeTravelBtn"
                 >
-                   2019 TIME TRAVEL
+                  2019 Website Release
                 </button>
               ) : (
                 <button
@@ -255,6 +304,7 @@ export default class ProjectModule extends Component {
               }}
             >
               <img
+                className="partnerLogo"
                 src={require("../Assets/Images/Icons/" +
                   ProjectData.clients[
                     this.state.clientList[this.state.clientIndex + 1]
@@ -262,7 +312,7 @@ export default class ProjectModule extends Component {
                 alt="Next Project"
                 title="Next Project"
               ></img>
-              <button className="nextProject">NEXT PROJECT</button>
+              <button className="nextProject">Next Project</button>
             </div>
           ) : null}
         </div>

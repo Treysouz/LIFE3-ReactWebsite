@@ -7,6 +7,7 @@ export default class ThankYou extends Component {
   }
   componentDidMount() {
     this.props.getPage("/thankyou");
+    window.scrollTo(0, 0);
   }
   render() {
     return (

@@ -9,7 +9,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="contactUsForm" id="contactUs">
-          <form action="../PHP/functions/handle_contact.php" method="POST">
+          <form action="https://formspree.io/xzbeebbo" method="POST">
             <div>
               <h2>CONTACT US</h2>
               <h1>SEND US A MESSAGE</h1>
@@ -53,7 +53,8 @@ export default class Footer extends Component {
               <input
                 className="submitBtn"
                 type="submit"
-                defaultValue="SEND MESSAGE"
+    
+                value="Send Message"
               />
             </div>
           </form>

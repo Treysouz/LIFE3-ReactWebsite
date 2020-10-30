@@ -11,9 +11,7 @@ import {
   faChevronLeft,
   faChevronRight,
   faCircle,
-  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faFacebook, fa } from "@fortawesome/free-brands-svg-icons";
 
 export default class Home extends Component {
   constructor() {
@@ -29,9 +27,9 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     var clientCount = 0;
     for (var client in ProjectData.clients) {
-      var client = client;
       clientCount += 1;
       this.setState({
         clientCount: clientCount,
@@ -40,7 +38,9 @@ export default class Home extends Component {
     this.props.getPage(window.location.pathname);
   }
   componentDidUpdate() {
-    this.state.projectModuleOpen? document.documentElement.style.overflow="hidden":  document.documentElement.style.overflow="auto";
+    this.state.projectModuleOpen
+      ? (document.documentElement.style.overflow = "hidden")
+      : (document.documentElement.style.overflow = "auto");
     for (
       var count = 0;
       count <
@@ -51,9 +51,9 @@ export default class Home extends Component {
         count
       ].style.color = "black";
     }
-      document.querySelectorAll(".carouselNavDots .paginationCircle")[
-        Math.floor(this.state.offsetClientImages / 3)
-      ].style.color = "mediumaquamarine";
+    document.querySelectorAll(".carouselNavDots .paginationCircle")[
+      Math.floor(this.state.offsetClientImages / 3)
+    ].style.color = "mediumaquamarine";
     if (this.state.offsetClientImages === 0) {
       document
         .querySelector(".carouselControls .leftArrow")
@@ -138,7 +138,7 @@ export default class Home extends Component {
               className="phaseContainer slide"
               onClick={() =>
                 this.togglePhaseModule(
-                  "https://drive.google.com/file/d/132avrm1sUKYvK113wnqbtJU4dDMeUw58/preview"
+                  "https://drive.google.com/file/d/114vVNmKsh-ggyrX29TxB2-Vvr0OEqeXf/preview"
                 )
               }
             >
@@ -164,7 +164,7 @@ export default class Home extends Component {
               className="phaseContainer slide"
               onClick={() =>
                 this.togglePhaseModule(
-                  "https://drive.google.com/file/d/1Wsx8BNNwfMMfy0UDoGUVRAj0qnQWZUPk/preview"
+                  "https://drive.google.com/file/d/1-R9NHRe6RaOMXSuiVByI1SlgiuiA4UD4/preview"
                 )
               }
             >
@@ -188,7 +188,14 @@ export default class Home extends Component {
 
               <button>learn more</button>
             </div>
-            <div className="phaseContainer slide">
+            <div
+              className="phaseContainer slide"
+              onClick={() =>
+                this.togglePhaseModule(
+                  "https://drive.google.com/file/d/123bw1XFn7UvxyZ6QEwZxqR3vesKsnKGl/preview"
+                )
+              }
+            >
               <div className="phaseImage">
                 <img src={PhaseThreeBanner} alt="phase three" />
               </div>
@@ -217,6 +224,7 @@ export default class Home extends Component {
               <a
                 href="https://www.linkedin.com/feed/hashtag/businessprojects"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <h1>
                   Business Projects{" "}
@@ -243,6 +251,7 @@ export default class Home extends Component {
                           ProjectData.clients[key].icon)}
                         key={key}
                         onClick={() => this.toggleProjectModule(key)}
+                        alt={key}
                       ></img>
                     );
                   }
@@ -260,7 +269,7 @@ export default class Home extends Component {
                   ></FontAwesomeIcon>
                   <div className="carouselNavDots">
                     {Object.keys(ProjectData.clients).map((key, index) => {
-                      if (index % 3 == 0) {
+                      if (index % 3 === 0) {
                         return (
                           <FontAwesomeIcon
                             key={index}

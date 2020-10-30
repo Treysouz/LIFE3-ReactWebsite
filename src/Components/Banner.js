@@ -24,7 +24,7 @@ export default class HomeBanner extends Component {
             <div>
               <h2>
                 you to build and design your digital application in a diverse
-                and equitable environemnt
+                and equitable environment
               </h2>
               <h2>
                 <a href="#contactUs">
