@@ -1174,7 +1174,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 .carouselControls .carouselNavDots .paginationCircle {
-  margin: 0 1%;
+  margin: 0 3%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -1429,6 +1429,10 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .lightBox .teamMemberLightBox .socialMediaIcon:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.lightBox .roleDescription li{
+  font-size: 0.8rem;
 }
 
 .lightBox .contactUsForm {
@@ -1779,7 +1783,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     letter-spacing: 4px;
   }
   p,
-  li,
+  
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 1.5rem;
@@ -1842,7 +1846,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   .about p,
   p,
-  li,
+  
   footer p,
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 1.5rem;
