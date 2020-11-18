@@ -148,10 +148,14 @@ export default class Home extends Component {
               <p className="describle">Product Design Services</p>
               <div className="phase">
                 <h2>phase 1</h2>
-                <p>
+
+                {/* Made modification here for feedback "Make the titles "Mock-up & Product Roadmap", 
+                "Software Design & Development", and "Artificial Intelligence & Analytics" the same 
+                font size as PHASE 1, PHASE 2, PHASE 3." initially <p> was used.     */}
+                <h2>
                   Mock-up &amp; <br />
                   Product Roadmap
-                </p>
+                </h2>
               </div>
               <h2 className="example">
                 "I have an idea for an app and would like some advice and
@@ -176,10 +180,10 @@ export default class Home extends Component {
               </p>
               <div className="phase">
                 <h2>phase 2</h2>
-                <p>
+                <h2>
                   Software Design &amp; <br />
                   Development
-                </p>
+                </h2>
               </div>
               <h2 className="example">
                 "I am ready to work with developers and designers to create a
@@ -202,10 +206,10 @@ export default class Home extends Component {
               <p className="describle">Product Management Services</p>
               <div className="phase">
                 <h2>phase 3</h2>
-                <p>
+                <h2>
                   Artificial Intelligence
                   <br /> &amp; Analytics
-                </p>
+                </h2>
               </div>
               <h2 className="example">
                 "I want to leverage data insights through advance analytics and
