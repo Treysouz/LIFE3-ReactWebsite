@@ -70,8 +70,13 @@ export default class Header extends Component {
               Empower
             </Link>
             <Link className="navLink navLinkText" to="/signin">
-              <button>
+              <button  className="contactUsButton">
                 Sign in
+              </button>
+            </Link>
+            <Link className="navLink navLinkText" to="/signup">
+              <button  className="contactUsButton">
+                Sign up
               </button>
             </Link>
             {/* <a href="#contactUs">
@@ -95,6 +100,9 @@ export default class Header extends Component {
             </Link>
             <Link className="navLink" to="/signin">
               Sign in
+            </Link>
+            <Link className="navLink navLinkText" to="/signup">
+                Sign up
             </Link>
             {/* <a className="navLink" href="#contactUs">
               Contact Us

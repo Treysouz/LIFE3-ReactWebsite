@@ -771,7 +771,7 @@ header {
 }
 
 .header2{
-  min-height: 120vh;
+  min-height: 130vh;
 }
 
 header .hoveredBar {
@@ -864,7 +864,8 @@ header .navBar .navLogo img:hover {
 
 header .contactUsButton {
   z-index: 3;
-  margin-left: 60px;
+  /* margin-left: 60px; */
+  margin: 0;
   width: 200px;
   height: auto;
   border-radius: 20px;
@@ -981,8 +982,9 @@ video {
 }
 
 .bannerContainer2 {
-  /* min-width: 100%; */
+  min-width: 100%;
   min-height: 100%;
+  width: 50%;
 }
 
 .banner {

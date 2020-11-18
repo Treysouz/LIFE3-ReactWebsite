@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BannerVideo from "../Assets/Videos/life3.MP4";
 import SigninForm from "./Forms/SigninForm";
+import SignupForm from "./Forms/SignupForm";
 
 export default class HomeBanner extends Component {
   render() {
@@ -11,15 +12,10 @@ export default class HomeBanner extends Component {
           this.props.currentPage === "/enable"
             ? "bannerContainer eBanner" : 
             this.props.currentPage === '/' ?
-            "bannerContainer" : ".bannerContainer2"
+            "bannerContainer" : "bannerContainer2"
           }
-         
-        //   className = {
-        //     "bannerContainer"
-        // }
-        //
       >
-        {this.props.currentPage === "/" || this.props.currentPage==='/signin' ? (
+        {this.props.currentPage === "/" || this.props.currentPage==='/signin' || this.props.currentPage==='/signup' ? (
           <video autoPlay muted loop>
             <source src={BannerVideo} type="video/mp4" />
           </video>
@@ -70,6 +66,11 @@ export default class HomeBanner extends Component {
         {this.props.currentPage === "/signin" ? (
           <div>
             <SigninForm></SigninForm>
+          </div>
+        ) : null}
+        {this.props.currentPage === "/signup" ? (
+          <div>
+            <SignupForm></SignupForm>
           </div>
         ) : null}
       </div>

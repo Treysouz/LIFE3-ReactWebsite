@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import BannerVideo from "../Assets/Videos/life3.MP4";
-import SigninForm from "../Components/Forms/SigninForm"
+import SignupForm from "../Components/Forms/SignupForm"
 
-export default class Signin extends Component {
+export default class Signup extends Component {
     constructor() {
         super();
         this.state = {};
       }
       componentDidMount() {
-        this.props.getPage("/signin");
+        this.props.getPage("/signup");
         window.scrollTo(0, 0);
       }
 
@@ -18,7 +18,7 @@ export default class Signin extends Component {
           {/* <video autoPlay muted loop>
             <source src={BannerVideo} type="video/mp4" />
           </video>
-          <SigninForm/> */}
+          <SignupForm/> */}
             </div>
         );
     }

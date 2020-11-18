@@ -5,6 +5,7 @@ import NavBar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";
 import Signin from './Pages/Signin'
+import Signup from "./Pages/Signup"
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 
@@ -28,7 +29,7 @@ export default class App extends Component {
     return (
       <Router>
       <main>
-        <header className={this.state.currentPage === "/signin" ? "header2" : "" }>
+        <header className={this.state.currentPage === "/" || this.props.currentPage === "/empower" ? "" : "header2" }>
           <NavBar></NavBar>
           <Banner currentPage={this.state.currentPage}></Banner>
         </header>
@@ -42,6 +43,9 @@ export default class App extends Component {
               </Route>
               <Route exact path ="/signin">
                 <Signin getPage={this.getPage}/>
+              </Route>
+              <Route exact path ="/signup">
+                <Signup getPage={this.getPage}/>
               </Route>
             </Switch>
         { this.state.currentPage === "/" || this.state.currentPage === "/empower" ? 
