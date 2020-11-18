@@ -998,6 +998,10 @@ video {
   font-weight: 500;
 }
 
+.banner .bannerText {
+  margin: 3vh 0;
+}
+
 /*------- End Header Stylings--------- */
 /* Footer Stylings */
 footer {

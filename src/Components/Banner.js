@@ -22,7 +22,7 @@ export default class HomeBanner extends Component {
           <div className="banner">
             <h1>WE ENABLE</h1>{" "}
             <div>
-              <h2>
+              <h2 className="bannerText">
                 you to build and design your digital application in a diverse
                 and equitable environment
               </h2>
@@ -38,7 +38,7 @@ export default class HomeBanner extends Component {
         {this.props.currentPage === "/enable" ? (
           <div className="enableBannerContent">
             <h1>WE ENABLE</h1>{" "}
-            <p>
+            <p className="bannerText">
               LIFE3 creates environments where team of thinkers and learners are
               enabled. Our initiative is having a positive impact on the number
               of underrepresented groups learning about , securing jobs, and
@@ -49,7 +49,7 @@ export default class HomeBanner extends Component {
         {this.props.currentPage === "/empower" ? (
           <div className="banner">
             <h1> We Empower </h1>
-            <p>
+            <p className="bannerText">
               We empower inclusion of underrepresented communities in
               technology-focused careers and entrepreneurial ventures
             </p>
