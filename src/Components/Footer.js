@@ -6,7 +6,7 @@ import { faLinkedinIn, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 export default class Footer extends Component {
   render() {
-    return (
+    return this.props.currentPage === '/signin' ? (null): (
       <footer>
         <div className="contactUsForm" id="contactUs">
           <form action="https://formspree.io/xzbeebbo" method="POST">

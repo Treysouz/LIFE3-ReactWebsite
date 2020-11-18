@@ -69,6 +69,11 @@ export default class Header extends Component {
             <Link className="navLink navLinkText" to="/empower">
               Empower
             </Link>
+            <Link className="navLink navLinkText" to="/signin">
+              <button>
+                Sign in
+              </button>
+            </Link>
             {/* <a href="#contactUs">
               <button className="contactUsButton">Contact Us</button>
             </a> */}
@@ -87,6 +92,9 @@ export default class Header extends Component {
             </Link>
             <Link className="navLink" to="/empower">
               Empower
+            </Link>
+            <Link className="navLink" to="/signin">
+              Sign in
             </Link>
             {/* <a className="navLink" href="#contactUs">
               Contact Us

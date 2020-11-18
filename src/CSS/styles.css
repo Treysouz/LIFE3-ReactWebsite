@@ -770,6 +770,10 @@ header {
   position: relative;
 }
 
+.header2{
+  min-height: 120vh;
+}
+
 header .hoveredBar {
   -webkit-box-shadow: 0px 0px 5px 5px black;
           box-shadow: 0px 0px 5px 5px black;
@@ -974,6 +978,11 @@ video {
   text-shadow: 0px 0px 2px white;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.bannerContainer2 {
+  /* min-width: 100%; */
+  min-height: 100%;
 }
 
 .banner {
@@ -1760,6 +1769,98 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 /* End LightBox Stylins */
+
+/* Log In System Styling */
+
+.container input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.container input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+/* Set a style for all buttons */
+.signupbtn {
+  background-color: #ADF5D9;
+  color: black;
+  /* padding: 14px 20px; */
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  /* padding: 14px 20px; */
+  background-color:#e7e7e7;
+  color: #000;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 30px;
+  width: 40vw;
+  margin: 20vh auto;
+  background-color: black;
+  color: white;
+}
+
+.container h1{
+  color: #ADF5D9;
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.floatright{
+  float: right;
+  /* color: black; */
+}
+
+/* End Log In System Styling */
+
+
 /* Media Queries */
 @media (max-width: 1600px), (max-height: 800px) {
   .banner {

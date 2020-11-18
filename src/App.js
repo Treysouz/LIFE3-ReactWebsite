@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";
+import Signin from './Pages/Signin'
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 
@@ -27,7 +28,7 @@ export default class App extends Component {
     return (
       <Router>
       <main>
-        <header>
+        <header className={this.state.currentPage === "/signin" ? "header2" : "" }>
           <NavBar></NavBar>
           <Banner currentPage={this.state.currentPage}></Banner>
         </header>
@@ -39,8 +40,13 @@ export default class App extends Component {
               <Route exact path ="/empower">
                 <Empower getPage={this.getPage}/>
               </Route>
+              <Route exact path ="/signin">
+                <Signin getPage={this.getPage}/>
+              </Route>
             </Switch>
-        <Footer></Footer>
+        { this.state.currentPage === "/" || this.state.currentPage === "/empower" ? 
+            <Footer></Footer> : null
+        }
       </main>
       </Router>
     );
