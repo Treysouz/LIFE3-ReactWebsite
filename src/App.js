@@ -29,10 +29,11 @@ export default class App extends Component {
     return (
       <Router>
       <main>
-        <header className={this.state.currentPage === "/" || this.props.currentPage === "/empower" ? "" : "header2" }>
-          <NavBar></NavBar>
-          <Banner currentPage={this.state.currentPage}></Banner>
-        </header>
+        { this.state.currentPage === "/" || this.state.currentPage === "/empower" ?
+          <header>
+            <NavBar></NavBar>
+            <Banner currentPage={this.state.currentPage}></Banner>
+          </header> : ""}
       
             <Switch>
               <Route exact path ="/">
@@ -48,9 +49,9 @@ export default class App extends Component {
                 <Signup getPage={this.getPage}/>
               </Route>
             </Switch>
-        { this.state.currentPage === "/" || this.state.currentPage === "/empower" ? 
-            <Footer></Footer> : null
-        }
+          { this.state.currentPage === "/" || this.state.currentPage === "/empower" ? 
+              <Footer></Footer> : null
+          }
       </main>
       </Router>
     );

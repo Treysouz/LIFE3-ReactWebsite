@@ -10,12 +10,10 @@ export default class HomeBanner extends Component {
         className={
           this.props.currentPage === "/empower" ||
           this.props.currentPage === "/enable"
-            ? "bannerContainer eBanner" : 
-            this.props.currentPage === '/' ?
-            "bannerContainer" : "bannerContainer2"
+            ? "bannerContainer eBanner" : "bannerContainer" 
           }
       >
-        {this.props.currentPage === "/" || this.props.currentPage==='/signin' || this.props.currentPage==='/signup' ? (
+        {this.props.currentPage === "/" ? (
           <video autoPlay muted loop>
             <source src={BannerVideo} type="video/mp4" />
           </video>
@@ -61,16 +59,6 @@ export default class HomeBanner extends Component {
                 <button> Contact Us </button>{" "}
               </a>
             </h2>
-          </div>
-        ) : null}
-        {this.props.currentPage === "/signin" ? (
-          <div>
-            <SigninForm></SigninForm>
-          </div>
-        ) : null}
-        {this.props.currentPage === "/signup" ? (
-          <div>
-            <SignupForm></SignupForm>
           </div>
         ) : null}
       </div>

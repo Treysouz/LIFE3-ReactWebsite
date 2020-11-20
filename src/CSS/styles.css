@@ -770,9 +770,6 @@ header {
   position: relative;
 }
 
-.header2{
-  min-height: 130vh;
-}
 
 header .hoveredBar {
   -webkit-box-shadow: 0px 0px 5px 5px black;
@@ -784,7 +781,7 @@ header .hoveredBar {
   transition: box-shadow 1s, background-color 1s, -webkit-box-shadow 1s;
 }
 
-header .navBar {
+.navBar {
   z-index: 10;
   position: fixed;
   height: 10vh;
@@ -807,7 +804,7 @@ header .navBar {
   margin-left: auto;
 }
 
-header .navBar .linksContainer {
+.navBar .linksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,13 +815,13 @@ header .navBar .linksContainer {
           align-items: center;
 }
 
-header .navBar .navLink {
+.navBar .navLink {
   display: inline-block;
   margin-left: 60px;
   font-family: "Montserrat", sans-serif;
 }
 
-header .navBar .navLinkText {
+.navBar .navLinkText {
   font-size: 1.5rem;
   text-align: center;
   display: block;
@@ -837,20 +834,20 @@ header .navBar .navLinkText {
   transition: opacity 0.5s, color 0.5s;
 }
 
-header .navBar .navLinkText:hover {
+.navBar .navLinkText:hover {
   opacity: 0.8;
   color: mediumaquamarine;
   cursor: pointer;
 }
 
-header .navBar .navLogo {
+.navBar .navLogo {
   height: 95%;
   width: auto;
   left: 1%;
   border-radius: 50%;
 }
 
-header .navBar .navLogo img {
+.navBar .navLogo img {
   width: auto;
   height: 100%;
   margin-right: -5%;
@@ -858,11 +855,11 @@ header .navBar .navLogo img {
   transition: opacity 0.5s;
 }
 
-header .navBar .navLogo img:hover {
+.navBar .navLogo img:hover {
   opacity: 0.5;
 }
 
-header .contactUsButton {
+.contactUsButton {
   z-index: 3;
   /* margin-left: 60px; */
   margin: 0;
@@ -879,11 +876,11 @@ header .contactUsButton {
   transition: opacity 0.5s;
 }
 
-header .contactUsButton p {
+.contactUsButton p {
   white-space: nowrap;
 }
 
-header .contactUsButton:hover {
+ .contactUsButton:hover {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -971,6 +968,10 @@ video {
      object-fit: fill;
   -webkit-filter: brightness(0.4);
           filter: brightness(0.4);
+}
+
+.videoBackground video {
+  position: fixed;
 }
 
 .bannerContainer {
@@ -1836,7 +1837,10 @@ button:hover {
 .container {
   padding: 30px;
   width: 40vw;
-  margin: 20vh auto;
+  margin: auto;
+  margin-bottom: 20vh;
+  position: relative;
+  top: 20vh;
   background-color: black;
   color: white;
 }

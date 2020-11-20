@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BannerVideo from "../Assets/Videos/life3.MP4";
 import SigninForm from "../Components/Forms/SigninForm"
+import NavBar from "../Components/Navbar";
 
 export default class Signin extends Component {
     constructor() {
@@ -14,11 +15,12 @@ export default class Signin extends Component {
 
     render() {
         return (
-            <div>
-          {/* <video autoPlay muted loop>
-            <source src={BannerVideo} type="video/mp4" />
-          </video>
-          <SigninForm/> */}
+            <div className="videoBackground">
+              <video autoPlay muted loop>
+                <source src={BannerVideo} type="video/mp4" />
+              </video>
+              <NavBar></NavBar>
+              <SigninForm/>
             </div>
         );
     }
