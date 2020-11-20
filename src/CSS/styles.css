@@ -1,5 +1,6 @@
 /* How Can We Help You Section Stylings */
-@import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");  
+/*@import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");*/
 .mainInfo {
   /* width: 100%; */
   position: relative;
@@ -29,9 +30,9 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
-
+/*    made modification here as in feedback "Increase font size of quoted texts until they are all 3 liners."   */
 .mainInfo .example {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
   padding: 0 1vw;
 }
@@ -188,11 +189,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
-
+/* made modification here as given feedback " Center the text underneath "Business Projects."
+ and "Add some space between "Business Projects" and text underneath*/ 
 .partners p {
+  text-align: center;
   line-height: 2;
   font-size: 1.3rem;
-  margin: 2vh 0;
+  margin: 5vh 0;
   font-weight: 500;
 }
 
@@ -291,9 +294,12 @@
   color: white;
   /* padding-top: 80px; */
 }
-
+/* made modification based on the feedback "Text underneath "Using Technology 
+to Learn and Progress Together" should have the same amount of line spacing as the text underneath "Business Projects." */
 .about p {
-  font-size: 2rem;
+  line-height: 2;
+  margin: 5vh 0;
+  font-size: 1.2rem;
   padding: 0 10vw;
 }
 
@@ -375,7 +381,7 @@
 }
 
 .testimonials .carouselNavDots .paginationCircle {
-  margin: 0 1%;
+  margin: 0 2%;
 }
 
 .testimonials .carouselNavDots .paginationCircle:hover {
@@ -843,14 +849,17 @@ header .hoveredBar {
 .navBar .navLogo {
   height: 95%;
   width: auto;
-  left: 1%;
+  left: 5%;
   border-radius: 50%;
 }
 
 .navBar .navLogo img {
   width: auto;
   height: 100%;
-  margin-right: -5%;
+  position: absolute;
+  left: 2%;
+  top:5%;
+  /*margin-right: -10%; */
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -1008,6 +1017,10 @@ video {
 
 .banner h2 {
   font-weight: 500;
+}
+
+.banner .bannerText {
+  margin: 3vh 0;
 }
 
 /*------- End Header Stylings--------- */
@@ -1277,6 +1290,13 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   font-family: "Esteban", serif;
 }
 
+.profileInformation .roleDescription {
+  font-weight: 500;
+  font-size: 5rem;
+  font-family: "Esteban", serif;
+}
+
+
 .lightBox .exitIcon {
   top: 5vh;
   right: 5vw;
@@ -1405,6 +1425,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .lightBox .teamMemberLightBox ul {
   margin-left: 1.5vw;
+  
 }
 
 .lightBox .teamMemberLightBox .iconBar {

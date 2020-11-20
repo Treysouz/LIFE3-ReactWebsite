@@ -40,8 +40,9 @@ export default class Header extends Component {
     });
 
     window.addEventListener("scroll", () => {
-      
-      window.scrollY >= 100
+      /* modified as mentioned in the feedback " Make black menu bar opaque and have it 
+      automatically appear as soon as the user scrolls down. Remove blurriness." */
+      window.scrollY >= 1
         ? document.getElementById("navBar").classList.add("hoveredBar")
         : document.getElementById("navBar").classList.remove("hoveredBar");
     });
@@ -59,7 +60,7 @@ export default class Header extends Component {
     return (
       <nav className="navBar" id="navBar">
         <Link className="navLink navLogo" to="/">
-          <img src={Logo} alt="LIFE3 Logo" title="LIFE3" />
+          <img src={Logo} alt="LIFE3 Logo" title="LIFE3"/>
         </Link>
         {!this.state.mobileView ? (
           <div className="linksContainer">

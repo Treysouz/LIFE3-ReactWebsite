@@ -5,6 +5,7 @@
 @import "./form";
 @import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 /* Global Stylings */
 
 .lightBoix .teamMemberLightBox li{
@@ -89,9 +90,10 @@ header {
   overflow: hidden;
   position: relative;
   .hoveredBar {
-    box-shadow: 0px 0px 5px 5px black;
+    box-shadow: 0px 0px 0px 0px black;
     background-color: black !important ;
-    transition: box-shadow 1s, background-color 1s;
+    transition: box-shadow 0s, background-color 0s;
+  
   }
   .navBar {
     z-index: 10;
@@ -103,11 +105,14 @@ header {
     padding: 0 5vw;
     background-color: transparent;
     display: flex;
+    /*
     justify-content: space-between;
+    */
+    justify-content: flex-end;
     color: white;
     align-items: center;
     font-size: 1.5rem;
-
+    box-shadow: 0px 0px 0px 0px black;
     margin-left: auto;
     .linksContainer {
       display: flex;
@@ -145,9 +150,10 @@ header {
 
       // box-shadow: 0px 0px 5px 5px black;
       img {
+        position: absolute;
         width: auto;
         height: 100%;
-        margin-right: -5%;
+        margin-right:5%;
         transition: opacity 0.5s;
         &:hover {
           opacity: 0.5;
@@ -451,7 +457,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .lightBox .teamName {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: $primaryFont;
 }
 
@@ -562,6 +568,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .lightBox .teamMemberLightBox ul {
   margin-left: 1.5vw;
+  
 }
 
 .lightBox .teamMemberLightBox .iconBar {
