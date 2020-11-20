@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import BannerVideo from "../Assets/Videos/life3.MP4";
-import SigninForm from "./Forms/SigninForm";
-import SignupForm from "./Forms/SignupForm";
 
 export default class HomeBanner extends Component {
   render() {
