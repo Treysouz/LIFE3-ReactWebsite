@@ -1965,7 +1965,7 @@ button:hover {
     width: 60%;
   }
   h2,
-  header .navBar,
+  .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p,
   .servicesTable th h2,
@@ -1993,7 +1993,7 @@ button:hover {
   .phasesTable td {
     font-size: 1rem;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     font-size: 1.3rem;
   }
   header .contactUsButton {
@@ -2094,7 +2094,7 @@ button:hover {
   footer .contactUsForm {
     width: 60%;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     margin-right: 40px;
     margin-left: 0;
   }
@@ -2186,10 +2186,10 @@ button:hover {
   .about .aboutUs {
     font-size: 3rem;
   }
-  header .navBar .navLinkText .mainInfo {
+  .navBar .navLinkText .mainInfo {
     font-size: 1.3rem;
   }
-  header .navBar .navLinkText:first-child {
+  .navBar .navLinkText:first-child {
     padding-right: 4.53%;
   }
   .partners .partnersInfoContainer .partnerLogosContainer {
@@ -2238,7 +2238,7 @@ button:hover {
   .events .eventsContainer figure {
     max-width: 40vw;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     margin-right: 20px;
   }
   footer .contactUsForm {
@@ -2340,7 +2340,7 @@ img {
   .navBar .navLink {
     margin: 0;
   }
-  header .navBar .navLogo {
+  .navBar .navLogo {
     margin-left: 10px;
     width: 20%;
   }
@@ -2349,7 +2349,7 @@ img {
     font-size: 1.3rem;
   }
   h2,
-  header .navBar,
+  .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p {
     font-size: 0.8rem;
@@ -2368,19 +2368,19 @@ img {
   .phasesTable td {
     font-size: 0.8rem;
   }
-  header .navBar {
+  .navBar {
     padding: 0 4%;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     margin-right: 20px;
     margin-left: 0;
     font-size: 1rem;
   }
-  header .contactUsButton .fa-envelope-open-text {
+  .contactUsButton .fa-envelope-open-text {
     display: inline-block;
     color: white;
   }
-  header .contactUsButton p {
+  .contactUsButton p {
     display: none;
   }
   .ourApproach .serviceStepsContainer figure img {
@@ -2494,7 +2494,7 @@ img {
   .navBar .navLink {
     margin: 0;
   }
-  header .navBar .navLogo {
+  .navBar .navLogo {
     margin-left: 10px;
   }
   .lightBox .contactUsForm form .formInput,
@@ -2552,7 +2552,7 @@ img {
   .navBar .navLink {
     margin: 0;
   }
-  header .navBar .navLogo {
+  .navBar .navLogo {
     margin-left: 10px;
   }
   .about {
@@ -2600,7 +2600,7 @@ img {
     font-size: 1rem;
   }
   h2,
-  header .navBar,
+  .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p {
     font-size: 0.8rem;
@@ -2684,7 +2684,7 @@ img {
   .events .eventsContainer figure {
     max-width: 20vw;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     font-size: 0.8rem;
   }
 }
@@ -2698,7 +2698,7 @@ img {
     font-size: 0.8rem;
   }
   h2,
-  header .navBar,
+  .navBar,
   footer .contactUsContainer h3,
   .projectInformation .testimonial p {
     font-size: 0.7rem;
@@ -2710,7 +2710,7 @@ img {
     font-size: 0.7rem;
     line-height: 1rem;
   }
-  header .navBar .navLinkText {
+  .navBar .navLinkText {
     font-size: 0.8rem;
   }
   header .homeBanner {

@@ -102,7 +102,7 @@ export default class Header extends Component {
             <Link className="navLink" to="/signin">
               Sign in
             </Link>
-            <Link className="navLink navLinkText" to="/signup">
+            <Link className="navLink" to="/signup">
                 Sign up
             </Link>
             {/* <a className="navLink" href="#contactUs">
