@@ -11,8 +11,8 @@ export default class Footer extends Component {
         <div className="contactUsForm" id="contactUs">
           <form action="https://formspree.io/xzbeebbo" method="POST">
             <div>
-              <h2>CONTACT US</h2>
-              <h1>SEND US A MESSAGE</h1>
+              <h2>Contact Us</h2>
+              <h1>Send Us a Message</h1>
               <br />
               <div className="formInput">
                 <input

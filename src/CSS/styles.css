@@ -99,9 +99,9 @@
   transition: opacity .5s;
 }
 
-.mainInfo .phase {
+/* .mainInfo .phase {
   text-transform: uppercase;
-}
+} */
 
 .mainInfo img {
   width: 100%;
@@ -173,7 +173,7 @@
 }
 
 .partners h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: black;
   text-align: center;
   font-size: 3rem;
@@ -304,7 +304,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 }
 
 .aboutContent .click {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: right;
   font-weight: 700;
 }
@@ -407,7 +407,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
   margin-top: 5vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .testimonialsHead img {
@@ -533,7 +533,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 }
 
 .diverseContentInfo h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: black;
   text-align: center;
   font-size: 3rem;
@@ -701,7 +701,7 @@ body {
 }
 
 h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 3.5rem;
   font-family: "Montserrat", sans-serif;
   z-index: 1;
@@ -1648,7 +1648,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .projectLightBox h2 {
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .projectLightBox .servicesContent {
@@ -1669,7 +1669,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .projectLightBox .phase h2 {
   background-color: mediumaquamarine;
   color: black;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 800;
   font-size: 1.5rem;
   padding: 1%;

@@ -227,12 +227,12 @@ export default class ProjectModule extends Component {
           {this.props.viewingClient === "LIFE3" ? (
             <div className="timeTravelContainer">
               <h1>
-                {!this.state.timeTravel ? "2020" : "2019"} LIFE3 WEBSITE
-                REDESIGN
+                {!this.state.timeTravel ? "2020" : "2019"} LIFE3 Website
+                Design
               </h1>
               <div className="redesignContainer">
                 <div className="redesigncell">
-                  <h2>BEFORE</h2>
+                  <h2>Before</h2>
                   {!this.state.timeTravel ? (
                     <img
                       src={require("../Assets/Images/2020 Before, 2019 After.png")}
@@ -246,7 +246,7 @@ export default class ProjectModule extends Component {
                   )}
                 </div>
                 <div className="redesigncell">
-                  <h2>AFTER</h2>
+                  <h2>After</h2>
                   {!this.state.timeTravel ? (
                     <img
                       src={require("../Assets/Images/2020 After.png")}

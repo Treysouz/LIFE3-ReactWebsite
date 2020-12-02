@@ -18,7 +18,7 @@ export default class ThankYou extends Component {
             alt="thank you icon"
             style={{ height: "15vh", marginTop: "18vh" }}
           />
-          <h1 style={{ color: "#ADF5D9" }}>THANK YOU!</h1>
+          <h1 style={{ color: "#ADF5D9" }}>Thank You!</h1>
           <p>
             We have received your message, and will get back to you shortly.
           </p>
