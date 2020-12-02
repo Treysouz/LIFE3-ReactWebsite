@@ -16,11 +16,13 @@ export default class Footer extends Component {
               <br />
               <div className="formInput">
                 <input
+                  className="input2"
                   type="text"
                   name="companyName"
                   placeholder="Your Organization Name"
                 />
                 <select
+                  className="input2"
                   id="mylist"
                   name="organizationType"
                   placeholder="Company Type"
@@ -33,8 +35,8 @@ export default class Footer extends Component {
                 </select>
               </div>
               <div className="formInput">
-                <input type="text" name="name" placeholder="Your Name" />
-                <input type="tel" name="phoneNumber" placeholder="Phone#" />
+                <input className="input2" type="text" name="name" placeholder="Your Name" />
+                <input className="input2" type="tel" name="phoneNumber" placeholder="Phone#" />
               </div>
               <input
                 className="input2"
