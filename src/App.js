@@ -6,6 +6,8 @@ import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
+
+
 // for google analytics 
 
 import ReactGA from 'react-ga';
@@ -37,7 +39,7 @@ ReactGA.addTrackers(
   ],
   { debug: true, alwaysSendToDefaultTracker: false }
 );
-////// end   
+//////    Google analytics end  //////   
 
 export const PageView = () => {  
   ReactGA.pageview(window.location.pathname +  
