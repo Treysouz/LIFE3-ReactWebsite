@@ -6,7 +6,7 @@ import { faLinkedinIn, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 export default class Footer extends Component {
   render() {
-    return this.props.currentPage === '/signin' ? (null): (
+    return this.props.currentPage === "/signin" ? null : (
       <footer>
         <div className="contactUsForm" id="contactUs">
           <form action="https://formspree.io/xzbeebbo" method="POST">
@@ -52,8 +52,10 @@ export default class Footer extends Component {
               </div>
               <input
                 className="submitBtn"
+                onClick={() =>
+                  this.props.clickHandler("Button", "Contact Us Message Sent")
+                }
                 type="submit"
-    
                 value="Send Message"
               />
             </div>
@@ -71,6 +73,7 @@ export default class Footer extends Component {
               href="https://www.linkedin.com/company/life3-learn-innovate-for-innovation-enablement-empowerment/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => this.props.clickHandler("Button", "LinkedIn Link")}
             >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
@@ -80,12 +83,16 @@ export default class Footer extends Component {
               href="https://www.facebook.com/life3innovate/?modal=admin_todo_tour"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => this.props.clickHandler("Button", "Facebook Link")}
             >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
               </div>
             </a>
-            <a href="mailto:omar.duran@life3.io">
+            <a
+              href="mailto:omar.duran@life3.io"
+              onClick={() => this.props.clickHandler("Button", "Email Link")}
+            >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
               </div>

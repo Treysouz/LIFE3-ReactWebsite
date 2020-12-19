@@ -25,7 +25,7 @@ export default function SigninForm() {
       } else {
         setErrorMsg(response.data.message);
         alert(response);
-        alert(response.data[0].Email)
+        // alert(response.data[0].Email)
         alert(response.data.message);
         setLoginStatus(false);
         console.log(response);
@@ -71,7 +71,7 @@ export default function SigninForm() {
 
         <div className="clearfix">
             <button type="button"  className="cancelbtn">Cancel</button>
-            <button type="submit" className="signupbtn" onClick={signin}><b>Sign in</b></button>
+            <button type="submit" className="signupbtn" onClick={(event)=>{ event.preventDefault(); signin();}}><b>Sign in</b></button>
         </div>
         
         <input type="checkbox" name="remember"/><span> Remember Me</span>

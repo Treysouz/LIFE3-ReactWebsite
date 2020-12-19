@@ -45,7 +45,7 @@ export default class ProjectModule extends Component {
   };
   componentDidUpdate() {}
   toggleTeamLightBox = (member) => {
-    console.log(member);
+
     this.state.teamMemberLightBoxOpen
       ? this.setState({ teamMemberLightBoxOpen: false })
       : this.setState({ teamMemberLightBoxOpen: true });
@@ -61,6 +61,7 @@ export default class ProjectModule extends Component {
             viewingClient={this.props.viewingClient}
             clickedTeamMember={this.state.clickedTeamMember}
             toggleTeamLightBox={() => this.toggleTeamLightBox()}
+            clickHandler = {this.props.clickHandler}
           ></TeamModule>
         ) : null}
 
@@ -169,7 +170,9 @@ export default class ProjectModule extends Component {
                     return (
                       <figure
                         key={member}
-                        onClick={() => this.toggleTeamLightBox(member)}
+                        onClick={() => {
+                          this.props.clickHandler("Team Member View", member)
+                          this.toggleTeamLightBox(member)}}
                       >
                         <img
                           className="teamProfileImage"
@@ -198,7 +201,9 @@ export default class ProjectModule extends Component {
                     return (
                       <figure
                         key={member}
-                        onClick={() => this.toggleTeamLightBox(member)}
+                        onClick={() => {
+                          this.props.clickHandler("Team Member View", member)
+                          this.toggleTeamLightBox(member)}}
                       >
                         <img
                           className="teamProfileImage"
@@ -267,6 +272,7 @@ export default class ProjectModule extends Component {
                       timeTravel: !this.state.timeTravel,
                     });
                     this.updateClientInfo();
+                    this.props.clickHandler("Button", "Time Travel");
                   }}
                   className="timeTravelBtn"
                 >
@@ -278,6 +284,7 @@ export default class ProjectModule extends Component {
                     this.setState({
                       timeTravel: !this.state.timeTravel,
                     });
+                    this.props.clickHandler("Button", "Time Travel");
                     this.updateClientInfo();
                   }}
                   className="timeTravelBtn"
@@ -293,6 +300,7 @@ export default class ProjectModule extends Component {
             <div
               className="nextProjectContainer"
               onClick={() => {
+                this.props.clickHandler("Next Project", this.state.clientList[this.state.clientIndex + 1]);
                 this.props.toggleProjectModule();
                 setTimeout(() => {
                   this.props.toggleProjectModule(
@@ -300,7 +308,7 @@ export default class ProjectModule extends Component {
                   );
                 }, 500);
                 this.updateClientInfo();
-                console.log(this.state.teamList);
+
               }}
             >
               <img

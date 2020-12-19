@@ -22,6 +22,7 @@ export default class TeamModule extends Component {
           <div className="teamProfileImage">
             <a
               href={ProjectData.team[this.props.clickedTeamMember].linkedin}
+              onClick={()=>this.props.clickHandler("Linkedin Page View", this.props.clickedTeamMember)}
               target="_blank" rel="noopener noreferrer"
             >
               <img

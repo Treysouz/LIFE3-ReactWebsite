@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactGA from 'react-ga';
 
 export default class ThankYou extends Component {
   constructor() {
@@ -8,6 +9,7 @@ export default class ThankYou extends Component {
   componentDidMount() {
     this.props.getPage("/thankyou");
     window.scrollTo(0, 0);
+ 
   }
   render() {
     return (

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BannerVideo from "../Assets/Videos/life3.MP4";
 import SignupForm from "../Components/Forms/SignupForm"
 import NavBar from "../Components/Navbar";
+import ReactGA from 'react-ga';
 
 export default class Signup extends Component {
     constructor() {
@@ -11,6 +12,8 @@ export default class Signup extends Component {
       componentDidMount() {
         this.props.getPage("/signup");
         window.scrollTo(0, 0);
+        ReactGA.initialize('UA-179955369-1');
+        ReactGA.pageview('/signup');
       }
 
     render() {

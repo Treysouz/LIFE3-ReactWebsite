@@ -12,6 +12,7 @@ import {
   faChevronRight,
   faCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import ReactGA from 'react-ga';
 
 export default class Home extends Component {
   constructor() {
@@ -36,6 +37,8 @@ export default class Home extends Component {
       });
     }
     this.props.getPage(window.location.pathname);
+      
+  
   }
   componentDidUpdate() {
     this.state.projectModuleOpen
@@ -91,6 +94,7 @@ export default class Home extends Component {
       <ProjectModule
         toggleProjectModule={this.toggleProjectModule}
         viewingClient={this.state.viewingClient}
+        clickHandler = {this.props.clickHandler}
       ></ProjectModule>
     );
   };
@@ -136,11 +140,12 @@ export default class Home extends Component {
           <div className="mainInfoContainer">
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() =>{
+                this.props.clickHandler("Phases", "Phase 1 - Product Design Services");
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/114vVNmKsh-ggyrX29TxB2-Vvr0OEqeXf/preview"
-                )
-              }
+                );
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseOneBanner} alt="phase one" />
@@ -166,11 +171,12 @@ export default class Home extends Component {
             </div>
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() =>{
+                this.props.clickHandler("Phases", "Phase 2 - Product Design & Development Services");
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/1-R9NHRe6RaOMXSuiVByI1SlgiuiA4UD4/preview"
                 )
-              }
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseTwoBanner} alt="phase two" />
@@ -194,11 +200,12 @@ export default class Home extends Component {
             </div>
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() =>{
+                this.props.clickHandler("Phases", "Phase 3 - Product Management Services");
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/123bw1XFn7UvxyZ6QEwZxqR3vesKsnKGl/preview"
                 )
-              }
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseThreeBanner} alt="phase three" />
@@ -254,7 +261,9 @@ export default class Home extends Component {
                         src={require("../Assets/Images/Icons/" +
                           ProjectData.clients[key].icon)}
                         key={key}
-                        onClick={() => this.toggleProjectModule(key)}
+                        onClick={() => {
+                          this.props.clickHandler("Business Projects", key);
+                          this.toggleProjectModule(key)}}
                         alt={key}
                       ></img>
                     );

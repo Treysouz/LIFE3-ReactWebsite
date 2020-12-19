@@ -8,6 +8,7 @@ import Signin from './Pages/Signin'
 import Signup from "./Pages/Signup"
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
+import ReactGA from 'react-ga';
 
 export default class App extends Component {
   constructor() {
@@ -18,11 +19,20 @@ export default class App extends Component {
   }
   componentDidMount(){
     this.getPage(window.location.pathname)
+    ReactGA.initialize('UA-179955369-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  
   }
   getPage = (page) =>{
   
     this.setState({
       currentPage: page
+    })
+  }
+  clickHandler = (category, action) =>{
+    ReactGA.event({
+      category: category,
+      action: action
     })
   }
   render() {
@@ -37,20 +47,20 @@ export default class App extends Component {
       
             <Switch>
               <Route exact path ="/">
-                <Home getPage={this.getPage}/>
+                <Home getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
               <Route exact path ="/empower">
-                <Empower getPage={this.getPage}/>
+                <Empower getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
               <Route exact path ="/signin">
-                <Signin getPage={this.getPage}/>
+                <Signin getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
               <Route exact path ="/signup">
-                <Signup getPage={this.getPage}/>
+                <Signup getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
             </Switch>
           { this.state.currentPage === "/" || this.state.currentPage === "/empower" ? 
-              <Footer></Footer> : null
+              <Footer clickHandler={this.clickHandler}></Footer> : null
           }
       </main>
       </Router>
