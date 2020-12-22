@@ -10,7 +10,7 @@
 
 # production
 /build
-
+/life3-build.zip
 # misc
 .DS_Store
 .env.local

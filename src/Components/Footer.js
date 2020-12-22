@@ -35,8 +35,18 @@ export default class Footer extends Component {
                 </select>
               </div>
               <div className="formInput">
-                <input className="input2" type="text" name="name" placeholder="Your Name" />
-                <input className="input2" type="tel" name="phoneNumber" placeholder="Phone#" />
+                <input
+                  className="input2"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                />
+                <input
+                  className="input2"
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="Phone#"
+                />
               </div>
               <input
                 className="input2"
@@ -55,7 +65,9 @@ export default class Footer extends Component {
               <input
                 className="submitBtn"
                 type="submit"
-    
+                onClick={() =>
+                  this.props.clickHandler("Button", "Contact Us Message Sent")
+                }
                 value="Send Message"
               />
             </div>
@@ -73,6 +85,7 @@ export default class Footer extends Component {
               href="https://www.linkedin.com/company/life3-learn-innovate-for-innovation-enablement-empowerment/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => this.props.clickHandler("Button", "LinkedIn Link")}
             >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
@@ -82,12 +95,16 @@ export default class Footer extends Component {
               href="https://www.facebook.com/life3innovate/?modal=admin_todo_tour"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => this.props.clickHandler("Button", "Facebook Link")}
             >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
               </div>
             </a>
-            <a href="mailto:omar.duran@life3.io">
+            <a
+              href="mailto:omar.duran@life3.io"
+              onClick={() => this.props.clickHandler("Button", "Email Link")}
+            >
               <div className="socialMediaIcon">
                 <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
               </div>

@@ -103,6 +103,7 @@ export default class Empower extends Component {
       <ProjectModule
         toggleProjectModule={this.toggleProjectModule}
         viewingClient={this.state.viewingClient}
+        clickHandler = {this.props.clickHandler}
       ></ProjectModule>
     );
   };
@@ -179,7 +180,7 @@ export default class Empower extends Component {
                       </p>
                     </div>
 
-                    <div className="carouselControls">
+                    <div className="carouselControls" onClick={()=> this.props.clickHandler("Button", "Testimonial Carousel Controls Clicked")}>
                       <FontAwesomeIcon
                         className="leftArrow"
                         icon={faChevronLeft}
@@ -195,7 +196,7 @@ export default class Empower extends Component {
                 );
               }
             })}
-            <div className="carouselNavDots">
+            <div className="carouselNavDots" onClick={()=> this.props.clickHandler("Button", "Testimonial Carousel Controls Clicked")}>
               {Object.keys(this.state.testimonialList).map((key, index) => {
                 return (
                   <FontAwesomeIcon
@@ -226,7 +227,7 @@ export default class Empower extends Component {
           
                   if (key.indexOf("(") === -1) {
                     return (
-                      <figure key={key + index} onClick={() => this.toggleProjectModule(key)}>
+                      <figure key={key + index} onClick={() => {this.props.clickHandler("Business Projects", key); this.toggleProjectModule(key)}}>
                         <img
                           alt={key}
                           src={require("../Assets/Images/Icons/" +

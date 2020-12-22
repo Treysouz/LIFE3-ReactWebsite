@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
+import ReactGA from 'react-ga';
 
 export default class App extends Component {
   constructor() {
@@ -16,11 +17,23 @@ export default class App extends Component {
   }
   componentDidMount(){
     this.getPage(window.location.pathname)
+    this.getPage(window.location.pathname)
+    ReactGA.initialize('UA-179955369-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+  componentDidUpdate(){
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
   getPage = (page) =>{
   
     this.setState({
       currentPage: page
+    })
+  }
+  clickHandler = (category, action) =>{
+    ReactGA.event({
+      category: category,
+      action: action
     })
   }
   render() {
@@ -33,14 +46,20 @@ export default class App extends Component {
         </header>
       
             <Switch>
-              <Route exact path ="/">
-                <Home getPage={this.getPage}/>
+            <Route exact path ="/">
+                <Home getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
               <Route exact path ="/empower">
-                <Empower getPage={this.getPage}/>
+                <Empower getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
+              {/* <Route exact path ="/signin">
+                <Signin getPage={this.getPage} clickHandler={this.clickHandler}/>
+              </Route>
+              <Route exact path ="/signup">
+                <Signup getPage={this.getPage} clickHandler={this.clickHandler}/>
+              </Route> */}
             </Switch>
-        <Footer></Footer>
+        <Footer clickHandler={this.clickHandler}></Footer>
       </main>
       </Router>
     );

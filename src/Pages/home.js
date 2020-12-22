@@ -91,6 +91,7 @@ export default class Home extends Component {
       <ProjectModule
         toggleProjectModule={this.toggleProjectModule}
         viewingClient={this.state.viewingClient}
+        clickHandler={this.props.clickHandler}
       ></ProjectModule>
     );
   };
@@ -136,18 +137,22 @@ export default class Home extends Component {
           <div className="mainInfoContainer">
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() => {
+                this.props.clickHandler(
+                  "Phases",
+                  "Phase 1 - Product Design Services"
+                );
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/114vVNmKsh-ggyrX29TxB2-Vvr0OEqeXf/preview"
-                )
-              }
+                );
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseOneBanner} alt="phase one" />
               </div>
               <p className="describle">Product Design Services</p>
               <div className="phase">
-                <h2>phase 1</h2>
+                <h2>Phase 1</h2>
 
                 {/* Made modification here for feedback "Make the titles "Mock-up & Product Roadmap", 
                 "Software Design & Development", and "Artificial Intelligence & Analytics" the same 
@@ -166,11 +171,15 @@ export default class Home extends Component {
             </div>
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() => {
+                this.props.clickHandler(
+                  "Phases",
+                  "Phase 2 - Product Design & Development Services"
+                );
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/1-R9NHRe6RaOMXSuiVByI1SlgiuiA4UD4/preview"
-                )
-              }
+                );
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseTwoBanner} alt="phase two" />
@@ -179,7 +188,7 @@ export default class Home extends Component {
                 Product Design &amp; Development Services
               </p>
               <div className="phase">
-                <h2>phase 2</h2>
+                <h2>Phase 2</h2>
                 <h2>
                   Software Design &amp; <br />
                   Development
@@ -194,18 +203,22 @@ export default class Home extends Component {
             </div>
             <div
               className="phaseContainer slide"
-              onClick={() =>
+              onClick={() => {
+                this.props.clickHandler(
+                  "Phases",
+                  "Phase 3 - Product Management Services"
+                );
                 this.togglePhaseModule(
                   "https://drive.google.com/file/d/123bw1XFn7UvxyZ6QEwZxqR3vesKsnKGl/preview"
-                )
-              }
+                );
+              }}
             >
               <div className="phaseImage">
                 <img src={PhaseThreeBanner} alt="phase three" />
               </div>
               <p className="describle">Product Management Services</p>
               <div className="phase">
-                <h2>phase 3</h2>
+                <h2>Phase 3</h2>
                 <h2>
                   Artificial Intelligence
                   <br /> &amp; Analytics
@@ -254,7 +267,9 @@ export default class Home extends Component {
                         src={require("../Assets/Images/Icons/" +
                           ProjectData.clients[key].icon)}
                         key={key}
-                        onClick={() => this.toggleProjectModule(key)}
+                        onClick={() => {
+                          this.props.clickHandler("Business Projects", key);
+                          this.toggleProjectModule(key)}}
                         alt={key}
                       ></img>
                     );
