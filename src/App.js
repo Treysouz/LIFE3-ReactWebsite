@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./CSS/styles.css";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { HashRouter as Router, Switch, Route} from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";
@@ -49,7 +49,7 @@ export default class App extends Component {
             <Route exact path ="/">
                 <Home getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
-              <Route exact path ="/empower">
+              <Route path ="/empower">
                 <Empower getPage={this.getPage} clickHandler={this.clickHandler}/>
               </Route>
               {/* <Route exact path ="/signin">

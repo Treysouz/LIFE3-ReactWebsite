@@ -217,30 +217,31 @@ export default class Empower extends Component {
           </h1>
           <div className="businessProjectsContainer">
             {Object.keys(this.state.testimonialList).map((key, index) => {
-              if (
+              if (ProjectData.team[this.state.testimonialList[index]].roles ) {
+                if (
                 index >= this.state.offsetClientImages &&
                 index < this.state.limitClientImages
-              ) {
-                return Object.keys(
-                  ProjectData.team[this.state.testimonialList[index]].roles
-                ).map((key, index) => {
+               ) {
+                  return Object.keys(
+                    ProjectData.team[this.state.testimonialList[index]].roles
+                 ).map((key, index) => {
           
-                  if (key.indexOf("(") === -1) {
-                    return (
-                      <figure key={key + index} onClick={() => {this.props.clickHandler("Business Projects", key); this.toggleProjectModule(key)}}>
-                        <img
-                          alt={key}
-                          src={require("../Assets/Images/Icons/" +
-                            ProjectData.clients[key].icon)}
+                   if (key.indexOf("(") === -1) {
+                     return (
+                       <figure key={key + index} onClick={() => {this.props.clickHandler("Business Projects", key); this.toggleProjectModule(key)}}>
+                          <img
+                            alt={key}
+                            src={require("../Assets/Images/Icons/" +
+                             ProjectData.clients[key].icon)}
                          
-                        ></img>
+                         ></img>
                
-                      </figure>
-                    );
-                  }
-                });
+                       </figure>
+                      );
+                    }
+                 });
               }
-            })}
+            }})}
           </div>
         </div>
       </section>
