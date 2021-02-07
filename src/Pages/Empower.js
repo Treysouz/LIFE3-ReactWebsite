@@ -213,7 +213,7 @@ export default class Empower extends Component {
           </div>
 
           <h1>
-            Business Projects <span className="shadowedText">Projects</span>
+            Proven Work <span className="shadowedText">Projects</span>
           </h1>
           <div className="businessProjectsContainer">
             {Object.keys(this.state.testimonialList).map((key, index) => {
@@ -227,8 +227,9 @@ export default class Empower extends Component {
                  ).map((key, index) => {
           
                    if (key.indexOf("(") === -1) {
-                     return (
+                     return ProjectData.clients[key]? (
                        <figure key={key + index} onClick={() => {this.props.clickHandler("Business Projects", key); this.toggleProjectModule(key)}}>
+                            
                           <img
                             alt={key}
                             src={require("../Assets/Images/Icons/" +
@@ -237,7 +238,7 @@ export default class Empower extends Component {
                          ></img>
                
                        </figure>
-                      );
+                      ) : null;
                     }
                  });
               }

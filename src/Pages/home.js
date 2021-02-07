@@ -244,7 +244,7 @@ export default class Home extends Component {
                 rel="noopener noreferrer"
               >
                 <h1>
-                  Business Projects{" "}
+                  Proven Work{" "}
                   <span className="shadowedText">Projects</span>
                 </h1>
               </a>

@@ -50,7 +50,7 @@ export default class HomeBanner extends Component {
           <div className="banner">
             <h1> We Empower </h1>
             <h2 className="bannerText">
-              We empower inclusion of underrepresented communities in
+              inclusion of underrepresented communities in
               technology-focused careers and entrepreneurial ventures
             </h2>
             <h2>

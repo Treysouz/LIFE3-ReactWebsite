@@ -1,6 +1,5 @@
 /* How Can We Help You Section Stylings */
- @import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");  
-/*@import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .mainInfo {
   /* width: 100%; */
   position: relative;
@@ -30,9 +29,9 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
-/*    made modification here as in feedback "Increase font size of quoted texts until they are all 3 liners."   */
+
 .mainInfo .example {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   padding: 0 1vw;
 }
@@ -99,9 +98,9 @@
   transition: opacity .5s;
 }
 
-/* .mainInfo .phase {
+.mainInfo .phase {
   text-transform: uppercase;
-} */
+}
 
 .mainInfo img {
   width: 100%;
@@ -173,7 +172,7 @@
 }
 
 .partners h1 {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   color: black;
   text-align: center;
   font-size: 3rem;
@@ -189,13 +188,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
-/* made modification here as given feedback " Center the text underneath "Business Projects."
- and "Add some space between "Business Projects" and text underneath*/ 
+
 .partners p {
-  text-align: center;
   line-height: 2;
   font-size: 1.3rem;
-  margin: 5vh 0;
+  margin: 2vh 0;
   font-weight: 500;
 }
 
@@ -294,17 +291,14 @@
   color: white;
   /* padding-top: 80px; */
 }
-/* made modification based on the feedback "Text underneath "Using Technology 
-to Learn and Progress Together" should have the same amount of line spacing as the text underneath "Business Projects." */
+
 .about p {
-  line-height: 2;
-  margin: 5vh 0;
   font-size: 2rem;
   padding: 0 10vw;
 }
 
 .aboutContent .click {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   text-align: right;
   font-weight: 700;
 }
@@ -357,7 +351,6 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 .testimonials {
   margin-bottom: 10vh;
   position: relative;
-  margin: 0 10vw 10vh 10vw;
 }
 
 .testimonials .carouselControls {
@@ -382,7 +375,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 }
 
 .testimonials .carouselNavDots .paginationCircle {
-  margin: 0 2%;
+  margin: 0 1%;
 }
 
 .testimonials .carouselNavDots .paginationCircle:hover {
@@ -407,7 +400,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
   margin-top: 5vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .testimonialsHead img {
@@ -533,7 +526,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 }
 
 .diverseContentInfo h1 {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   color: black;
   text-align: center;
   font-size: 3rem;
@@ -572,7 +565,7 @@ to Learn and Progress Together" should have the same amount of line spacing as t
 
 .testimonialsContentInfo {
   text-align: left;
-  margin-left: 15%;
+  margin-left: 230px;
 }
 
 .testimonialsContentInfo p {
@@ -687,7 +680,12 @@ to Learn and Progress Together" should have the same amount of line spacing as t
   cursor: pointer;
 }
 
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 /* Global Stylings */
+.lightBoix .teamMemberLightBox li {
+  font-size: 0.8rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -701,7 +699,7 @@ body {
 }
 
 h1 {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-size: 3.5rem;
   font-family: "Montserrat", sans-serif;
   z-index: 1;
@@ -778,13 +776,13 @@ header {
 }
 
 header .hoveredBar {
-  -webkit-box-shadow: 0px 0px 5px 5px black;
-          box-shadow: 0px 0px 5px 5px black;
+  -webkit-box-shadow: 0px 0px 0px 0px black;
+          box-shadow: 0px 0px 0px 0px black;
   background-color: black !important;
-  -webkit-transition: background-color 1s, -webkit-box-shadow 1s;
-  transition: background-color 1s, -webkit-box-shadow 1s;
-  transition: box-shadow 1s, background-color 1s;
-  transition: box-shadow 1s, background-color 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 0s, -webkit-box-shadow 0s;
+  transition: background-color 0s, -webkit-box-shadow 0s;
+  transition: box-shadow 0s, background-color 0s;
+  transition: box-shadow 0s, background-color 0s, -webkit-box-shadow 0s;
 }
 
 header .navBar {
@@ -807,6 +805,8 @@ header .navBar {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
+  -webkit-box-shadow: 0px 0px 0px 0px black;
+          box-shadow: 0px 0px 0px 0px black;
   margin-left: auto;
 }
 
@@ -849,17 +849,15 @@ header .navBar .navLinkText:hover {
 header .navBar .navLogo {
   height: 95%;
   width: auto;
-  left: 5%;
+  left: 1%;
   border-radius: 50%;
 }
-/* made modification based on feedback "Move LIFE3's logo further to the left, and lower it by a hair so it’s not touching the toolbar." */ 
+
 header .navBar .navLogo img {
-  width: auto;
-  height: 100%;
   position: absolute;
-  left: 2%;
-  top:5%;
-  /*margin-right: -10%; */
+  width: auto;
+  height: 95%;
+  margin-right: 5%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -987,10 +985,10 @@ video {
 }
 
 .banner {
-  width: 50%;
+  width: 70%;
   position: absolute;
-  top: 26%;
-  right: 12%;
+  top: 20%;
+  right: 10%;
   color: white;
   z-index: 1;
 }
@@ -1002,14 +1000,12 @@ video {
 .banner h1 {
   font-weight: 600;
   color: mediumaquamarine;
+  font-size: 3.5rem;
 }
 
 .banner h2 {
   font-weight: 500;
-}
-
-.banner .bannerText {
-  margin: 3vh 0;
+  font-size: 3.5rem;
 }
 
 /*------- End Header Stylings--------- */
@@ -1029,16 +1025,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 95vh;
+  height: 90vh;
   min-height: 750px;
   min-width: 300px;
   clear: both;
   position: relative;
-}
-
-footer p{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
 }
 
 footer .footerLogo {
@@ -1193,7 +1184,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 }
 
 .carouselControls .carouselNavDots .paginationCircle {
-  margin: 0 3%;
+  margin: 0 1%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -1209,7 +1200,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .carouselControls .leftArrow,
 .carouselControls .rightArrow {
-  font-size: 3rem;
+  font-size: 5rem;
   color: gray;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -1274,7 +1265,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .lightBox .teamName {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1283,13 +1274,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   font-size: 1rem;
   font-family: "Esteban", serif;
 }
-
-.profileInformation .roleDescription {
-  font-weight: 500;
-  font-size: 5rem;
-  font-family: "Esteban", serif;
-}
-
 
 .lightBox .exitIcon {
   top: 5vh;
@@ -1419,7 +1403,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .lightBox .teamMemberLightBox ul {
   margin-left: 1.5vw;
-  
 }
 
 .lightBox .teamMemberLightBox .iconBar {
@@ -1456,10 +1439,6 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .lightBox .teamMemberLightBox .socialMediaIcon:hover {
   opacity: 0.5;
   cursor: pointer;
-}
-
-.lightBox .roleDescription li{
-  font-size: 0.8rem;
 }
 
 .lightBox .contactUsForm {
@@ -1648,7 +1627,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
 .projectLightBox h2 {
   font-family: "Montserrat", sans-serif;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .projectLightBox .servicesContent {
@@ -1669,7 +1648,7 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 .projectLightBox .phase h2 {
   background-color: mediumaquamarine;
   color: black;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-weight: 800;
   font-size: 1.5rem;
   padding: 1%;
@@ -1789,11 +1768,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 /* End LightBox Stylins */
 /* Media Queries */
 @media (max-width: 1600px), (max-height: 800px) {
-  .banner {
-    width: 60%;
-  }
-  .about h1 {
-    font-size: 2.8rem;
+  .about .aboutUs {
+    font-size: 4rem;
   }
   h1,
   footer h1 {
@@ -1810,7 +1786,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
     letter-spacing: 4px;
   }
   p,
-  
+  li,
+  footer p,
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 1.5rem;
   }
@@ -1853,14 +1830,11 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   footer h1 {
     font-size: 3rem;
   }
-  .about h1 {
-    font-size: 2.5rem;
+  .about .aboutUs {
+    font-size: 3rem;
   }
-  .banner h2 {
-    font-size: 1.5rem;
-  }
-  .banner {
-    width: 60%;
+  .banner h1, .banner h2 {
+    font-size: 3rem;
   }
   h2,
   header .navBar,
@@ -1872,7 +1846,8 @@ footer .socialMediaContainer .socialMediaIcon:hover {
   }
   .about p,
   p,
-  
+  li,
+  footer p,
   .aboutTeam .teamProfiles figure figcaption p {
     font-size: 1.5rem;
   }
@@ -2055,13 +2030,12 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 } */
 @media (max-width: 850px), (max-height: 600px) {
   .banner {
-    width: 60%;
+    margin: 40px 0 0 40px;
   }
-  .banner h2 {
-    font-size: 1.5rem;
+  .banner h1, .banner h2 {
+    font-size: 2rem;
   }
   .aboutUs p,
-  .about p,
   .mainInfo h2,
   .diverseContentInfo p,
   .testimonialsContentInfo p {
@@ -2190,14 +2164,7 @@ img {
     font-size: 0.7rem;
   }
   .banner {
-    margin: 40px 0 0 40px;
     width: 80%;
-  }
-  .banner h1 {
-    font-size: 2rem;
-  }
-  .banner h2 {
-    font-size: 1.3rem;
   }
   .aboutUs {
     display: -webkit-box;
@@ -2369,7 +2336,7 @@ img {
     font-size: 2rem;
   }
   .banner h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   .mainInfo h2 {
     font-size: 1rem;
@@ -2438,7 +2405,7 @@ img {
     font-size: 2rem;
   }
   .banner h2 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .aboutImage .img {
     margin-top: 20px;
@@ -2739,6 +2706,12 @@ img {
   .enableBannerContent h1,
   .empowerBannerContent h1 {
     font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner h1, .banner h2 {
+    font-size: 1.5rem;
   }
 }
 
