@@ -993,6 +993,10 @@ video {
   z-index: 1;
 }
 
+.banner .bannerText {
+  padding: 2% 0;
+}
+
 .banner button {
   margin: 20px 0 0 0;
 }
@@ -1770,6 +1774,9 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 @media (max-width: 1600px), (max-height: 800px) {
   .about .aboutUs {
     font-size: 4rem;
+  }
+  .banner h1, .banner h2 {
+    font-size: 3rem;
   }
   h1,
   footer h1 {

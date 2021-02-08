@@ -252,6 +252,9 @@ video {
   right: 10%;
   color: white;
   z-index: 1;
+  .bannerText{
+    padding: 2% 0;
+  }
   button {
     margin: 20px 0 0 0;
   }
@@ -845,6 +848,11 @@ footer .socialMediaContainer .socialMediaIcon:hover {
 
   .about .aboutUs {
     font-size: 4rem;
+  }
+  .banner{
+    h1,h2{
+      font-size: 3rem;
+    }
   }
   h1,
   footer h1 {
