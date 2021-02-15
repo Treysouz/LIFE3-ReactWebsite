@@ -1,0 +1,450 @@
+{
+    "team": {
+        "Omar Duran": {
+            "image": "omar.jpg",
+            "roles": {
+                "LIFE3(2019)": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Articulated LIFE3 vision to be implemented and carried out as design requirements",
+                        "Implemented market research for inspiration to website design",
+                        "Led User Experience designers to create layout of new website",
+                        "Managed User Experience designers and Front-End developer to carry out requirements for website"
+                    ]
+                },
+                "LIFE3": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Articulated LIFE3 vision to be implemented and carried out as design requirements",
+                        "Implemented market research for inspiration to website design",
+                        "Led User Experience designers to create layout of new website",
+                        "Managed User Experience designers and Front-End developer to carry out requirements for website"
+                    ]
+                },
+                "Bushwick Generator": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Synthesizing results from user interviews to help support further product design and strategy",
+                        "Creating User Personas and User Journeys for the local entrepreneur and the local resident"
+                    ]
+                },
+                "TVSensei": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Worked with founder to gather product requirement",
+                        "Led user experience design of the product",
+                        "Orchestrated Design Thinking Workshop",
+                        "Implemented design requirements for Lo-Fi wireframes",
+                        "Drove concepts from ideas to product features"
+                    ]
+                },
+                "Mucktracker": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Gathered business requirements from company stakeholders",
+                        "Advised on use of APIs for news retrieval & AI capabilities",
+                        "Presented architecture to use API capabilities in UI components",
+                        "Wrote user requirements to support development sprints",
+                        "Presented next steps to produce a MVP"
+                    ]
+                },
+                "Energy EDC": {
+                    "role": "Product Specialist",
+                    "contributions": [
+                        "Using Agile and Scrum frameworks to manage and deliver weekly design sprints",
+                        "Led a Design Thinking workshop to gather concepts for product development",
+                        "Advised and implemented necessary technology to facilitate remote learning",
+                        "Created a customer-centric, market-relevant business plan for the client"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/omar-duran-88b35769/"
+        },
+        "Paolo Austria": {
+            "image": "paolo.png",
+            "roles": {
+                "LIFE3(2019)": {
+                    "role": "UX Designer",
+                    "contributions": [
+                        "Suggested website designs through secondary research conducted of design consultancies that cater to early startup product development",
+                        "Creatively designing overall layout of website with emphasis on esthetically pleasing visual designs",
+                        "Suggesting design changes and approaches based on deep experience and knowledge of digital and UX design"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/paoloaustria/"
+        },
+        "Tremayne Souza": {
+            "image": "tremayne.jpg",
+            "roles": {
+                "LIFE3(2019)": {
+                    "role": "Full Stack Developer",
+                    "contributions": [
+                        "Carrying out development requirements based on website needs and designs handed off by visual and user experience designer"
+                    ]
+                },
+                "LIFE3": {
+                    "role": "Full Stack Developer",
+                    "contributions": [
+                        "Collaborated with the development team to implement React version of the LIFE3 website",
+                        "Assisted in any development challenges that the team encountered through the website redesign process",
+                        "Collaborated with UI Designer to implement their vision for the website redesign precisely",
+                        "Recommended third-party technologies to implement various features for the new LIFE3 website"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/tremayne-souza-98862b1a5/"
+        },
+        "Alberto Caicedo": {
+            "image": "alberto.png",
+            "roles": {
+                "LIFE3(2019)": {
+                    "role": "Visual Designer",
+                    "contributions": [
+                        "Contributed to secondary research to inspire website redesign of LIFE3 website",
+                        "Created overall design architecture of current website being developed",
+                        "Recreating LIFE3 logo and generating moving animations for website design"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/alberto-caicedo-8402bb112/"
+        },
+        "Hong Gao": {
+            "image": "hong.png",
+            "roles": {
+                "LIFE3(2019)": {
+                    "role": "UI Designer",
+                    "contributions": [
+                        "Conducting user interviews with entry-to-mid career professionals and startup founders",
+                        "Creating user persona and journey map based on design thinking conducted for the startup founder looking to develop a mobile or web application",
+                        "Refining user persona and journey map based on user interviews"
+                    ]
+                },
+                "TVSensei": {
+                    "role": "UI Designer",
+                    "contributions": [
+                        "Participated in various stakeholder meetings to contribute to ideation for getting from product vision to user interface design details",
+                        "Worked with multiple stakeholders to gather and understand User Interface Design requirement",
+                        "Created Lo-Fidelity to Hi-Fidelity wireframes based on application design requirements gathered during multiple stakeholder meetings"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/uxhonggao/"
+        },
+        "Paul Sobers": {
+            "image": "paul.png",
+            "roles": {
+                "Bushwick Generator": {
+                    "role": "UX Designer",
+                    "contributions": [
+                        "Explored multiple competitors that apply technology for gathering communities based on common interests and themes as well as aggregating data from meeting participants",
+                        "Led efforts to briefly educate interior designers of a local private institute, Pratt, on how to apply user experience design principles for architecture that connects with the community",
+                        "Conducted user interviews with resident entrepreneurs to clearly understand how efforts are being made to help the community through workforce development programming",
+                        "Conducting User interviews with local residents to help understand the voice of the community and provide local workforce development programming that is desired and needed",
+                        "Using Remesh, cutting edge artificial intelligence technology, to help further support user experience design through advanced analytics",
+                        "Synthesizing results from user interviews to help support further product design and strategy",
+                        "Creating User Personas and User Journeys for the local entrepreneur and the local resident"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/paulcsobers/"
+        },
+        "Lissett Gonzalez": {
+            "image": "lissett.png",
+            "roles": {
+                "Bushwick Generator": {
+                    "role": "UX Designer",
+                    "contributions": [
+                        "Explored multiple competitors that apply technology for gathering communities based on common interests and themes as well as aggregating data from meeting participants",
+                        "Led efforts to briefly educate interior designers of a local private institute, Pratt, on how to apply user experience design principles for architecture that connects with the community",
+                        "Conducted user interviews with resident entrepreneurs to clearly understand how efforts are being made to help the community through workforce development programming",
+                        "Conducting User interviews with local residents to help understand the voice of the community and provide local workforce development programming that is desired and needed",
+                        "Using Remesh, cutting edge artificial intelligence technology, to help further support user experience design through advanced analytics",
+                        "Synthesizing results from user interviews to help support further product design and strategy",
+                        "Creating User Personas and User Journeys for the local entrepreneur and the local resident"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/lissett-gonzalez/"
+        },
+        "Sabeen Afzal": {
+            "image": "sabeen.png",
+            "roles": {
+                "Bushwick Generator": {
+                    "role": "UX Designer",
+                    "contributions": [
+                        "Synthesizing results from user interviews to help support further product design and strategy",
+                        "Creating User Personas and User Journeys for the local entrepreneur and the local resident"
+                    ]
+                },
+                "TVSensei": {
+                    "role": "UX Designer",
+                    "contributions": [
+                        "Participated in various stakeholder meetings to contribute to ideation for aligning product vision to user experience design details",
+                        "Created User Personas, Journey Maps, and User Flows for student and teacher users of TVSensei"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/sabeen-afzal-21514a189/"
+        },
+        "Micaela Rivera": {
+            "image": "micaela.jpg",
+            "roles": {
+                "Mucktracker": {
+                    "role": "UI Designer",
+                    "contributions": [
+                        "Researched, designed, and presented various UI variations",
+                        "Created Search Engine Results Page User Interface",
+                        "Presented app mock-up for student persona",
+                        "Designed mock-up screens for MVP release"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/micaela-rivera/"
+        },
+        "Sabine Salandy": {
+            "image": "sabine.jpg",
+            "roles": {
+                "Energy EDC": {
+                    "role": "UX Researcher",
+                    "contributions": [
+                        "Led user experience design that resulted in a more targeted execution of product strategy",
+                        "Led multiple stakeholder playback presentations to align design to product initiatives",
+                        "Implemented surveys and user interview guides leading to design improvements",
+                        "Conducted user interviews with program managers, trainers, and trainees"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/sabine-salandy/",
+            "testimonial": "I was skeptical about technology as an industry where I can thrive. Even though I studied UX design and was good at what I did I wasn’t sure it was the right field for me. LIFE3 created a culture of inclusion where I felt free to share my ideas and make mistakes. Not only were my suggestions heard but they were often acted upon and credited. It was a really empowering experience for me.",
+            "testimonialRole": "UX Researcher, Energy EDC"
+        },
+        "Brenton Jackson": {
+            "image": "brenton.png",
+            "roles": {
+                "LIFE3 Education":{
+                    "role" : "Trainee"
+                }
+            },
+            "testimonial": "I became involved in a series of classes Omar taught in where he led LIFE3 training sessions covering topics around business processes for deployment of mobile and web application for technical startups. Through this training, one topic that I really enjoyed learning about was application of agile methodologies and practices to quickly and iteratively test new ideas by implementing them into design and development sprints. Participating in LIFE3’s training program made me a well-rounded candidate and gave me the confidence to land my current role as a Junior Software Developer at CoreView.",
+            "testimonialRole": "Trainee, LIFE3"
+        },
+        "Katherine Fernandez": {
+            "image": "katherine.jpg",
+            "roles": {
+                "Energy EDC": {
+                    "role": "UI/UX Designer",
+                    "contributions": [
+                        "Identified user problems to inform on best approach to improve training satisfaction",
+                        "Advised on the use of digital tools to enhance the quality of remote learning",
+                        "Conducted interviews to gather insights on technology and improve the user experience",
+                        "Created designs for a new landing page resulting in improved retention of students"
+                    ]
+                },
+                "LIFE3": {
+                    "role": "UI/UX Designer",
+                    "contributions": [
+                        "Redesigned LIFE3’s website using ux thinking with design execution, to produce a user-friendly and intuitive user interface",
+                        "Ensured designs met Web Content Accessibility Guidelines (WCAG) so that all users may have a good online experience",
+                        "Created the graphics, ui style guide, and layout that reinforce the brand’s voice through its visual touchpoints",
+                        "Translated concepts into user flows, mockups and prototypes"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/katfernandez22/",
+            "testimonial": "I enjoy being part of an amazing group of people with diverse skills, thoughts, and backgrounds. I have never worked with such a talented team of professionals who thrive and thoroughly enjoy supporting LIFE3 clients. The friendly and supportive environment have provided me with the best platform to grow and develop my knowledge and skills. You receive great satisfaction knowing you have contributed to the collective growth of the company.",
+            "testimonialRole": "UI/UX Designer, LIFE3"
+        },
+        "Smith Chongvanich": {
+            "image": "smith.png",
+            "roles": {
+                "Energy EDC": {
+                    "role": "Product Designer",
+                    "contributions": [
+                        "Synthesized journey maps based off design thinking with multiple stakeholders",
+                        "Led landing webpage design to create a digital presence for clean energy training",
+                        "Informed project stakeholders on design approach for supporting product design",
+                        "Created user personas from student interviews and survey results"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/smith-chongvanich/"
+        },
+        "Ling Fang": {
+            "image": "ling.jpg",
+            "roles": {
+                "LIFE3": {
+                    "role": "Junior Software Developer",
+                    "contributions": [
+                        "Carried out transition work between designer and senior developer",
+                        "Implemented html frame for all pages from designer",
+                        "Implemented CSS to keep the website consistent and responsiveness",
+                        "Created a log in system"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/lingfang1206/"
+        },
+        "Sambeg R. Subedi": {
+            "image": "sambeg.jpg",
+            "roles": {
+                "LIFE3": {
+                    "role": "Junior Software Developer",
+                    "contributions": [
+                        "Used JavaScript, HTML, and CSS to redesign a LIFE3 website",
+                        "Used PHP to store the information obtained through the contact us/sign up form on phpMyAdmin",
+                        "Collaborated with other developers to implement React on the existing code",
+                        "Implemented Google analytics and Applicant tracking system (ATS), provided website design ideas, and digital marketing strategies through the developer’s point of view"
+                    ]
+                }
+            },
+            "linkedin": "https://www.linkedin.com/in/sambeg-r-subedi-b85941162/"
+        }
+    },
+    "clients": {
+        "LIFE3": {
+            "icon": "life3developLogo.png",
+            "projectDetails": "Bringing LIFE3’s mission and initiatives to life through a complete redesign of the website. LIFE3 is committed to educating its community by participating in events to demonstrate how product development and design is applied to building mobile and web applications. LIFE3 enables startups to build and create product releases while empowering early-to-mid career professionals with the opportunity to work on real business problems.",
+            "valueProposition": "",
+            "weOffer": "LIFE3 has been working with a full-stack developer, User Experience Designers, and a Visual Designer to illustrate the value provided to both professional and business development through a unique business model.",
+            "team": [
+                "Omar Duran",
+                "Paolo Austria",
+                "Alberto Caicedo",
+                "Tremayne Souza",
+                "Hong Gao"
+            ],
+          
+            "phases": {
+                "Phase 1": {
+                    "phaseHeader": "Mock-Up & Product Roadmap",
+                    "list": {
+                        "User Experience Design": []
+                    }
+                },
+                "Phase 2": {
+                    "phaseHeader": "Software Design & Development",
+                    "list": {
+                        "Design Thinking": [],
+                        "User Interface Design": []
+                    }
+                }
+            },
+            "timeline": {
+                "2019": [
+                    "Omar Duran",
+                    "Paolo Austria",
+                    "Alberto Caicedo",
+                    "Tremayne Souza",
+                    "Hong Gao"
+                ]
+            }
+        },
+        "Bushwick Generator": {
+            "icon": "generator.png",
+            "projectDetails": "LIFE3 supported this concept by leading user experience designers to gather relevant qualitative data from resident entrepreneurs, as well as local community members, and then provide this as a catalog of opportunities for the community to decide on what they want to receive as training to further their careers.",
+            "valueProposition": "Gathering the voice of the community for the purpose of connecting low-to-mid income community residents to desirable workforce development opportunities made possible through creative, social entrepreneurs.",
+            "weOffer": "Bushwick Generator required User Experience design to discover the varying personas involved. LIFE3 worked with interns from CUNY Techworks UX Design program to map out User Personas and Journey Maps of resident entrepreneurs along with local residents.",
+            "team": [
+                "Omar Duran",
+                "Paul Sobers",
+                "Lissett Gonzalez",
+                "Sabeen Azfal"
+            ],
+            "phases": {
+                "Phase 1": {
+                    "phaseHeader": "Mock-Up & Product Roadmap",
+                    "list": {
+                        "User Experience Design": []
+                    }
+                },
+                "Phase 2": {
+                    "phaseHeader": "Software Design & Development",
+                    "list": {
+                        "Design Thinking": [],
+                        "User Interface Design": []
+                    }
+                }
+            }
+        },
+        "TVSensei": {
+            "icon": "tvSensei.jpg",
+            "projectDetails": "LIFE3 supported TVSensei from the very conception of an idea and presented a plan to build a product for teachers and students to use. Once user personas were clearly defined we proceeded to create Hi-Fidelity wireframes for the teacher and student user interfaces.",
+            "valueProposition": "Teacher-made lessons for entertaining educational experiences enabled through an application that elicits teacher-student interactions, through digital media, for purposes of learning English as a Second Language.",
+            "weOffer": "As a tech start-up, within pre-seed funding stages, TVSensei required a solution that would showcase its concept while keeping costs low. Through collaboration with CUNY Techworks UX Design program, LIFE3 was able to hire and allocate interns to deliver on TVSensei’s mobile application design needs.",
+            "team": [
+                "Omar Duran",
+                "Hong Gao",
+                "Sabeen Azfal"
+            ],
+            "phases": {
+                "Phase 1": {
+                    "phaseHeader": "Mock-Up & Product Roadmap",
+                    "list": {
+                        "User Experience Design": []
+                    }
+                },
+                "Phase 2": {
+                    "phaseHeader": "Software Design & Development",
+                    "list": {
+                        "Design Thinking": [],
+                        "User Interface Design": []
+                    }
+                }
+            }
+        },
+        "Mucktracker": {
+            "icon": "mucktracker.png",
+            "projectDetails": "Mucktracker had a need for design of an application for students to research current news in a visually appealing way. This led to design of the Search Engine Result Page (SERP) from both a User Interface (UI) perspective as well as on advisement on the use of Application Program Interfaces (APIs) to access news from different news sources.",
+            "valueProposition": "Mucktracker’s platform allows students to survey coverage of newsworthy events and compare reporting from a range of diverse sources. Through data visualization, digital annotation, and organizational tools, students improve their 21st century media literacy skills in a fresh, relevant, and engaging way.",
+            "weOffer": "LIFE3 consulted with company stakeholders, gathered business requirements, led User Interface design, and presented requirements for a Minimum Viable Product (MVP). We presented various options for User Interface design, tied the design to API functionality, and advised on the implementation of Artificial Intelligence as part of their MVP release.",
+            "team": [
+                "Omar Duran",
+                "Micaela Rivera"
+            ],
+            "phases": {
+                "Phase 1": {
+                    "phaseHeader": "Mock-Up & Product Roadmap",
+                    "list": {
+                        "User Experience Design": []
+                    }
+                },
+                "Phase 2": {
+                    "phaseHeader": "Software Design & Development",
+                    "list": {
+                        "Design Thinking": [],
+                        "User Interface Design": []
+                    }
+                }
+            }
+        },
+        "Energy EDC": {
+            "icon": "energyedc.png",
+            "projectDetails": "As a result of COVID-19 Clean Energy training delivered through Energy Economic Development Corp had to be converted from in-person classes to virtual online classes, in a very rapid fashion. This provided an opportunity to create a remote training program that makes optimal use of digital tools for training and facilitating employment opportunities within clean energy industries. Additionally, we are supporting improved student acquisition through digital marketing of the training program.",
+            "valueProposition": "Energy EDC was founded with the goal of using energy as a vehicle to create green jobs. We believe that retrofitting buildings and using their energy savings to pay for the service, parts, and labor needed is an organic way to fund a Twenty First century workforce. The jobs that can be created from doing this represent the New Deal of our time.",
+            "weOffer": "LIFE3 is offering Product Design Services to support high student satisfaction with online, clean energy, training. The team implemented surveys and user interviews to gather qualitative data which informed how to adjust the use of digital tools resulting in an optimal remote learning experience. We also created a more prominent digital presence by designing a program flyer and landing page.",
+            "team": [
+                "Omar Duran",
+                "Micaela Rivera",
+                "Sabine Salandy",
+                "Katherine Fernandez",
+                "Smith Chongvanich"
+            ],
+            "phases": {
+                "Phase 1": {
+                    "phaseHeader": "Mock-Up & Product Roadmap",
+                    "list": {
+                        "User Experience Design": []
+                    }
+                },
+                "Phase 2": {
+                    "phaseHeader": "Software Design & Development",
+                    "list": {
+                        "Design Thinking": [],
+                        "User Interface Design": []
+                    }
+                }
+            }
+        }
+    }
+}
