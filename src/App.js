@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./CSS/styles.css";
-import { HashRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Empower from "./Pages/Empower";

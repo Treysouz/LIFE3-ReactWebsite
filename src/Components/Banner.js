@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import BannerVideo from "../Assets/Videos/life3.MP4";
+import Particles from 'react-particles-js';
+
+const config = require('../JSON/particlesjs-config.json');
+
 
 export default class HomeBanner extends Component {
+
   render() {
     return (
       <div
@@ -13,31 +17,23 @@ export default class HomeBanner extends Component {
         }
       >
         {this.props.currentPage === "/" ? (
-          <video autoPlay muted loop>
-            <source src={BannerVideo} type="video/mp4" />
-          </video>
+          <Particles className="particlesBanner" params={config}></Particles>
         ) : null}
 
         {this.props.currentPage === "/" ? (
           <div className="banner">
-            <h1>We Enable</h1>{" "}
+            <h1>We Enable</h1>
             <div>
               <h2 className="bannerText">
                 you to build and design your digital application in a diverse
                 and equitable environment
-              </h2>
-              <h2>
-                <a href="#contactUs">
-                  {" "}
-                  <button> Contact Us </button>{" "}
-                </a>
               </h2>
             </div>
           </div>
         ) : null}
         {this.props.currentPage === "/enable" ? (
           <div className="enableBannerContent">
-            <h1>We Enable</h1>{" "}
+            <h1>We Enable</h1>
             <h2 className="bannerText">
               LIFE3 creates environments where team of thinkers and learners are
               enabled. Our initiative is having a positive impact on the number

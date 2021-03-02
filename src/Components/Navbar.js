@@ -59,7 +59,7 @@ export default class Header extends Component {
   render() {
     return (
       <nav className="navBar" id="navBar">
-        <Link className="navLink navLogo" to="/">
+        <Link className="navLogo" to="/">
           <img src={Logo} alt="LIFE3 Logo" title="LIFE3"/>
         </Link>
         {!this.state.mobileView ? (
@@ -70,9 +70,9 @@ export default class Header extends Component {
             <Link className="navLink navLinkText" to="/empower">
               Empower
             </Link>
-            {/* <a href="#contactUs">
+            <a href="#contactUs">
               <button className="contactUsButton">Contact Us</button>
-            </a> */}
+            </a>
           </div>
         ) : (
           <FontAwesomeIcon
@@ -89,9 +89,9 @@ export default class Header extends Component {
             <Link className="navLink" to="/empower">
               Empower
             </Link>
-            {/* <a className="navLink" href="#contactUs">
+            <a className="navLink" href="#contactUs">
               Contact Us
-            </a> */}
+            </a>
           </div>
         ) : null}
       </nav>

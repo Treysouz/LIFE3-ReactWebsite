@@ -93,7 +93,9 @@
                     ]
                 }
             },
-            "linkedin": "https://www.linkedin.com/in/tremayne-souza-98862b1a5/"
+            "linkedin": "https://www.linkedin.com/in/tremayne-souza-98862b1a5/",
+            "testimonial": "I met Omar during the QCC Techworks Software Development program where he took an interest in my potential due to the quality of my class work.  After hearing LIFE3's message of empowerment through tech education for minorities such as myself, it didn't take long for me to come to the decision to help LIFE3 with two website revamps as a full-stack developer. Along the way, I learned more about how to apply my skills in a professional setting while collaborating with UI/UX designers and advising junior developers; all of which played a huge part in me acquiring my first full time front-end developer position for mobile shopping platform Fetch Rewards. I cannot thank LIFE3 enough for such an opportunity.",
+            "testimonialRole": "Full Stack Developer, LIFE3"
         },
         "Alberto Caicedo": {
             "image": "alberto.png",
