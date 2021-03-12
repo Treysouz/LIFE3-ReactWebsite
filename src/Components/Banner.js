@@ -49,11 +49,7 @@ export default class HomeBanner extends Component {
               inclusion of underrepresented communities in
               technology-focused careers and entrepreneurial ventures
             </h2>
-            <h2>
-              <a href="#contactUs">
-                <button> Contact Us </button>{" "}
-              </a>
-            </h2>
+
           </div>
         ) : null}
       </div>
